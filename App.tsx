@@ -11,28 +11,42 @@ const Home = () => {
   
   return (
     <div className="relative">
-      {/* Hero Section */}
-      <section className="h-screen flex items-center justify-center text-center px-6 relative overflow-hidden">
+      {/* Hero Section - Updated with Green Forest and Project Text */}
+      <section className="min-h-screen flex items-center justify-center text-center px-6 py-32 relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-black/40 to-stone-950 z-10"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-stone-950/80 via-stone-950/40 to-stone-950 z-10"></div>
           <img 
-            src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&q=80&w=2560" 
-            className="w-full h-full object-cover animate-slow-zoom opacity-60"
-            alt="Burning forest prevention"
+            src="https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&q=80&w=2560" 
+            className="w-full h-full object-cover animate-slow-zoom opacity-70"
+            alt="Healthy Resilient Mediterranean Forest"
           />
         </div>
-        <div className="relative z-20 max-w-5xl space-y-10">
-          <div className="inline-flex items-center space-x-3 px-4 py-2 bg-orange-600/10 border border-orange-500/20 rounded-full backdrop-blur-md animate-fade-in">
-            <span className="flex h-2 w-2 rounded-full bg-orange-500 animate-pulse"></span>
-            <span className="text-[10px] font-black uppercase tracking-[0.5em] text-orange-500">Live Research Data Active</span>
+        <div className="relative z-20 max-w-5xl mx-auto space-y-12">
+          <div className="inline-flex items-center space-x-3 px-6 py-2.5 bg-emerald-600/10 border border-emerald-500/20 rounded-full backdrop-blur-xl animate-fade-in shadow-[0_0_20px_rgba(16,185,129,0.1)]">
+            <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span className="text-[10px] font-black uppercase tracking-[0.5em] text-emerald-400">{t.home.hero_sub}</span>
           </div>
-          <h1 className="text-6xl md:text-9xl font-black text-white leading-[0.85] tracking-tighter animate-fade-in-up">
-            SAFEGUARDING <br/>OUR <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-red-500 to-orange-600">FORESTS</span>
+          
+          <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-white leading-[0.85] tracking-tighter animate-fade-in-up">
+            {t.home.hero_title}
           </h1>
-          <p className="text-lg md:text-xl text-stone-300 max-w-2xl mx-auto leading-relaxed font-medium opacity-80 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
-            {t.home.hero_desc}
-          </p>
-          <div className="flex flex-wrap justify-center gap-6 pt-8 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
+
+          <div className="space-y-8 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+            <p className="text-xl md:text-2xl text-white font-semibold leading-relaxed max-w-4xl mx-auto">
+              {t.home.hero_desc_p1}
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-8 text-left border-t border-white/10 pt-10 mt-10">
+              <p className="text-stone-300 text-sm md:text-base leading-relaxed opacity-80">
+                {t.home.hero_desc_p2}
+              </p>
+              <p className="text-stone-300 text-sm md:text-base leading-relaxed opacity-80">
+                {t.home.hero_desc_p3}
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-6 pt-12 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
             <a href="#/abstract" className="group relative px-12 py-5 bg-orange-600 text-white font-black rounded-full transition-all shadow-2xl shadow-orange-600/30 uppercase tracking-[0.2em] text-xs overflow-hidden">
               <span className="relative z-10">{t.home.cta_primary}</span>
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
@@ -43,7 +57,7 @@ const Home = () => {
           </div>
         </div>
         
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-stone-600">
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-stone-600 opacity-50">
           <i className="fa-solid fa-chevron-down"></i>
         </div>
       </section>
@@ -51,16 +65,36 @@ const Home = () => {
       {/* Monitoring Dashboard Section */}
       <section className="py-24 bg-stone-950 border-y border-white/5">
         <div className="container mx-auto px-6">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+             <div className="space-y-2">
+                <span className="text-orange-500 font-bold uppercase tracking-[0.4em] text-[10px]">Project Metrics</span>
+                <h3 className="text-4xl font-black text-white tracking-tighter uppercase">Real-Time Resilience</h3>
+             </div>
+             <div className="px-6 py-3 bg-stone-900 border border-white/5 rounded-2xl flex items-center space-x-4">
+                <div className="flex space-x-1">
+                   <div className="w-1 h-4 bg-emerald-500/40 rounded-full animate-[pulse_1s_infinite]"></div>
+                   <div className="w-1 h-6 bg-emerald-500 rounded-full animate-[pulse_1.2s_infinite]"></div>
+                   <div className="w-1 h-3 bg-emerald-500/60 rounded-full animate-[pulse_0.8s_infinite]"></div>
+                </div>
+                <span className="text-emerald-500 font-bold text-[10px] uppercase tracking-widest">Sensors Synchronized</span>
+             </div>
+          </div>
           <div className="grid lg:grid-cols-4 gap-6">
             {[
-              { label: 'Global Risk Index', val: 'Low', color: 'text-emerald-500' },
-              { label: 'Active Sensors', val: '14,209', color: 'text-orange-500' },
-              { label: 'Detection Rate', val: '98.4%', color: 'text-blue-500' },
-              { label: 'Resilience Score', val: 'Optimal', color: 'text-purple-500' }
+              { label: 'Global Risk Index', val: 'Low', color: 'text-emerald-500', icon: 'fa-earth-americas' },
+              { label: 'Active Sensors', val: '14,209', color: 'text-orange-500', icon: 'fa-tower-broadcast' },
+              { label: 'Detection Rate', val: '98.4%', color: 'text-blue-500', icon: 'fa-satellite-dish' },
+              { label: 'Resilience Score', val: 'Optimal', color: 'text-purple-500', icon: 'fa-shield-heart' }
             ].map((stat, i) => (
-              <div key={i} className="glass-card p-8 rounded-3xl space-y-2 border-l-4 border-l-stone-800 hover:border-l-orange-500 transition-all group">
-                <span className="text-[10px] font-black uppercase tracking-widest text-stone-500 group-hover:text-stone-300">{stat.label}</span>
-                <div className={`text-3xl font-black ${stat.color} tracking-tight`}>{stat.val}</div>
+              <div key={i} className="glass-card p-8 rounded-3xl space-y-4 border-l-4 border-l-stone-800 hover:border-l-orange-500 transition-all group relative overflow-hidden">
+                <div className="absolute -right-4 -top-4 opacity-5 text-6xl group-hover:scale-110 transition-transform">
+                   <i className={`fa-solid ${stat.icon}`}></i>
+                </div>
+                <span className="text-[10px] font-black uppercase tracking-widest text-stone-500 group-hover:text-stone-300 block">{stat.label}</span>
+                <div className={`text-4xl font-black ${stat.color} tracking-tight`}>{stat.val}</div>
+                <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden">
+                   <div className={`h-full bg-current ${stat.color} opacity-30 animate-[loading_2s_ease-in-out_infinite]`} style={{ width: '60%' }}></div>
+                </div>
               </div>
             ))}
           </div>
@@ -118,13 +152,18 @@ const Abstract = () => {
               <div className="w-20 h-2 bg-orange-600 rounded-full"></div>
               <p className="text-xl text-stone-300 leading-relaxed font-medium opacity-90">{t.abstract.p1}</p>
             </div>
-            <div className="relative">
-              <div className="absolute -inset-10 bg-orange-600/10 blur-[100px] rounded-full"></div>
-              <img 
-                src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200" 
-                alt="Satellite Earth" 
-                className="relative rounded-[3rem] shadow-2xl border border-white/10 z-10 transform -rotate-2"
-              />
+            <div className="relative group">
+              <div className="absolute -inset-10 bg-orange-600/10 blur-[100px] rounded-full group-hover:bg-orange-600/20 transition-all duration-1000"></div>
+              <div className="relative overflow-hidden rounded-[3rem] border border-white/10 shadow-2xl z-10">
+                 <img 
+                  src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200" 
+                  alt="Satellite Earth" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                {/* Scan line effect */}
+                <div className="absolute top-0 left-0 w-full h-1 bg-orange-500/50 shadow-[0_0_15px_rgba(234,88,12,0.8)] animate-[scan_4s_linear_infinite]"></div>
+              </div>
             </div>
           </div>
 
