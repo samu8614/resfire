@@ -6,12 +6,12 @@ import Assistant from './components/Assistant';
 import { WORK_PACKAGES } from './constants';
 import { LanguageProvider, useTranslation } from './context/LanguageContext';
 
-const Home = () => {
+const Abstract = () => {
   const { t } = useTranslation();
   
   return (
     <div className="relative">
-      {/* Hero Section */}
+      {/* Hero Section - The "Misión" content now starts the Abstract */}
       <section className="min-h-screen flex items-center justify-center text-center px-6 py-32 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-b from-stone-950/80 via-stone-950/40 to-stone-950 z-10"></div>
@@ -47,12 +47,9 @@ const Home = () => {
           </div>
 
           <div className="flex flex-wrap justify-center gap-6 pt-12 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
-            <a href="#/abstract" className="group relative px-12 py-5 bg-orange-600 text-white font-black rounded-full transition-all shadow-2xl shadow-orange-600/30 uppercase tracking-[0.2em] text-xs overflow-hidden">
-              <span className="relative z-10">{t.home.cta_primary}</span>
+            <a href="#/work-packages" className="group relative px-12 py-5 bg-orange-600 text-white font-black rounded-full transition-all shadow-2xl shadow-orange-600/30 uppercase tracking-[0.2em] text-xs overflow-hidden">
+              <span className="relative z-10">{t.home.cta_secondary}</span>
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
-            </a>
-            <a href="#/work-packages" className="px-12 py-5 bg-white/5 border border-white/10 hover:bg-white/10 text-white font-black rounded-full transition-all backdrop-blur-md uppercase tracking-[0.2em] text-xs">
-              {t.home.cta_secondary}
             </a>
           </div>
         </div>
@@ -62,7 +59,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Monitoring Dashboard Section */}
+      {/* Monitoring Dashboard Section - Part of Abstract flow */}
       <section className="py-24 bg-stone-950 border-y border-white/5">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
@@ -101,99 +98,59 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Featured Grid Section */}
-      <section className="py-32 bg-stone-950">
+      {/* Scientific Vision Section - Traditional Abstract Content */}
+      <section className="pt-32 pb-32 bg-stone-950">
         <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-3 gap-8">
-            <div className="group relative h-[600px] rounded-[3rem] overflow-hidden border border-white/5">
-              <img src="https://images.unsplash.com/photo-1521747116042-5a810fda9664?auto=format&fit=crop&q=80&w=800" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
-              <div className="absolute bottom-12 left-12 right-12">
-                <div className="w-12 h-1 bg-orange-500 mb-6"></div>
-                <h4 className="text-3xl font-black mb-2 uppercase tracking-tighter">Innovation</h4>
-                <p className="text-stone-400 text-xs uppercase tracking-[0.2em] font-bold">Predictive satellite algorithms</p>
+          <div className="max-w-6xl mx-auto space-y-32">
+            <div className="grid lg:grid-cols-2 gap-20 items-center">
+              <div className="space-y-10">
+                <span className="text-orange-500 font-black tracking-[0.4em] uppercase text-xs">Scientific Vision</span>
+                <h2 className="text-6xl md:text-8xl font-black text-white leading-[0.85] tracking-tighter">{t.abstract.title}</h2>
+                <div className="w-20 h-2 bg-orange-600 rounded-full"></div>
+                <p className="text-xl text-stone-300 leading-relaxed font-medium opacity-90">{t.abstract.p1}</p>
+              </div>
+              <div className="relative group">
+                <div className="absolute -inset-10 bg-orange-600/10 blur-[100px] rounded-full group-hover:bg-orange-600/20 transition-all duration-1000"></div>
+                <div className="relative overflow-hidden rounded-[3rem] border border-white/10 shadow-2xl z-10">
+                   <img 
+                    src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200" 
+                    alt="Satellite Earth" 
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                  <div className="absolute top-0 left-0 w-full h-1 bg-orange-500/50 shadow-[0_0_15px_rgba(234,88,12,0.8)] animate-[scan_4s_linear_infinite]"></div>
+                </div>
               </div>
             </div>
-            <div className="group relative h-[600px] rounded-[3rem] overflow-hidden border border-white/5 lg:translate-y-16">
-              <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=800" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
-              <div className="absolute bottom-12 left-12 right-12">
-                <div className="w-12 h-1 bg-emerald-500 mb-6"></div>
-                <h4 className="text-3xl font-black mb-2 uppercase tracking-tighter">Ecology</h4>
-                <p className="text-stone-400 text-xs uppercase tracking-[0.2em] font-bold">Climate-adaptive planting</p>
+
+            <div className="grid md:grid-cols-2 gap-10">
+              <div className="p-12 bg-stone-900/50 backdrop-blur-xl border border-white/5 rounded-[3rem] space-y-8 hover:bg-stone-900/80 transition-all group">
+                <div className="w-14 h-14 bg-orange-600/20 text-orange-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <i className="fa-solid fa-triangle-exclamation text-2xl"></i>
+                </div>
+                <h4 className="text-3xl font-black text-white tracking-tighter uppercase">{t.abstract.challenge_title}</h4>
+                <p className="text-stone-400 text-lg leading-relaxed">{t.abstract.challenge_desc}</p>
+              </div>
+              <div className="p-12 bg-stone-900/50 backdrop-blur-xl border border-white/5 rounded-[3rem] space-y-8 hover:bg-stone-900/80 transition-all group">
+                <div className="w-14 h-14 bg-emerald-600/20 text-emerald-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <i className="fa-solid fa-microchip text-2xl"></i>
+                </div>
+                <h4 className="text-3xl font-black text-white tracking-tighter uppercase">{t.abstract.solution_title}</h4>
+                <p className="text-stone-400 text-lg leading-relaxed">{t.abstract.solution_desc}</p>
               </div>
             </div>
-            <div className="group relative h-[600px] rounded-[3rem] overflow-hidden border border-white/5">
-              <img src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e?auto=format&fit=crop&q=80&w=800" className="w-full h-full object-cover grayscale transition-all duration-700 group-hover:grayscale-0 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent"></div>
-              <div className="absolute bottom-12 left-12 right-12">
-                <div className="w-12 h-1 bg-blue-500 mb-6"></div>
-                <h4 className="text-3xl font-black mb-2 uppercase tracking-tighter">Impact</h4>
-                <p className="text-stone-400 text-xs uppercase tracking-[0.2em] font-bold">Resilient local communities</p>
-              </div>
+            
+            <div className="bg-stone-900/30 p-16 rounded-[4rem] text-center border border-white/5 relative overflow-hidden">
+               <div className="absolute top-0 right-0 p-10 opacity-5">
+                 <i className="fa-solid fa-quote-right text-9xl"></i>
+               </div>
+              <p className="text-2xl md:text-3xl text-stone-300 leading-relaxed font-serif italic max-w-4xl mx-auto relative z-10">
+                "{t.abstract.p2}"
+              </p>
             </div>
           </div>
         </div>
       </section>
-    </div>
-  );
-};
-
-const Abstract = () => {
-  const { t } = useTranslation();
-  return (
-    <div className="pt-48 pb-32 bg-stone-950">
-      <div className="container mx-auto px-6">
-        <div className="max-w-6xl mx-auto space-y-32">
-          <div className="grid lg:grid-cols-2 gap-20 items-center">
-            <div className="space-y-10">
-              <span className="text-orange-500 font-black tracking-[0.4em] uppercase text-xs">Scientific Vision</span>
-              <h2 className="text-6xl md:text-8xl font-black text-white leading-[0.85] tracking-tighter">{t.abstract.title}</h2>
-              <div className="w-20 h-2 bg-orange-600 rounded-full"></div>
-              <p className="text-xl text-stone-300 leading-relaxed font-medium opacity-90">{t.abstract.p1}</p>
-            </div>
-            <div className="relative group">
-              <div className="absolute -inset-10 bg-orange-600/10 blur-[100px] rounded-full group-hover:bg-orange-600/20 transition-all duration-1000"></div>
-              <div className="relative overflow-hidden rounded-[3rem] border border-white/10 shadow-2xl z-10">
-                 <img 
-                  src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200" 
-                  alt="Satellite Earth" 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
-                {/* Scan line effect */}
-                <div className="absolute top-0 left-0 w-full h-1 bg-orange-500/50 shadow-[0_0_15px_rgba(234,88,12,0.8)] animate-[scan_4s_linear_infinite]"></div>
-              </div>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-10">
-            <div className="p-12 bg-stone-900/50 backdrop-blur-xl border border-white/5 rounded-[3rem] space-y-8 hover:bg-stone-900/80 transition-all group">
-              <div className="w-14 h-14 bg-orange-600/20 text-orange-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                <i className="fa-solid fa-triangle-exclamation text-2xl"></i>
-              </div>
-              <h4 className="text-3xl font-black text-white tracking-tighter uppercase">{t.abstract.challenge_title}</h4>
-              <p className="text-stone-400 text-lg leading-relaxed">{t.abstract.challenge_desc}</p>
-            </div>
-            <div className="p-12 bg-stone-900/50 backdrop-blur-xl border border-white/5 rounded-[3rem] space-y-8 hover:bg-stone-900/80 transition-all group">
-              <div className="w-14 h-14 bg-emerald-600/20 text-emerald-500 rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                <i className="fa-solid fa-microchip text-2xl"></i>
-              </div>
-              <h4 className="text-3xl font-black text-white tracking-tighter uppercase">{t.abstract.solution_title}</h4>
-              <p className="text-stone-400 text-lg leading-relaxed">{t.abstract.solution_desc}</p>
-            </div>
-          </div>
-          
-          <div className="bg-stone-900/30 p-16 rounded-[4rem] text-center border border-white/5 relative overflow-hidden">
-             <div className="absolute top-0 right-0 p-10 opacity-5">
-               <i className="fa-solid fa-quote-right text-9xl"></i>
-             </div>
-            <p className="text-2xl md:text-3xl text-stone-300 leading-relaxed font-serif italic max-w-4xl mx-auto relative z-10">
-              "{t.abstract.p2}"
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
@@ -214,13 +171,11 @@ const WorksPackages = () => {
             const content = wp.content[language];
             return (
               <div key={wp.id} className="group relative min-h-[400px] md:min-h-[500px] rounded-[3.5rem] overflow-hidden border border-white/5 flex flex-col justify-end p-10 md:p-16 transition-all">
-                {/* Background Image with Overlay */}
                 <div className="absolute inset-0">
                   <img src={wp.image} className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110" alt={content.title} />
                   <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/60 to-transparent"></div>
                 </div>
                 
-                {/* Content */}
                 <div className="relative z-10 max-w-4xl space-y-8 animate-fade-in-up">
                   <div className="flex items-center space-x-6">
                     <span className="text-4xl md:text-6xl font-black text-orange-600/40">{wp.id}</span>
@@ -333,8 +288,7 @@ const App: React.FC = () => {
       <Router>
         <Layout>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/abstract" element={<Abstract />} />
+            <Route path="/" element={<Abstract />} />
             <Route path="/work-packages" element={<WorksPackages />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
