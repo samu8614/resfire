@@ -92,7 +92,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
 
 export const TRANSLATIONS = {
   en: {
-    nav: { home: 'Home', abstract: 'Abstract', workPackages: 'Work Packages', team: 'Team', contact: 'Contact', language: 'Language' },
+    nav: { abstract: 'Abstract', workPackages: 'Work Packages', contact: 'Contact', language: 'Language' },
     home: {
       hero_sub: 'Proactive & Sustainable Management',
       hero_title: 'THE RESFIRE PROJECT',
@@ -136,7 +136,7 @@ export const TRANSLATIONS = {
     }
   },
   es: {
-    nav: { home: 'Inicio', abstract: 'Abstract', workPackages: 'Work Packages', team: 'Equipo', contact: 'Contacto', language: 'Idioma' },
+    nav: { abstract: 'Abstract', workPackages: 'Work Packages', contact: 'Contacto', language: 'Idioma' },
     home: {
       hero_sub: 'Gestión Proactiva y Sostenible',
       hero_title: 'EL PROYECTO RESFIRE',
@@ -180,7 +180,7 @@ export const TRANSLATIONS = {
     }
   },
   pt: {
-    nav: { home: 'Início', abstract: 'Abstract', workPackages: 'Pacotes', team: 'Equipa', contact: 'Contacto', language: 'Idioma' },
+    nav: { abstract: 'Abstract', workPackages: 'Pacotes', contact: 'Contacto', language: 'Idioma' },
     home: {
       hero_sub: 'Gestão Proativa e Sustentável',
       hero_title: 'O PROJETO RESFIRE',
