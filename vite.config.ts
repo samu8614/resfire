@@ -7,15 +7,15 @@ export default defineConfig(({ mode }) => {
   
   return {
     plugins: [react()],
-    base: './', // Crucial para que los archivos se encuentren en GitHub Pages
+    base: '', // Usar cadena vacía es más seguro para GitHub Pages que './'
     define: {
-      // Usamos una lógica más segura: si no hay key, inyectamos un string vacío para que no explote el JS
       'process.env.API_KEY': JSON.stringify(env.API_KEY || "")
     },
     build: {
       outDir: 'dist',
       assetsDir: 'assets',
-      emptyOutDir: true
+      emptyOutDir: true,
+      sourcemap: false
     }
   };
 });
