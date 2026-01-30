@@ -11,7 +11,7 @@ const Home = () => {
   
   return (
     <div className="relative">
-      {/* Hero Section - Updated with Green Forest and Project Text */}
+      {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center text-center px-6 py-32 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-b from-stone-950/80 via-stone-950/40 to-stone-950 z-10"></div>
@@ -209,32 +209,39 @@ const WorksPackages = () => {
           <p className="text-xl text-stone-400 font-medium max-w-2xl">{t.work_packages.subtitle}</p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8">
-          {WORK_PACKAGES.map((wp) => {
+        <div className="grid gap-12">
+          {WORK_PACKAGES.map((wp, idx) => {
             const content = wp.content[language];
             return (
-              <div key={wp.id} className="group relative overflow-hidden bg-stone-900/40 border border-white/5 rounded-[3rem] p-12 transition-all hover:bg-stone-900/60">
-                <div className="absolute top-0 right-0 p-8">
-                   <span className="text-8xl font-black text-white/5 select-none">{wp.id}</span>
+              <div key={wp.id} className="group relative min-h-[400px] md:min-h-[500px] rounded-[3.5rem] overflow-hidden border border-white/5 flex flex-col justify-end p-10 md:p-16 transition-all">
+                {/* Background Image with Overlay */}
+                <div className="absolute inset-0">
+                  <img src={wp.image} className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110" alt={content.title} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/60 to-transparent"></div>
                 </div>
-                <div className="relative z-10 flex flex-col h-full space-y-10">
-                  <div className={`w-20 h-20 ${wp.color} rounded-3xl flex items-center justify-center text-white text-3xl shadow-xl transform group-hover:rotate-12 transition-transform`}>
-                    <i className={`fa-solid ${wp.icon}`}></i>
-                  </div>
-                  <div className="space-y-6">
-                    <h3 className="text-4xl font-black text-white leading-tight tracking-tighter uppercase">{content.title}</h3>
-                    <p className="text-stone-400 text-lg leading-relaxed">{content.description}</p>
+                
+                {/* Content */}
+                <div className="relative z-10 max-w-4xl space-y-8 animate-fade-in-up">
+                  <div className="flex items-center space-x-6">
+                    <span className="text-4xl md:text-6xl font-black text-orange-600/40">{wp.id}</span>
+                    <div className="w-12 h-1 bg-orange-600 rounded-full"></div>
                   </div>
                   
-                  <div className="pt-6 border-t border-white/5 space-y-4">
-                    <h4 className="text-[10px] font-black uppercase tracking-[0.4em] text-orange-500">{t.work_packages.milestones}</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {content.tasks.map((task, idx) => (
-                        <div key={idx} className="px-4 py-2 bg-stone-950/50 border border-white/5 rounded-xl text-[10px] font-bold uppercase tracking-widest text-stone-300">
-                          {task}
-                        </div>
-                      ))}
-                    </div>
+                  <div className="space-y-4">
+                    <h3 className="text-3xl md:text-5xl font-black text-white leading-[1.1] tracking-tight uppercase">
+                      {content.title}
+                    </h3>
+                    <p className="text-stone-300 text-lg md:text-xl leading-relaxed max-w-3xl opacity-80 font-medium">
+                      {content.description}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-wrap gap-4 pt-4">
+                    {content.tasks.map((task, i) => (
+                      <span key={i} className="px-5 py-2.5 bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-[10px] font-black uppercase tracking-widest text-stone-200">
+                        {task}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
