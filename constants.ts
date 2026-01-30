@@ -1,92 +1,67 @@
 
 import { WorkPackage, TeamMember } from './types';
 
-export const WORK_PACKAGES: WorkPackage[] = [
+export const WORK_PACKAGES: any[] = [
   {
-    id: '01',
-    icon: 'fa-microchip',
-    color: 'bg-orange-600',
+    id: 'WP1',
+    image: 'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80&w=1600',
     content: {
       en: {
-        title: 'Neural Risk Detection',
-        description: 'Implementing deep learning models that process multispectral satellite data to identify "pre-ignition" heat signatures before smoke is even visible.',
-        tasks: ['AI Training', 'Satellite Integration', 'Live Heatmaps']
+        title: 'WP1. Understanding and quantifying human control on fire regimes in Mediterranean landscapes',
+        description: 'Analyzing the historical and current influence of human activities on fire patterns to better predict future risks.',
+        tasks: ['Data Quantification', 'Human Impact Analysis', 'Regime Mapping']
       },
       es: {
-        title: 'Detección Neuronal de Riesgos',
-        description: 'Implementación de modelos de aprendizaje profundo que procesan datos satelitales multiespectrales para identificar firmas de calor "pre-ignición" antes de que el humo sea visible.',
-        tasks: ['Entrenamiento de IA', 'Integración Satelital', 'Mapas de Calor en Vivo']
+        title: 'WP1. Comprender y cuantificar el control humano sobre los regímenes de incendios en paisajes mediterráneos',
+        description: 'Analizar la influencia histórica y actual de las actividades humanas en los patrones de fuego para predecir mejor los riesgos futuros.',
+        tasks: ['Cuantificación de Datos', 'Análisis de Impacto Humano', 'Mapeo de Regímenes']
       },
       pt: {
-        title: 'Deteção Neuronal de Riscos',
-        description: 'Implementação de modelos de aprendizagem profunda que processam dados de satélite multiespectrais para identificar assinaturas de calor antes do fumo ser visível.',
-        tasks: ['Treino de IA', 'Integração de Satélite', 'Mapas de Calor']
+        title: 'WP1. Compreender e quantificar o controlo humano sobre os regimes de fogo em paisagens mediterrânicas',
+        description: 'Analisar a influência histórica e atual das atividades humanas nos padrões de fogo para prever melhor os riscos futuros.',
+        tasks: ['Quantificação de Dados', 'Análise de Impacto Humano', 'Mapeamento de Regimes']
       }
     }
   },
   {
-    id: '02',
-    icon: 'fa-seedling',
-    color: 'bg-emerald-600',
+    id: 'WP2',
+    image: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&q=80&w=1600',
     content: {
       en: {
-        title: 'Biodiversity Resilience',
-        description: 'Restoring mosaic landscapes using fire-resistant native species to create natural biological barriers that slow down fire progression.',
-        tasks: ['Seed Engineering', 'Mosaic Planting', 'Soil Recovery']
+        title: 'WP2. Identifying the role of ecological processes behind biodiversity responses to fire in the restoration of ecological fire regimes',
+        description: 'Studying how different species and ecosystems react to fire to restore natural balance and resilience.',
+        tasks: ['Ecological Processes', 'Biodiversity Monitoring', 'Restoration Science']
       },
       es: {
-        title: 'Resiliencia de la Biodiversidad',
-        description: 'Restauración de paisajes en mosaico utilizando especies nativas resistentes al fuego para crear barreras biológicas naturales que frenen la progresión del fuego.',
-        tasks: ['Ingeniería de Semillas', 'Plantación en Mosaico', 'Recuperación de Suelo']
+        title: 'WP2. Identificar el papel de los procesos ecológicos detrás de las respuestas de la biodiversidad al fuego en la restauración de regímenes de fuego ecológicos',
+        description: 'Estudiar cómo reaccionan las diferentes especies y ecosistemas al fuego para restaurar el equilibrio natural.',
+        tasks: ['Procesos Ecológicos', 'Monitoreo de Biodiversidad', 'Ciencia de Restauración']
       },
       pt: {
-        title: 'Resiliência da Biodiversidade',
-        description: 'Restauração de paisagens em mosaico utilizando espécies nativas resistentes ao fogo para criar barreiras biológicas naturais.',
-        tasks: ['Engenharia de Sementes', 'Plantação em Mosaico', 'Recuperação de Solo']
+        title: 'WP2. Identificar o papel dos processos ecológicos por trás das respostas da biodiversidade ao fogo na restauração de regimes de fogo ecológicos',
+        description: 'Estudar como diferentes espécies e ecossistemas reagem ao fogo para restaurar o equilíbrio natural.',
+        tasks: ['Processos Ecológicos', 'Monitorização da Biodiversidade', 'Ciência da Restauração']
       }
     }
   },
   {
-    id: '03',
-    icon: 'fa-drone-ops',
-    color: 'bg-blue-600',
+    id: 'WP3',
+    image: 'https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&q=80&w=1600',
     content: {
       en: {
-        title: 'Autonomous Swarm Response',
-        description: 'Coordinating swarms of autonomous drones for high-precision delivery of eco-friendly retardants in difficult-to-reach terrains.',
-        tasks: ['Swarm Logic', 'Precision Delivery', 'Terrain Mapping']
+        title: 'WP3. Using the Nature Futures Framework (NFF) to guide the future potential of ecological fire regimes as NbS to extreme wildfires',
+        description: 'Applying global frameworks to develop nature-based solutions that transform fire from a threat into a management tool.',
+        tasks: ['NFF Framework', 'Nature-based Solutions', 'Strategic Planning']
       },
       es: {
-        title: 'Respuesta de Enjambres Autónomos',
-        description: 'Coordinación de enjambres de drones autónomos para la entrega de alta precisión de retardantes ecológicos en terrenos de difícil acceso.',
-        tasks: ['Lógica de Enjambre', 'Entrega de Precisión', 'Mapeo de Terreno']
+        title: 'WP3. Uso del Nature Futures Framework (NFF) para guiar el potencial futuro de los regímenes de fuego ecológicos como NbS ante incendios extremos',
+        description: 'Aplicar marcos globales para desarrollar soluciones basadas en la naturaleza que transformen el fuego en una herramienta de gestión.',
+        tasks: ['Marco NFF', 'Soluciones Basadas en Naturaleza', 'Planificación Estratégica']
       },
       pt: {
-        title: 'Resposta de Enxames Autónomos',
-        description: 'Coordenação de enxames de drones autónomos para a entrega de alta precisão de retardadores ecológicos.',
-        tasks: ['Lógica de Enxame', 'Entrega de Precisión', 'Mapeamento']
-      }
-    }
-  },
-  {
-    id: '04',
-    icon: 'fa-handshake-angle',
-    color: 'bg-stone-700',
-    content: {
-      en: {
-        title: 'Socio-Legal Framework',
-        description: 'Collaborating with policy makers and local communities to update Wildland-Urban Interface (WUI) laws and crisis protocols.',
-        tasks: ['Policy Drafting', 'Local Workshops', 'Crisis Apps']
-      },
-      es: {
-        title: 'Marco Socio-Legal',
-        description: 'Colaboración con legisladores y comunidades locales para actualizar las leyes de Interfaz Urbano-Forestal (WUI) y protocolos de crisis.',
-        tasks: ['Redacción de Políticas', 'Talleres Locales', 'Apps de Crisis']
-      },
-      pt: {
-        title: 'Estrutura Sócio-Legal',
-        description: 'Colaboração com decisores políticos e comunidades locais para atualizar as leis de Interface Urbano-Florestal (WUI).',
-        tasks: ['Redação de Políticas', 'Workshops Locais', 'Apps de Crise']
+        title: 'WP3. Utilização do Nature Futures Framework (NFF) para guiar o potencial futuro dos regimes de fogo ecológicos como NbS perante incêndios extremos',
+        description: 'Aplicar estruturas globais para desenvolver soluções baseadas na natureza que transformem o fogo numa ferramenta de gestão.',
+        tasks: ['Estrutura NFF', 'Soluções Baseadas na Natureza', 'Planeamento Estratégico']
       }
     }
   }
@@ -138,8 +113,8 @@ export const TRANSLATIONS = {
     },
     work_packages: {
       title: 'Strategy',
-      subtitle: 'The project is organized into four core strategic pillars, each focusing on a critical aspect of wildfire reduction.',
-      milestones: 'Operational Areas'
+      subtitle: 'The project is organized into three strategic work packages designed to restore resilient fire regimes.',
+      milestones: 'Focus Areas'
     },
     contact: {
       title: 'Contact',
@@ -182,8 +157,8 @@ export const TRANSLATIONS = {
     },
     work_packages: {
       title: 'Estrategia',
-      subtitle: 'El proyecto se organiza en cuatro pilares fundamentales, cada uno enfocado en un aspecto crítico de la reducción de incendios.',
-      milestones: 'Áreas Operativas'
+      subtitle: 'El proyecto se organiza en tres paquetes de trabajo estratégicos diseñados para restaurar regímenes de fuego resilientes.',
+      milestones: 'Áreas de Enfoque'
     },
     contact: {
       title: 'Contacto',
@@ -220,14 +195,14 @@ export const TRANSLATIONS = {
       p1: 'As alterações climáticas alteraram o regime de incêndios. O Resfire representa uma mudança para paisagens proativas e resilientes.',
       challenge_title: 'O Desafio',
       challenge_desc: 'O aumento das temperaturas criou "mega-incêndios" que excedem a capacidade humana de supressão.',
-      solution_title: 'A Solução',
+      solution_title: 'La Solución',
       solution_desc: 'Integração de aprendizagem profunda, sensores IoT e gestão florestal adaptativa.',
       p2: 'Nossa missão é tratar a floresta como um sistema dinâmico gerido pela ciência.',
     },
     work_packages: {
       title: 'Estratégia',
-      subtitle: 'O projeto está organizado em quatro pilares estratégicos fundamentais.',
-      milestones: 'Áreas Operacionais'
+      subtitle: 'O projeto está organizado em três pacotes de trabalho estratégicos concebidos para restaurar regimes de fogo resilientes.',
+      milestones: 'Áreas de Foco'
     },
     contact: {
       title: 'Contacto',
