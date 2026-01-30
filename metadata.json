@@ -1,0 +1,7 @@
+{
+  "name": "Resfire Project",
+  "description": "An advanced research project dedicated to the reduction and prevention of forest fires through technological innovation and sustainable management.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
