@@ -98,6 +98,17 @@ export const PODCASTS = [
   }
 ];
 
+export const NEWS = [
+  {
+    id: 'news-faro-vigo-2025',
+    source: 'Faro de Vigo',
+    date: '10/03/2025',
+    title: '«El fuego bien gestionado puede ser clave para prevenir incendios extremos»',
+    url: 'https://www.farodevigo.es/galicia/2025/03/10/adrian-regos-fuego-gestionado-clave-prevenir-incendios-115112216.html',
+    image: 'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80&w=1200'
+  }
+];
+
 export const WORK_PACKAGES: any[] = [
   {
     id: 'WP1',
