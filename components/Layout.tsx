@@ -39,6 +39,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         { name: t.outputs.news, path: '/outputs/news' },
       ]
     },
+    { name: t.nav.team, path: '/team' },
     { name: t.nav.contact, path: '/contact' },
   ];
 
