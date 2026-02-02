@@ -277,7 +277,7 @@ const Outputs = () => {
                 {/* Articles Section */}
                 <div className="grid gap-8">
                   {PUBLICATIONS.map(pub => (
-                    <div key={pub.id} className="bg-stone-900/30 p-10 rounded-[3rem] border border-white/5 hover:border-white/10 transition-all group">
+                    <div key={pub.id} className="bg-stone-900/30 p-10 rounded-[3rem] border border-white/10 transition-all group">
                       <div className="flex items-start space-x-6">
                          <div className="w-12 h-12 bg-orange-600/10 rounded-2xl flex items-center justify-center text-orange-500 flex-shrink-0">
                             <i className="fa-solid fa-book-open"></i>
@@ -376,7 +376,7 @@ const Outputs = () => {
                     rel="noopener noreferrer" 
                     className="group flex flex-col space-y-6"
                   >
-                    <div className="aspect-video bg-stone-900 rounded-[2.5rem] overflow-hidden border border-white/5 relative shadow-xl">
+                    <div className="aspect-video bg-stone-950 rounded-[2.5rem] overflow-hidden border border-white/5 relative shadow-xl">
                        <img 
                         src={item.image} 
                         className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105 opacity-60 group-hover:opacity-100" 
@@ -428,7 +428,12 @@ const Team = () => {
                   <div className="space-y-4">
                     <div className="inline-block px-4 py-1.5 bg-orange-600/10 border border-orange-500/20 rounded-full text-[9px] font-black uppercase tracking-[0.3em] text-orange-500 mb-2">Institutional Partner</div>
                     <h3 className="text-4xl md:text-6xl font-black text-white tracking-tighter leading-none uppercase group-hover:text-orange-500 transition-colors">
-                      <a href={partner.url} target="_blank" rel="noopener noreferrer" className="hover:underline decoration-orange-600 underline-offset-8">
+                      <a 
+                        href={partner.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        className="hover:underline decoration-orange-600 underline-offset-8"
+                      >
                         {partner.name}
                       </a>
                     </h3>
@@ -468,27 +473,57 @@ const Contact = () => {
               <h2 className="text-6xl md:text-9xl font-black text-white leading-[0.8] tracking-tighter">{t.contact.title}</h2>
               <p className="text-xl text-stone-400 font-medium leading-relaxed">{t.contact.subtitle}</p>
             </div>
+
+            {/* Principal Researchers Section */}
             <div className="space-y-10">
-              <div className="flex items-start space-x-6 group">
-                <div className="w-14 h-14 bg-stone-900 border border-white/10 rounded-2xl flex items-center justify-center text-orange-500 group-hover:bg-orange-600 group-hover:text-white transition-all">
-                  <i className="fa-solid fa-envelope text-xl"></i>
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="h-px flex-grow bg-white/10"></div>
+                <span className="text-[10px] font-black uppercase tracking-[0.4em] text-stone-500 whitespace-nowrap">Principal Researchers</span>
+                <div className="h-px flex-grow bg-white/10"></div>
+              </div>
+
+              {/* Research Contact 1 */}
+              <div className="flex items-center space-x-6 group animate-fade-in-up">
+                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-orange-500/50 transition-all flex-shrink-0 shadow-2xl">
+                  <img src="/regos2.jpg" alt="Adrián Regos Sanz" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" />
                 </div>
-                <div>
-                  <h4 className="font-black text-white uppercase tracking-widest text-[10px] mb-1">General Inquiries</h4>
-                  <p className="text-stone-400 font-bold tracking-widest uppercase">RESEARCH@RESFIRE.ORG</p>
+                <div className="space-y-1">
+                  <h4 className="font-black text-white text-lg tracking-tight uppercase group-hover:text-orange-500 transition-colors">Adrián Regos Sanz</h4>
+                  <a href="mailto:aregos@mbg.csic.es" className="text-stone-400 font-bold tracking-widest uppercase text-[10px] hover:text-white transition-colors flex items-center space-x-2">
+                    <i className="fa-solid fa-envelope text-[8px]"></i>
+                    <span>aregos@mbg.csic.es</span>
+                  </a>
                 </div>
               </div>
-              <div className="flex items-start space-x-6 group">
-                <div className="w-14 h-14 bg-stone-900 border border-white/10 rounded-2xl flex items-center justify-center text-orange-500 group-hover:bg-orange-600 group-hover:text-white transition-all">
-                  <i className="fa-solid fa-location-dot text-xl"></i>
+
+              {/* Research Contact 2 */}
+              <div className="flex items-center space-x-6 group animate-fade-in-up" style={{ animationDelay: '100ms' }}>
+                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-orange-500/50 transition-all flex-shrink-0 shadow-2xl">
+                  <img src="/Brotons.jpg" alt="Lluís Brotons Alabau" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" />
                 </div>
-                <div>
-                  <h4 className="font-black text-white uppercase tracking-widest text-[10px] mb-1">{t.contact.hub}</h4>
-                  <p className="text-stone-400 text-sm leading-relaxed max-w-[200px]">{t.contact.address}</p>
+                <div className="space-y-1">
+                  <h4 className="font-black text-white text-lg tracking-tight uppercase group-hover:text-orange-500 transition-colors">Lluís Brotons Alabau</h4>
+                  <a href="mailto:l.brotons@creaf.uab.cat" className="text-stone-400 font-bold tracking-widest uppercase text-[10px] hover:text-white transition-colors flex items-center space-x-2">
+                    <i className="fa-solid fa-envelope text-[8px]"></i>
+                    <span>l.brotons@creaf.uab.cat</span>
+                  </a>
+                </div>
+              </div>
+
+              <div className="pt-10 space-y-8">
+                <div className="flex items-start space-x-6 group">
+                  <div className="w-14 h-14 bg-stone-900 border border-white/10 rounded-2xl flex items-center justify-center text-orange-500 group-hover:bg-orange-600 group-hover:text-white transition-all">
+                    <i className="fa-solid fa-location-dot text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 className="font-black text-white uppercase tracking-widest text-[10px] mb-1">{t.contact.hub}</h4>
+                    <p className="text-stone-400 text-sm leading-relaxed max-w-[200px]">{t.contact.address}</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
           <div className="lg:col-span-3 bg-stone-900 border border-white/5 p-12 md:p-16 rounded-[4rem] shadow-2xl relative overflow-hidden">
              <div className="absolute top-0 right-0 p-8 opacity-10">
                 <i className="fa-solid fa-paper-plane text-8xl text-stone-500"></i>
