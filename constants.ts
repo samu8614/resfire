@@ -72,7 +72,7 @@ export const CONFERENCES = [
     id: 'conf-regos-2025-pt',
     authors: 'Regos A*',
     year: '2025',
-    title: 'O uso do fogo como solução baseada na natureza: os grandes incêndios florestais em paisagens rurais abandonadas',
+    title: 'O uso do fogo como solução baseada na naturaleza: os grandes incêndios florestais em paisagens rurais abandonadas',
     event: 'Ponencia invitada na Conferência “Floresta e Fogos: que futuro?',
     date: '3 de outubro de 2025',
     location: 'Ponte de Lima (Portugal)'
@@ -112,14 +112,14 @@ export const NEWS = [
 export const PARTNERS = [
   {
     id: 'mbg',
-    name: 'Misión Biológica de Galicia (CSIC)',
-    logo: 'https://mbg.csic.es/wp-content/uploads/2019/02/logo_mbg.png',
+    name: 'Misión Biológica de Galicia',
+    url: 'https://mbg.csic.es/es/',
     description: 'The Misión Biológica de Galicia has an excellent research record in the study of the responses of landscapes and the key ecosystem services provided such as carbon or water provisioning to main drivers such as wildfires, accounting for much of the information needed in the development of landscape dynamic models in complex socio-ecological contexts.'
   },
   {
     id: 'creaf',
     name: 'CREAF',
-    logo: 'https://www.creaf.cat/sites/default/files/creaf_logo_principal.png',
+    url: 'https://www.creaf.cat/es',
     description: 'The Centre for Ecological Research and Forestry Applications as gained experience in establishing links between landscape dynamics, in terms of composition and configuration of major landscape components and their derived biodiversity responses. This has been possible thanks to developing a spatially explicit landscape model (SELM), aimed at simulating forest dynamics under different fire regimes.'
   }
 ];
@@ -141,7 +141,7 @@ export const WORK_PACKAGES: any[] = [
       },
       pt: {
         title: 'WP1. Compreender e quantificar o controlo humano sobre os regimes de fogo em paisagens mediterrânicas',
-        description: 'Analisar a influência histórica e atual das atividades humanas nos padrões de fogo para prever melhor os riscos futuros.',
+        description: 'Analisar a influência histórica e atual das actividades humanas nos padrões de fogo para prever melhor os riscos futuros.',
         tasks: ['Quantificação de Dados', 'Análise de Impacto Humano', 'Mapeamento de Regimes']
       }
     }
@@ -162,7 +162,7 @@ export const WORK_PACKAGES: any[] = [
       },
       pt: {
         title: 'WP2. Identificar o papel dos procesos ecológicos por trás das respostas da biodiversidade ao fogo na restauração de regimes de fogo ecológicos',
-        description: 'Estudar como diferentes espécies e ecossistemas reagem ao fogo para restaurar o equilíbrio natural.',
+        description: 'Estudar como diferentes espécies e ecossistemas reagem ao fogo para restaurar el equilibrio natural.',
         tasks: ['Processos Ecológicos', 'Monitorização da Biodiversidade', 'Ciência da Restauração']
       }
     }
