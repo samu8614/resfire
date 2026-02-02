@@ -7,6 +7,7 @@ import { Language } from '../types';
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isLangOpen, setIsLangOpen] = useState(false);
+  const [isOutputsOpen, setIsOutputsOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const { language, setLanguage, t } = useTranslation();
@@ -22,12 +23,22 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   useEffect(() => {
     setIsMobileMenuOpen(false);
     setIsLangOpen(false);
+    setIsOutputsOpen(false);
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
   const navLinks = [
     { name: t.nav.abstract, path: '/' },
     { name: t.nav.workPackages, path: '/work-packages' },
+    { 
+      name: t.nav.outputs, 
+      path: '/outputs',
+      subMenu: [
+        { name: t.outputs.publications, path: '/outputs/publications' },
+        { name: t.outputs.podcasts, path: '/outputs/podcasts' },
+        { name: t.outputs.news, path: '/outputs/news' },
+      ]
+    },
     { name: t.nav.contact, path: '/contact' },
   ];
 
@@ -53,16 +64,33 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           
           <div className="hidden md:flex items-center space-x-10">
             {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={`text-[10px] font-bold uppercase tracking-[0.3em] transition-all hover:text-orange-500 relative group ${
-                  location.pathname === link.path ? 'text-orange-500' : 'text-stone-300'
-                }`}
-              >
-                {link.name}
-                <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full ${location.pathname === link.path ? 'w-full' : ''}`}></span>
-              </Link>
+              <div key={link.path} className="relative group/nav" onMouseEnter={() => link.subMenu && setIsOutputsOpen(true)} onMouseLeave={() => setIsOutputsOpen(false)}>
+                <Link
+                  to={link.path}
+                  className={`text-[10px] font-bold uppercase tracking-[0.3em] transition-all hover:text-orange-500 relative flex items-center space-x-1 ${
+                    location.pathname.startsWith(link.path) && link.path !== '/' ? 'text-orange-500' : 
+                    location.pathname === '/' && link.path === '/' ? 'text-orange-500' : 'text-stone-300'
+                  }`}
+                >
+                  <span>{link.name}</span>
+                  {link.subMenu && <i className="fa-solid fa-chevron-down text-[8px] opacity-50 group-hover/nav:rotate-180 transition-transform"></i>}
+                  <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover/nav:w-full ${location.pathname.startsWith(link.path) && (link.path !== '/' || location.pathname === '/') ? 'w-full' : ''}`}></span>
+                </Link>
+
+                {link.subMenu && isOutputsOpen && (
+                  <div className="absolute left-0 mt-4 w-64 bg-stone-900 border border-white/5 rounded-2xl p-4 shadow-2xl animate-fade-in-up">
+                    {link.subMenu.map(sub => (
+                      <Link 
+                        key={sub.path} 
+                        to={sub.path}
+                        className="block px-4 py-3 text-[9px] font-black uppercase tracking-[0.2em] text-stone-400 hover:text-orange-500 hover:bg-white/5 rounded-xl transition-all"
+                      >
+                        {sub.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
 
             <div className="relative">
@@ -96,10 +124,19 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         </div>
 
         <div className={`md:hidden transition-all duration-500 ease-in-out bg-stone-950 fixed inset-0 z-40 ${isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
-          <div className="flex flex-col p-10 space-y-10 h-full justify-center items-center">
+          <div className="flex flex-col p-10 space-y-8 h-full justify-center items-center text-center overflow-y-auto pt-24">
              <button onClick={() => setIsMobileMenuOpen(false)} className="absolute top-8 right-6 text-3xl text-stone-500"><i className="fa-solid fa-xmark"></i></button>
             {navLinks.map((link) => (
-              <Link key={link.path} to={link.path} className="text-5xl font-black uppercase tracking-tighter text-white hover:text-orange-500 transition-colors">{link.name}</Link>
+              <div key={link.path} className="flex flex-col items-center">
+                <Link to={link.path} className="text-4xl font-black uppercase tracking-tighter text-white hover:text-orange-500 transition-colors">{link.name}</Link>
+                {link.subMenu && (
+                  <div className="flex flex-col mt-4 space-y-2">
+                    {link.subMenu.map(sub => (
+                      <Link key={sub.path} to={sub.path} className="text-xs uppercase tracking-[0.3em] font-bold text-stone-500 hover:text-orange-500">{sub.name}</Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
             <div className="flex space-x-4 pt-10">
                {languages.map(lang => (
