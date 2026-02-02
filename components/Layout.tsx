@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from '../context/LanguageContext';
 import { Language } from '../types';
@@ -9,6 +9,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isLangOpen, setIsLangOpen] = useState(false);
   const [isOutputsOpen, setIsOutputsOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const timeoutRef = useRef<number | null>(null);
   const location = useLocation();
   const { language, setLanguage, t } = useTranslation();
 
@@ -27,6 +28,17 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     window.scrollTo(0, 0);
   }, [location.pathname]);
 
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) window.clearTimeout(timeoutRef.current);
+    setIsOutputsOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = window.setTimeout(() => {
+      setIsOutputsOpen(false);
+    }, 150); // Pequeño delay para que no se cierre si el usuario es rápido
+  };
+
   const navLinks = [
     { name: t.nav.abstract, path: '/' },
     { name: t.nav.workPackages, path: '/work-packages' },
@@ -34,9 +46,9 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       name: t.nav.outputs, 
       path: '/outputs',
       subMenu: [
-        { name: t.outputs.publications, path: '/outputs/publications' },
-        { name: t.outputs.podcasts, path: '/outputs/podcasts' },
-        { name: t.outputs.news, path: '/outputs/news' },
+        { name: t.outputs.publications, path: '/outputs/publications', icon: 'fa-file-lines' },
+        { name: t.outputs.podcasts, path: '/outputs/podcasts', icon: 'fa-microphone-lines' },
+        { name: t.outputs.news, path: '/outputs/news', icon: 'fa-newspaper' },
       ]
     },
     { name: t.nav.team, path: '/team' },
@@ -67,49 +79,52 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             {navLinks.map((link) => (
               <div 
                 key={link.path} 
-                className="relative" 
-                onMouseEnter={() => link.subMenu && setIsOutputsOpen(true)} 
-                onMouseLeave={() => link.subMenu && setIsOutputsOpen(false)}
+                className="relative group"
+                onMouseEnter={link.subMenu ? handleMouseEnter : undefined} 
+                onMouseLeave={link.subMenu ? handleMouseLeave : undefined}
               >
-                {/* Contenedor del link con padding inferior para evitar huecos al mover el mouse */}
-                <div className="pb-4">
-                  <Link
-                    to={link.path}
-                    className={`text-[10px] font-bold uppercase tracking-[0.3em] transition-all hover:text-orange-500 relative flex items-center space-x-1 ${
-                      location.pathname.startsWith(link.path) && link.path !== '/' ? 'text-orange-500' : 
-                      location.pathname === '/' && link.path === '/' ? 'text-orange-500' : 'text-stone-300'
-                    }`}
-                  >
-                    <span>{link.name}</span>
-                    {link.subMenu && <i className="fa-solid fa-chevron-down text-[8px] opacity-50 group-hover:rotate-180 transition-transform"></i>}
-                    <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full ${location.pathname.startsWith(link.path) && (link.path !== '/' || location.pathname === '/') ? 'w-full' : ''}`}></span>
-                  </Link>
-                </div>
+                <Link
+                  to={link.path}
+                  className={`text-[10px] font-bold uppercase tracking-[0.3em] transition-all hover:text-orange-500 relative flex items-center space-x-2 py-2 ${
+                    location.pathname.startsWith(link.path) && link.path !== '/' ? 'text-orange-500' : 
+                    location.pathname === '/' && link.path === '/' ? 'text-orange-500' : 'text-stone-300'
+                  }`}
+                >
+                  <span>{link.name}</span>
+                  {link.subMenu && (
+                    <i className={`fa-solid fa-chevron-down text-[7px] transition-transform duration-300 ${isOutputsOpen ? 'rotate-180 text-orange-500' : 'opacity-40'}`}></i>
+                  )}
+                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-orange-500 transition-all duration-300 ${location.pathname.startsWith(link.path) && (link.path !== '/' || location.pathname === '/') ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
+                </Link>
 
+                {/* Submenú Desplegable con "puente" invisible para estabilidad */}
                 {link.subMenu && isOutputsOpen && (
-                  <div className="absolute left-0 top-6 w-64 bg-stone-900/95 backdrop-blur-xl border border-white/5 rounded-2xl p-4 shadow-[0_20px_50px_rgba(0,0,0,0.5)] animate-fade-in z-[100]">
-                    {/* Triángulo indicador opcional */}
-                    <div className="absolute -top-1 left-4 w-2 h-2 bg-stone-900 border-l border-t border-white/5 rotate-45"></div>
-                    
-                    <div className="flex flex-col space-y-1 relative">
-                      {link.subMenu.map(sub => (
-                        <Link 
-                          key={sub.path} 
-                          to={sub.path}
-                          className={`block px-4 py-3 text-[9px] font-black uppercase tracking-[0.2em] rounded-xl transition-all ${
-                            location.pathname === sub.path 
-                              ? 'bg-orange-600 text-white shadow-lg shadow-orange-600/20' 
-                              : 'text-stone-400 hover:text-orange-500 hover:bg-white/5'
-                          }`}
-                        >
-                          {sub.name}
-                        </Link>
-                      ))}
+                  <div className="absolute left-0 top-full w-64 pt-4 z-[100] animate-fade-in">
+                    <div className="bg-stone-900/95 backdrop-blur-2xl border border-white/10 rounded-2xl p-2 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8)] overflow-hidden">
+                      <div className="flex flex-col">
+                        {link.subMenu.map(sub => (
+                          <Link 
+                            key={sub.path} 
+                            to={sub.path}
+                            className={`flex items-center space-x-4 px-4 py-3.5 text-[9px] font-black uppercase tracking-[0.2em] rounded-xl transition-all ${
+                              location.pathname === sub.path 
+                                ? 'bg-orange-600 text-white shadow-lg' 
+                                : 'text-stone-400 hover:text-orange-500 hover:bg-white/5'
+                            }`}
+                          >
+                            <i className={`fa-solid ${sub.icon} text-xs opacity-50`}></i>
+                            <span className="flex-grow">{sub.name}</span>
+                            <i className="fa-solid fa-arrow-right text-[7px] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all"></i>
+                          </Link>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 )}
               </div>
             ))}
+
+            <div className="h-6 w-px bg-white/10 mx-2"></div>
 
             <div className="relative">
               <button 
@@ -121,7 +136,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
               </button>
               
               {isLangOpen && (
-                <div className="absolute right-0 mt-3 w-32 bg-stone-900 border border-stone-800 rounded-xl py-2 shadow-2xl animate-fade-in-up">
+                <div className="absolute right-0 mt-3 w-32 bg-stone-900 border border-stone-800 rounded-xl py-2 shadow-2xl animate-fade-in-up z-[110]">
                   {languages.map((lang) => (
                     <button
                       key={lang.code}
@@ -143,23 +158,22 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
         {/* Menú Móvil */}
         <div className={`md:hidden transition-all duration-500 ease-in-out bg-stone-950 fixed inset-0 z-40 ${isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
-          <div className="flex flex-col p-10 space-y-8 h-full justify-center items-center text-center overflow-y-auto pt-24">
-             <button onClick={() => setIsMobileMenuOpen(false)} className="absolute top-8 right-6 text-3xl text-stone-500"><i className="fa-solid fa-xmark"></i></button>
+          <div className="flex flex-col p-10 h-full justify-center items-center text-center overflow-y-auto pt-24 space-y-10">
             {navLinks.map((link) => (
-              <div key={link.path} className="flex flex-col items-center">
+              <div key={link.path} className="flex flex-col items-center space-y-4">
                 <Link to={link.path} className="text-4xl font-black uppercase tracking-tighter text-white hover:text-orange-500 transition-colors">{link.name}</Link>
                 {link.subMenu && (
-                  <div className="flex flex-col mt-4 space-y-2">
+                  <div className="flex flex-wrap justify-center gap-4">
                     {link.subMenu.map(sub => (
-                      <Link key={sub.path} to={sub.path} className="text-xs uppercase tracking-[0.3em] font-bold text-stone-500 hover:text-orange-500">{sub.name}</Link>
+                      <Link key={sub.path} to={sub.path} className="text-[10px] uppercase tracking-[0.3em] font-bold text-stone-500 hover:text-orange-500 px-4 py-2 bg-white/5 rounded-full border border-white/5">{sub.name}</Link>
                     ))}
                   </div>
                 )}
               </div>
             ))}
-            <div className="flex space-x-4 pt-10">
+            <div className="flex space-x-6 pt-10 border-t border-white/10 w-full justify-center">
                {languages.map(lang => (
-                 <button key={lang.code} onClick={() => { setLanguage(lang.code); setIsMobileMenuOpen(false); }} className={`text-xl ${language === lang.code ? 'opacity-100' : 'opacity-30'}`}>{lang.flag}</button>
+                 <button key={lang.code} onClick={() => { setLanguage(lang.code); setIsMobileMenuOpen(false); }} className={`text-2xl transition-transform hover:scale-125 ${language === lang.code ? 'opacity-100 grayscale-0' : 'opacity-30 grayscale'}`}>{lang.flag}</button>
                ))}
             </div>
           </div>
@@ -175,7 +189,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
               <div className="flex items-center space-x-3">
                 <span className="font-black text-2xl tracking-tighter text-white">RESFIRE</span>
               </div>
-              <p className="text-stone-400 max-w-sm text-sm leading-relaxed">
+              <p className="text-stone-400 max-w-sm text-sm leading-relaxed font-medium">
                 Global initiative for forest preservation through advanced data science and ecological engineering.
               </p>
             </div>
@@ -199,7 +213,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-10 border-t border-white/5">
             <div className="flex flex-col">
               <p className="text-stone-600 text-[10px] uppercase tracking-[0.2em] font-bold">Scientific Prevention &bull; 2024</p>
-              <p className="text-orange-500/50 text-[8px] uppercase tracking-[0.4em] font-black mt-1">v1.1.0 - Deployment Active</p>
+              <p className="text-orange-500/50 text-[8px] uppercase tracking-[0.4em] font-black mt-1">v1.2.0 - Deployment Active</p>
             </div>
             <div className="flex space-x-6">
               {['linkedin', 'x-twitter', 'github', 'instagram'].map(social => (
