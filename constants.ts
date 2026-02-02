@@ -3,15 +3,68 @@ import { WorkPackage, TeamMember } from './types';
 
 export const PUBLICATIONS = [
   {
-    id: 'pub1',
+    id: 'special-issue-link',
+    authors: 'Regos A (Ed.)',
+    year: '2026',
+    title: 'Special Issue: Nature-Based Solutions to Extreme Wildfire',
+    journal: 'Fire (MDPI) Collection',
+    doi: 'Collection Link',
+    url: 'https://www.mdpi.com/journal/fire/special_issues/Nature_Based_Solutions_Extreme_Wildfire'
+  },
+  {
+    id: 'regos-2026-editorial',
     authors: 'Regos A',
     year: '2026',
     title: 'Editorial for the Special Issue: Nature-Based Solutions to Extreme',
     journal: 'Fire 9(1), 47',
     doi: '10.3390/fire9010047',
     url: 'https://doi.org/10.3390/fire9010047'
+  },
+  {
+    id: 'regos-2026-roadmap',
+    authors: 'Regos A',
+    year: '2026',
+    title: 'A Roadmap for Nature-Based Solutions to Extreme Wildfires',
+    journal: 'iScience, 29(1):114364',
+    doi: '10.1016/j.isci.2025.114364',
+    url: 'https://doi.org/10.1016/j.isci.2025.114364'
+  },
+  {
+    id: 'pais-2025-fire',
+    authors: 'Pais S, Campos J, Aquilué N, Brotons Ll, Honrado J.P, Fernandes PM & Regos A',
+    year: '2025',
+    title: 'The role of fire as a restoration tool for biodiversity and fire regimes in abandoned mountain areas of southern Europe',
+    journal: 'Fire Ecology 21: 65',
+    doi: '10.1186/s42408-025-00422-y',
+    url: 'https://doi.org/10.1186/s42408-025-00422-y'
+  },
+  {
+    id: 'novo-2025-machine',
+    authors: 'Novo A, Regos A, Fernández C',
+    year: '2025',
+    title: 'Machine Learning-Based Predictions of Soil Burn Severity using Spectral and LiDAR Remote Sensing Data',
+    journal: 'Forest Ecology and Management. 596:123094',
+    doi: '10.1016/j.foreco.2025.123094',
+    url: 'https://doi.org/10.1016/j.foreco.2025.123094'
+  },
+  {
+    id: 'plumanns-2025-pathways',
+    authors: 'Plumanns-Pouton E, Bakx TRM, Buitenwerf R, Espelta JM, Moreira F, Regos A, Selwyn M & Brotons L.',
+    year: '2025',
+    title: 'Pathways to restoring fire regimes through rewilding',
+    journal: 'Current Biology. 35(13), R670-R686',
+    doi: '10.1016/j.cub.2025.04.026',
+    url: 'https://doi.org/10.1016/j.cub.2025.04.026'
+  },
+  {
+    id: 'oliveres-2025-path',
+    authors: 'Oliveres J, Castellnou M, Castellarnau X, Rosas-Casals M, Brotons L & Duane A',
+    year: '2025',
+    title: 'The path to strategic fire management planning in the Aran, Pyrenees',
+    journal: 'Fire Ecology',
+    doi: '10.1186/s42408-024-00348-x',
+    url: 'https://doi.org/10.1186/s42408-024-00348-x'
   }
-  // Añade más publicaciones aquí siguiendo el mismo formato
 ];
 
 export const WORK_PACKAGES: any[] = [
@@ -53,7 +106,7 @@ export const WORK_PACKAGES: any[] = [
       pt: {
         title: 'WP2. Identificar o papel dos processos ecológicos por trás das respostas da biodiversidade ao fogo na restauração de regimes de fogo ecológicos',
         description: 'Estudar como diferentes espécies e ecossistemas reagem ao fogo para restaurar o equilíbrio natural.',
-        tasks: ['Processos Ecológicos', 'Monitorização da Biodiversidade', 'Ciência da Restauração']
+        tasks: ['Procesos Ecológicos', 'Monitorização da Biodiversidade', 'Ciência da Restauração']
       }
     }
   },
