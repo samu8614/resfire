@@ -65,30 +65,47 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           
           <div className="hidden md:flex items-center space-x-10">
             {navLinks.map((link) => (
-              <div key={link.path} className="relative group/nav" onMouseEnter={() => link.subMenu && setIsOutputsOpen(true)} onMouseLeave={() => setIsOutputsOpen(false)}>
-                <Link
-                  to={link.path}
-                  className={`text-[10px] font-bold uppercase tracking-[0.3em] transition-all hover:text-orange-500 relative flex items-center space-x-1 ${
-                    location.pathname.startsWith(link.path) && link.path !== '/' ? 'text-orange-500' : 
-                    location.pathname === '/' && link.path === '/' ? 'text-orange-500' : 'text-stone-300'
-                  }`}
-                >
-                  <span>{link.name}</span>
-                  {link.subMenu && <i className="fa-solid fa-chevron-down text-[8px] opacity-50 group-hover/nav:rotate-180 transition-transform"></i>}
-                  <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover/nav:w-full ${location.pathname.startsWith(link.path) && (link.path !== '/' || location.pathname === '/') ? 'w-full' : ''}`}></span>
-                </Link>
+              <div 
+                key={link.path} 
+                className="relative" 
+                onMouseEnter={() => link.subMenu && setIsOutputsOpen(true)} 
+                onMouseLeave={() => link.subMenu && setIsOutputsOpen(false)}
+              >
+                {/* Contenedor del link con padding inferior para evitar huecos al mover el mouse */}
+                <div className="pb-4">
+                  <Link
+                    to={link.path}
+                    className={`text-[10px] font-bold uppercase tracking-[0.3em] transition-all hover:text-orange-500 relative flex items-center space-x-1 ${
+                      location.pathname.startsWith(link.path) && link.path !== '/' ? 'text-orange-500' : 
+                      location.pathname === '/' && link.path === '/' ? 'text-orange-500' : 'text-stone-300'
+                    }`}
+                  >
+                    <span>{link.name}</span>
+                    {link.subMenu && <i className="fa-solid fa-chevron-down text-[8px] opacity-50 group-hover:rotate-180 transition-transform"></i>}
+                    <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-orange-500 transition-all duration-300 group-hover:w-full ${location.pathname.startsWith(link.path) && (link.path !== '/' || location.pathname === '/') ? 'w-full' : ''}`}></span>
+                  </Link>
+                </div>
 
                 {link.subMenu && isOutputsOpen && (
-                  <div className="absolute left-0 mt-4 w-64 bg-stone-900 border border-white/5 rounded-2xl p-4 shadow-2xl animate-fade-in-up">
-                    {link.subMenu.map(sub => (
-                      <Link 
-                        key={sub.path} 
-                        to={sub.path}
-                        className="block px-4 py-3 text-[9px] font-black uppercase tracking-[0.2em] text-stone-400 hover:text-orange-500 hover:bg-white/5 rounded-xl transition-all"
-                      >
-                        {sub.name}
-                      </Link>
-                    ))}
+                  <div className="absolute left-0 top-6 w-64 bg-stone-900/95 backdrop-blur-xl border border-white/5 rounded-2xl p-4 shadow-[0_20px_50px_rgba(0,0,0,0.5)] animate-fade-in z-[100]">
+                    {/* Triángulo indicador opcional */}
+                    <div className="absolute -top-1 left-4 w-2 h-2 bg-stone-900 border-l border-t border-white/5 rotate-45"></div>
+                    
+                    <div className="flex flex-col space-y-1 relative">
+                      {link.subMenu.map(sub => (
+                        <Link 
+                          key={sub.path} 
+                          to={sub.path}
+                          className={`block px-4 py-3 text-[9px] font-black uppercase tracking-[0.2em] rounded-xl transition-all ${
+                            location.pathname === sub.path 
+                              ? 'bg-orange-600 text-white shadow-lg shadow-orange-600/20' 
+                              : 'text-stone-400 hover:text-orange-500 hover:bg-white/5'
+                          }`}
+                        >
+                          {sub.name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>
@@ -124,6 +141,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           </button>
         </div>
 
+        {/* Menú Móvil */}
         <div className={`md:hidden transition-all duration-500 ease-in-out bg-stone-950 fixed inset-0 z-40 ${isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
           <div className="flex flex-col p-10 space-y-8 h-full justify-center items-center text-center overflow-y-auto pt-24">
              <button onClick={() => setIsMobileMenuOpen(false)} className="absolute top-8 right-6 text-3xl text-stone-500"><i className="fa-solid fa-xmark"></i></button>
@@ -141,7 +159,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             ))}
             <div className="flex space-x-4 pt-10">
                {languages.map(lang => (
-                 <button key={lang.code} onClick={() => setLanguage(lang.code)} className={`text-xl ${language === lang.code ? 'opacity-100' : 'opacity-30'}`}>{lang.flag}</button>
+                 <button key={lang.code} onClick={() => { setLanguage(lang.code); setIsMobileMenuOpen(false); }} className={`text-xl ${language === lang.code ? 'opacity-100' : 'opacity-30'}`}>{lang.flag}</button>
                ))}
             </div>
           </div>
@@ -155,7 +173,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           <div className="grid md:grid-cols-4 gap-12 mb-16">
             <div className="col-span-2 space-y-6">
               <div className="flex items-center space-x-3">
-                <span className="font-black text-2xl tracking-tighter">RESFIRE</span>
+                <span className="font-black text-2xl tracking-tighter text-white">RESFIRE</span>
               </div>
               <p className="text-stone-400 max-w-sm text-sm leading-relaxed">
                 Global initiative for forest preservation through advanced data science and ecological engineering.
