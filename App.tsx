@@ -3,7 +3,7 @@ import React from 'react';
 import { HashRouter as Router, Routes, Route, Link, useParams } from 'react-router-dom';
 import Layout from './components/Layout';
 import Assistant from './components/Assistant';
-import { WORK_PACKAGES } from './constants';
+import { WORK_PACKAGES, PUBLICATIONS } from './constants';
 import { LanguageProvider, useTranslation } from './context/LanguageContext';
 
 const Abstract = () => {
@@ -273,22 +273,30 @@ const Outputs = () => {
             </Link>
 
             {category === 'publications' && (
-              <div className="grid gap-6">
-                {[1, 2, 3].map(i => (
-                  <div key={i} className="bg-stone-900/50 p-8 md:p-12 rounded-[2.5rem] border border-white/5 hover:border-white/10 transition-all flex flex-col md:flex-row gap-10">
-                    <div className="w-full md:w-1/3 aspect-[3/4] bg-stone-800 rounded-2xl overflow-hidden relative border border-white/5">
-                      <div className="absolute inset-0 flex items-center justify-center text-stone-700">
-                        <i className="fa-solid fa-file-pdf text-6xl"></i>
-                      </div>
-                    </div>
-                    <div className="w-full md:w-2/3 space-y-6 flex flex-col justify-center">
-                      <div className="flex flex-wrap gap-2">
-                        <span className="px-3 py-1 bg-emerald-500/10 text-emerald-500 text-[8px] font-black uppercase tracking-widest rounded-full border border-emerald-500/20">Peer Reviewed</span>
-                        <span className="px-3 py-1 bg-blue-500/10 text-blue-500 text-[8px] font-black uppercase tracking-widest rounded-full border border-blue-500/20">DOI Available</span>
-                      </div>
-                      <h4 className="text-2xl md:text-3xl font-black text-white tracking-tight uppercase leading-tight">Quantifying Fire Risk in Quercus ecosystems: A meta-analysis of the Mediterranean basin</h4>
-                      <p className="text-stone-400 text-sm leading-relaxed">Journal of Fire Ecology • December 2023</p>
-                      <button className="self-start text-[10px] font-black uppercase tracking-[0.3em] text-orange-500 border-b border-orange-500/30 hover:border-orange-500 transition-all pb-1">Download Full Paper</button>
+              <div className="grid gap-8">
+                {PUBLICATIONS.map(pub => (
+                  <div key={pub.id} className="bg-stone-900/30 p-10 rounded-[3rem] border border-white/5 hover:border-white/10 transition-all group">
+                    <div className="flex items-start space-x-6">
+                       <div className="w-12 h-12 bg-orange-600/10 rounded-2xl flex items-center justify-center text-orange-500 flex-shrink-0">
+                          <i className="fa-solid fa-book-open"></i>
+                       </div>
+                       <div className="space-y-4">
+                          <p className="text-lg md:text-xl text-stone-300 leading-relaxed font-medium">
+                            {pub.authors} ({pub.year}).{' '}
+                            <a 
+                              href={pub.url} 
+                              target="_blank" 
+                              rel="noopener noreferrer" 
+                              className="text-blue-500 underline hover:text-blue-400 transition-colors"
+                            >
+                              {pub.title}
+                            </a>. {pub.journal}; DOI:{pub.doi}.
+                          </p>
+                          <div className="flex space-x-4">
+                             <span className="px-3 py-1 bg-emerald-500/10 text-emerald-500 text-[8px] font-black uppercase tracking-widest rounded-full border border-emerald-500/20">Active DOI</span>
+                             <span className="px-3 py-1 bg-white/5 text-stone-400 text-[8px] font-black uppercase tracking-widest rounded-full border border-white/10">Full Text Available</span>
+                          </div>
+                       </div>
                     </div>
                   </div>
                 ))}
@@ -308,10 +316,6 @@ const Outputs = () => {
                        <div className="w-full h-1 bg-stone-800 rounded-full mt-4 overflow-hidden">
                           <div className="h-full bg-orange-600 w-1/3 group-hover:w-full transition-all duration-[10s]"></div>
                        </div>
-                    </div>
-                    <div className="flex space-x-4 opacity-50">
-                       <i className="fa-brands fa-spotify text-2xl hover:text-white cursor-pointer"></i>
-                       <i className="fa-brands fa-apple text-2xl hover:text-white cursor-pointer"></i>
                     </div>
                   </div>
                 ))}
