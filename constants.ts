@@ -109,6 +109,21 @@ export const NEWS = [
   }
 ];
 
+export const PARTNERS = [
+  {
+    id: 'mbg',
+    name: 'Misión Biológica de Galicia (CSIC)',
+    logo: 'https://mbg.csic.es/wp-content/uploads/2019/02/logo_mbg.png',
+    description: 'The Misión Biológica de Galicia has an excellent research record in the study of the responses of landscapes and the key ecosystem services provided such as carbon or water provisioning to main drivers such as wildfires, accounting for much of the information needed in the development of landscape dynamic models in complex socio-ecological contexts.'
+  },
+  {
+    id: 'creaf',
+    name: 'CREAF',
+    logo: 'https://www.creaf.cat/sites/default/files/creaf_logo_principal.png',
+    description: 'The Centre for Ecological Research and Forestry Applications as gained experience in establishing links between landscape dynamics, in terms of composition and configuration of major landscape components and their derived biodiversity responses. This has been possible thanks to developing a spatially explicit landscape model (SELM), aimed at simulating forest dynamics under different fire regimes.'
+  }
+];
+
 export const WORK_PACKAGES: any[] = [
   {
     id: 'WP1',
@@ -200,7 +215,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
 
 export const TRANSLATIONS = {
   en: {
-    nav: { abstract: 'Abstract', workPackages: 'Work Packages', outputs: 'Outputs', contact: 'Contact', language: 'Language' },
+    nav: { abstract: 'Abstract', workPackages: 'Work Packages', outputs: 'Outputs', team: 'Team', contact: 'Contact', language: 'Language' },
     home: {
       hero_sub: 'Proactive & Sustainable Management',
       hero_title: 'THE RESFIRE PROJECT',
@@ -232,6 +247,11 @@ export const TRANSLATIONS = {
       news: 'News',
       view_all: 'Explore category'
     },
+    team: {
+      title: 'The Team',
+      subtitle: 'Resfire is a collaborative effort between leading research institutions in Galicia and Catalonia.',
+      partners: 'Consortium Partners'
+    },
     contact: {
       title: 'Contact',
       subtitle: 'Have questions about our research or want to collaborate? Our team is ready to connect.',
@@ -252,7 +272,7 @@ export const TRANSLATIONS = {
     }
   },
   es: {
-    nav: { abstract: 'Abstract', workPackages: 'Work Packages', outputs: 'Outputs', contact: 'Contacto', language: 'Idioma' },
+    nav: { abstract: 'Abstract', workPackages: 'Work Packages', outputs: 'Outputs', team: 'Equipo', contact: 'Contacto', language: 'Idioma' },
     home: {
       hero_sub: 'Gestión Proactiva y Sostenible',
       hero_title: 'EL PROYECTO RESFIRE',
@@ -284,6 +304,11 @@ export const TRANSLATIONS = {
       news: 'Noticias',
       view_all: 'Explorar categoría'
     },
+    team: {
+      title: 'El Equipo',
+      subtitle: 'Resfire es un esfuerzo colaborativo entre instituciones de investigación líderes en Galicia y Cataluña.',
+      partners: 'Socios del Consorcio'
+    },
     contact: {
       title: 'Contacto',
       subtitle: '¿Tienes preguntas sobre nuestra investigación? Nuestro equipo está listo para colaborar.',
@@ -304,7 +329,7 @@ export const TRANSLATIONS = {
     }
   },
   pt: {
-    nav: { abstract: 'Abstract', workPackages: 'Pacotes', outputs: 'Outputs', contact: 'Contacto', language: 'Idioma' },
+    nav: { abstract: 'Abstract', workPackages: 'Pacotes', outputs: 'Outputs', team: 'Equipa', contact: 'Contacto', language: 'Idioma' },
     home: {
       hero_sub: 'Gestão Proativa e Sustentável',
       hero_title: 'O PROJETO RESFIRE',
@@ -335,6 +360,11 @@ export const TRANSLATIONS = {
       podcasts: 'Podcasts e Vídeos',
       news: 'Noticias',
       view_all: 'Explorar categoria'
+    },
+    team: {
+      title: 'A Equipa',
+      subtitle: 'Resfire é um esforço colaborativo entre instituições de investigação líderes na Galiza e na Catalunha.',
+      partners: 'Parceiros do Consórcio'
     },
     contact: {
       title: 'Contacto',
