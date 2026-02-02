@@ -3,7 +3,7 @@ import React from 'react';
 import { HashRouter as Router, Routes, Route, Link, useParams } from 'react-router-dom';
 import Layout from './components/Layout';
 import Assistant from './components/Assistant';
-import { WORK_PACKAGES, PUBLICATIONS, CONFERENCES, PODCASTS } from './constants';
+import { WORK_PACKAGES, PUBLICATIONS, CONFERENCES, PODCASTS, NEWS } from './constants';
 import { LanguageProvider, useTranslation } from './context/LanguageContext';
 
 const Abstract = () => {
@@ -367,16 +367,39 @@ const Outputs = () => {
             )}
 
             {category === 'news' && (
-              <div className="grid md:grid-cols-2 gap-8">
-                {[1, 2, 3, 4].map(i => (
-                  <div key={i} className="group cursor-pointer">
-                    <div className="aspect-video bg-stone-900 rounded-[2.5rem] overflow-hidden border border-white/5 mb-6 relative">
-                       <img src={`https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80&w=800&sig=${i}`} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" />
-                       <div className="absolute top-6 left-6 px-4 py-1.5 bg-orange-600 text-white text-[9px] font-black uppercase tracking-widest rounded-full">Press Release</div>
+              <div className="grid md:grid-cols-2 gap-10">
+                {NEWS.map(item => (
+                  <a 
+                    key={item.id} 
+                    href={item.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="group flex flex-col space-y-6"
+                  >
+                    <div className="aspect-video bg-stone-900 rounded-[2.5rem] overflow-hidden border border-white/5 relative shadow-xl">
+                       <img 
+                        src={item.image} 
+                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105 opacity-60 group-hover:opacity-100" 
+                        alt={item.title}
+                       />
+                       <div className="absolute top-6 left-6 px-4 py-1.5 bg-orange-600 text-white text-[9px] font-black uppercase tracking-widest rounded-full shadow-lg">Press Appearance</div>
+                       <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                       <div className="absolute bottom-6 left-6 right-6 flex items-center justify-between transform translate-y-4 group-hover:translate-y-0 transition-transform opacity-0 group-hover:opacity-100">
+                          <span className="text-[10px] font-black uppercase tracking-widest text-white">Read Article</span>
+                          <i className="fa-solid fa-arrow-up-right-from-square text-white text-sm"></i>
+                       </div>
                     </div>
-                    <h4 className="text-2xl font-black text-white uppercase tracking-tight group-hover:text-orange-500 transition-colors">Resfire project joins UN resilience platform for 2025 summits</h4>
-                    <p className="text-stone-500 text-xs mt-3 uppercase tracking-widest font-bold">January 15, 2024 • 4 min read</p>
-                  </div>
+                    <div className="space-y-3 px-2">
+                      <h4 className="text-2xl font-black text-white uppercase tracking-tight group-hover:text-orange-500 transition-colors leading-tight">
+                        {item.title}
+                      </h4>
+                      <div className="flex items-center space-x-3 text-stone-500 text-[10px] uppercase tracking-widest font-bold">
+                        <span>{item.source}</span>
+                        <span className="w-1 h-1 bg-stone-700 rounded-full"></span>
+                        <span>{item.date}</span>
+                      </div>
+                    </div>
+                  </a>
                 ))}
               </div>
             )}
