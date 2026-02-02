@@ -22,7 +22,7 @@ const Abstract = () => {
           />
         </div>
         <div className="relative z-20 max-w-5xl mx-auto space-y-12">
-          <div className="inline-flex items-center space-x-3 px-6 py-2.5 bg-emerald-600/10 border border-emerald-500/20 rounded-full backdrop-blur-xl animate-fade-in shadow-[0_0_20px_rgba(16,185,129,0.1)]">
+          <div className="inline-flex items-center space-x-3 px-6 py-2.5 bg-emerald-600/10 border border-emerald-500/20 rounded-full backdrop-blur-xl animate-fade-in shadow-[0_0_20px_rgba(16,185,129,0.15)]">
             <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
             <span className="text-[10px] font-black uppercase tracking-[0.5em] text-emerald-400">{t.home.hero_sub}</span>
           </div>
@@ -65,10 +65,6 @@ const Abstract = () => {
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
             </a>
           </div>
-        </div>
-        
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-stone-600 opacity-50">
-          <i className="fa-solid fa-chevron-down"></i>
         </div>
       </section>
 
@@ -466,54 +462,57 @@ const Contact = () => {
   return (
     <div className="pt-48 pb-32 bg-stone-950 min-h-screen">
       <div className="container mx-auto px-6">
-        <div className="max-w-7xl mx-auto grid lg:grid-cols-5 gap-20">
-          <div className="lg:col-span-2 space-y-12">
-            <div className="space-y-8">
-              <span className="text-orange-500 font-black tracking-[0.4em] uppercase text-xs">Collaborate With Us</span>
-              <h2 className="text-6xl md:text-9xl font-black text-white leading-[0.8] tracking-tighter">{t.contact.title}</h2>
-              <p className="text-xl text-stone-400 font-medium leading-relaxed">{t.contact.subtitle}</p>
-            </div>
+        <div className="max-w-7xl mx-auto space-y-16">
+          <div className="space-y-8 text-center md:text-left">
+            <span className="text-orange-500 font-black tracking-[0.4em] uppercase text-xs">Collaborate With Us</span>
+            <h2 className="text-6xl md:text-9xl font-black text-white leading-[0.8] tracking-tighter">{t.contact.title}</h2>
+            <p className="text-xl text-stone-400 font-medium leading-relaxed max-w-3xl">{t.contact.subtitle}</p>
+          </div>
 
-            {/* Principal Researchers Section */}
-            <div className="space-y-10">
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="h-px flex-grow bg-white/10"></div>
+          <div className="grid lg:grid-cols-2 gap-12 items-stretch">
+            {/* Principal Researchers Column (Left) */}
+            <div className="space-y-10 flex flex-col justify-center">
+              <div className="flex items-center space-x-4 mb-2">
                 <span className="text-[10px] font-black uppercase tracking-[0.4em] text-stone-500 whitespace-nowrap">Principal Researchers</span>
                 <div className="h-px flex-grow bg-white/10"></div>
               </div>
 
-              {/* Research Contact 1 */}
-              <div className="flex items-center space-x-6 group animate-fade-in-up">
-                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-orange-500/50 transition-all flex-shrink-0 shadow-2xl">
-                  <img src="regos2.jpg" alt="Adrián Regos Sanz" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" />
+              <div className="grid gap-6">
+                {/* Research Contact 1 */}
+                <div className="bg-stone-900/40 p-8 rounded-[3rem] border border-white/5 flex items-center space-x-8 group animate-fade-in-up hover:border-orange-500/30 transition-all">
+                  <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-orange-500/50 transition-all flex-shrink-0 shadow-2xl">
+                    <img src="regos2.jpg" alt="Adrián Regos Sanz" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" />
+                  </div>
+                  <div className="space-y-2">
+                    <h4 className="font-black text-white text-2xl tracking-tight uppercase group-hover:text-orange-500 transition-colors">Adrián Regos Sanz</h4>
+                    <p className="text-stone-500 text-[9px] font-bold uppercase tracking-[0.3em]">Researcher & Project Coordinator</p>
+                    <a href="mailto:aregos@mbg.csic.es" className="text-stone-400 font-bold tracking-widest uppercase text-[11px] hover:text-white transition-colors flex items-center space-x-2 pt-1">
+                      <i className="fa-solid fa-envelope text-[10px] text-orange-500"></i>
+                      <span>aregos@mbg.csic.es</span>
+                    </a>
+                  </div>
                 </div>
-                <div className="space-y-1">
-                  <h4 className="font-black text-white text-lg tracking-tight uppercase group-hover:text-orange-500 transition-colors">Adrián Regos Sanz</h4>
-                  <a href="mailto:aregos@mbg.csic.es" className="text-stone-400 font-bold tracking-widest uppercase text-[10px] hover:text-white transition-colors flex items-center space-x-2">
-                    <i className="fa-solid fa-envelope text-[8px]"></i>
-                    <span>aregos@mbg.csic.es</span>
-                  </a>
+
+                {/* Research Contact 2 */}
+                <div className="bg-stone-900/40 p-8 rounded-[3rem] border border-white/5 flex items-center space-x-8 group animate-fade-in-up hover:border-orange-500/30 transition-all" style={{ animationDelay: '100ms' }}>
+                  <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-orange-500/50 transition-all flex-shrink-0 shadow-2xl">
+                    <img src="Brotons.jpg" alt="Lluís Brotons Alabau" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" />
+                  </div>
+                  <div className="space-y-2">
+                    <h4 className="font-black text-white text-2xl tracking-tight uppercase group-hover:text-orange-500 transition-colors">Lluís Brotons Alabau</h4>
+                    <p className="text-stone-500 text-[9px] font-bold uppercase tracking-[0.3em]">Scientific Advisor & Partner Lead</p>
+                    <a href="mailto:l.brotons@creaf.uab.cat" className="text-stone-400 font-bold tracking-widest uppercase text-[11px] hover:text-white transition-colors flex items-center space-x-2 pt-1">
+                      <i className="fa-solid fa-envelope text-[10px] text-orange-500"></i>
+                      <span>l.brotons@creaf.uab.cat</span>
+                    </a>
+                  </div>
                 </div>
               </div>
 
-              {/* Research Contact 2 */}
-              <div className="flex items-center space-x-6 group animate-fade-in-up" style={{ animationDelay: '100ms' }}>
-                <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-orange-500/50 transition-all flex-shrink-0 shadow-2xl">
-                  <img src="Brotons.jpg" alt="Lluís Brotons Alabau" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" />
-                </div>
-                <div className="space-y-1">
-                  <h4 className="font-black text-white text-lg tracking-tight uppercase group-hover:text-orange-500 transition-colors">Lluís Brotons Alabau</h4>
-                  <a href="mailto:l.brotons@creaf.uab.cat" className="text-stone-400 font-bold tracking-widest uppercase text-[10px] hover:text-white transition-colors flex items-center space-x-2">
-                    <i className="fa-solid fa-envelope text-[8px]"></i>
-                    <span>l.brotons@creaf.uab.cat</span>
-                  </a>
-                </div>
-              </div>
-
-              <div className="pt-10 space-y-8">
+              <div className="pt-12 border-t border-white/5">
                 <div className="flex items-start space-x-6 group">
-                  <div className="w-14 h-14 bg-stone-900 border border-white/10 rounded-2xl flex items-center justify-center text-orange-500 group-hover:bg-orange-600 group-hover:text-white transition-all">
-                    <i className="fa-solid fa-location-dot text-xl"></i>
+                  <div className="w-12 h-12 bg-stone-900 border border-white/10 rounded-2xl flex items-center justify-center text-orange-500 group-hover:bg-orange-600 group-hover:text-white transition-all">
+                    <i className="fa-solid fa-location-dot text-lg"></i>
                   </div>
                   <div>
                     <h4 className="font-black text-white uppercase tracking-widest text-[10px] mb-1">{t.contact.hub}</h4>
@@ -522,31 +521,16 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-          </div>
 
-          <div className="lg:col-span-3 bg-stone-900 border border-white/5 p-12 md:p-16 rounded-[4rem] shadow-2xl relative overflow-hidden">
-             <div className="absolute top-0 right-0 p-8 opacity-10">
-                <i className="fa-solid fa-paper-plane text-8xl text-stone-500"></i>
-             </div>
-            <form className="grid gap-10 relative z-10" onSubmit={(e) => e.preventDefault()}>
-              <div className="grid md:grid-cols-2 gap-10">
-                <div className="space-y-3">
-                  <label className="text-[10px] font-black uppercase tracking-[0.3em] text-stone-500">{t.contact.form_first}</label>
-                  <input type="text" className="w-full bg-stone-950 border border-white/5 rounded-2xl px-6 py-5 text-white focus:outline-none focus:border-orange-600 transition-colors" placeholder="First Name" />
-                </div>
-                <div className="space-y-3">
-                  <label className="text-[10px] font-black uppercase tracking-[0.3em] text-stone-500">{t.contact.form_last}</label>
-                  <input type="text" className="w-full bg-stone-950 border border-white/5 rounded-2xl px-6 py-5 text-white focus:outline-none focus:border-orange-600 transition-colors" placeholder="Last Name" />
-                </div>
-              </div>
-              <div className="space-y-3">
-                <label className="text-[10px] font-black uppercase tracking-[0.3em] text-stone-500">{t.contact.form_email}</label>
-                <input type="email" className="w-full bg-stone-950 border border-white/5 rounded-2xl px-6 py-5 text-white focus:outline-none focus:border-orange-600 transition-colors" placeholder="email@organization.org" />
-              </div>
-              <button className="w-full bg-orange-600 hover:bg-orange-500 text-white font-black py-6 rounded-2xl transition-all shadow-xl shadow-orange-600/20 uppercase tracking-[0.4em] text-xs">
-                {t.contact.form_btn}
-              </button>
-            </form>
+            {/* Visual Column (Right) */}
+            <div className="relative group min-h-[500px] rounded-[4rem] overflow-hidden border border-white/5 shadow-2xl">
+              <img 
+                src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&q=80&w=1200" 
+                alt="Scientific Resilience Forest" 
+                className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-105 transition-transform duration-[4s]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent opacity-60"></div>
+            </div>
           </div>
         </div>
       </div>
