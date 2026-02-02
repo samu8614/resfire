@@ -67,6 +67,27 @@ export const PUBLICATIONS = [
   }
 ];
 
+export const CONFERENCES = [
+  {
+    id: 'conf-regos-2025-pt',
+    authors: 'Regos A*',
+    year: '2025',
+    title: 'O uso do fogo como solução baseada na natureza: os grandes incêndios florestais em paisagens rurais abandonadas',
+    event: 'Ponencia invitada na Conferência “Floresta e Fogos: que futuro?',
+    date: '3 de outubro de 2025',
+    location: 'Ponte de Lima (Portugal)'
+  },
+  {
+    id: 'conf-regos-2025-gl',
+    authors: 'Regos A*',
+    year: '2025',
+    title: 'Paisaxe, fogo e biodiversidade na reserva da biosfera Gerês-Xurés: pasado, presente e futuro',
+    event: 'Ponencia invitada nas Xornadas “Expansión e homoxeneización do espazo forestal: receita para un desastre?” Consello da Cultura Galega',
+    date: '20 de outubro de 2025',
+    location: 'Santiago de Compostela'
+  }
+];
+
 export const WORK_PACKAGES: any[] = [
   {
     id: 'WP1',
@@ -104,9 +125,9 @@ export const WORK_PACKAGES: any[] = [
         tasks: ['Procesos Ecológicos', 'Monitoreo de Biodiversidad', 'Ciencia de Restauración']
       },
       pt: {
-        title: 'WP2. Identificar o papel dos processos ecológicos por trás das respostas da biodiversidade ao fogo na restauração de regimes de fogo ecológicos',
+        title: 'WP2. Identificar o papel dos procesos ecológicos por trás das respostas da biodiversidade ao fogo na restauração de regimes de fogo ecológicos',
         description: 'Estudar como diferentes espécies e ecossistemas reagem ao fogo para restaurar o equilíbrio natural.',
-        tasks: ['Procesos Ecológicos', 'Monitorização da Biodiversidade', 'Ciência da Restauração']
+        tasks: ['Processos Ecológicos', 'Monitorização da Biodiversidade', 'Ciência da Restauração']
       }
     }
   },
@@ -273,7 +294,7 @@ export const TRANSLATIONS = {
       cta_secondary: 'Plano de Ação',
     },
     abstract: {
-      title: 'Resumo do Projeto',
+      title: 'Resumo do Proyecto',
       p1: 'As alterações climáticas alteraram o regime de incêndios. O Resfire representa uma mudança para paisagens proativas e resilientes.',
       challenge_title: 'O Desafio',
       challenge_desc: 'O aumento das temperaturas criou "mega-incêndios" que excedem a capacidade humana de supressão.',
@@ -288,7 +309,7 @@ export const TRANSLATIONS = {
     },
     outputs: {
       title: 'Resultados',
-      subtitle: 'Descubra nossas contribuições científicas, presença na mídia e últimas notícias.',
+      subtitle: 'Descubra nossas contribuições científicas, presença na mídia e últimas noticias.',
       publications: 'Publicações Científicas',
       podcasts: 'Podcasts',
       news: 'Noticias e Mídia',
