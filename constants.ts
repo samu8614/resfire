@@ -1,6 +1,19 @@
 
 import { WorkPackage, TeamMember } from './types';
 
+export const PUBLICATIONS = [
+  {
+    id: 'pub1',
+    authors: 'Regos A',
+    year: '2026',
+    title: 'Editorial for the Special Issue: Nature-Based Solutions to Extreme',
+    journal: 'Fire 9(1), 47',
+    doi: '10.3390/fire9010047',
+    url: 'https://doi.org/10.3390/fire9010047'
+  }
+  // Añade más publicaciones aquí siguiendo el mismo formato
+];
+
 export const WORK_PACKAGES: any[] = [
   {
     id: 'WP1',
@@ -216,7 +229,7 @@ export const TRANSLATIONS = {
       p2: 'Nossa missão é tratar a floresta como um sistema dinâmico gerido pela ciência.',
     },
     work_packages: {
-      title: 'Estratégia',
+      title: 'Estrategia',
       subtitle: 'O projeto está organizado em três pacotes de trabalho estratégicos concebidos para restaurar regimes de fogo resilientes.',
       milestones: 'Áreas de Foco'
     },
@@ -225,7 +238,7 @@ export const TRANSLATIONS = {
       subtitle: 'Descubra nossas contribuições científicas, presença na mídia e últimas notícias.',
       publications: 'Publicações Científicas',
       podcasts: 'Podcasts',
-      news: 'Notícias e Mídia',
+      news: 'Noticias e Mídia',
       view_all: 'Explorar categoria'
     },
     contact: {
