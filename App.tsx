@@ -3,7 +3,7 @@ import React from 'react';
 import { HashRouter as Router, Routes, Route, Link, useParams } from 'react-router-dom';
 import Layout from './components/Layout';
 import Assistant from './components/Assistant';
-import { WORK_PACKAGES, PUBLICATIONS } from './constants';
+import { WORK_PACKAGES, PUBLICATIONS, CONFERENCES } from './constants';
 import { LanguageProvider, useTranslation } from './context/LanguageContext';
 
 const Abstract = () => {
@@ -273,33 +273,64 @@ const Outputs = () => {
             </Link>
 
             {category === 'publications' && (
-              <div className="grid gap-8">
-                {PUBLICATIONS.map(pub => (
-                  <div key={pub.id} className="bg-stone-900/30 p-10 rounded-[3rem] border border-white/5 hover:border-white/10 transition-all group">
-                    <div className="flex items-start space-x-6">
-                       <div className="w-12 h-12 bg-orange-600/10 rounded-2xl flex items-center justify-center text-orange-500 flex-shrink-0">
-                          <i className="fa-solid fa-book-open"></i>
-                       </div>
-                       <div className="space-y-4">
-                          <p className="text-lg md:text-xl text-stone-300 leading-relaxed font-medium">
-                            {pub.authors} ({pub.year}).{' '}
-                            <a 
-                              href={pub.url} 
-                              target="_blank" 
-                              rel="noopener noreferrer" 
-                              className="text-blue-500 underline hover:text-blue-400 transition-colors"
-                            >
-                              {pub.title}
-                            </a>. {pub.journal}; DOI:{pub.doi}.
-                          </p>
-                          <div className="flex space-x-4">
-                             <span className="px-3 py-1 bg-emerald-500/10 text-emerald-500 text-[8px] font-black uppercase tracking-widest rounded-full border border-emerald-500/20">Active DOI</span>
-                             <span className="px-3 py-1 bg-white/5 text-stone-400 text-[8px] font-black uppercase tracking-widest rounded-full border border-white/10">Full Text Available</span>
-                          </div>
-                       </div>
+              <div className="space-y-20">
+                {/* Articles Section */}
+                <div className="grid gap-8">
+                  {PUBLICATIONS.map(pub => (
+                    <div key={pub.id} className="bg-stone-900/30 p-10 rounded-[3rem] border border-white/5 hover:border-white/10 transition-all group">
+                      <div className="flex items-start space-x-6">
+                         <div className="w-12 h-12 bg-orange-600/10 rounded-2xl flex items-center justify-center text-orange-500 flex-shrink-0">
+                            <i className="fa-solid fa-book-open"></i>
+                         </div>
+                         <div className="space-y-4">
+                            <p className="text-lg md:text-xl text-stone-300 leading-relaxed font-medium">
+                              {pub.authors} ({pub.year}).{' '}
+                              <a 
+                                href={pub.url} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="text-blue-500 underline hover:text-blue-400 transition-colors"
+                              >
+                                {pub.title}
+                              </a>. {pub.journal}; DOI:{pub.doi}.
+                            </p>
+                            <div className="flex space-x-4">
+                               <span className="px-3 py-1 bg-emerald-500/10 text-emerald-500 text-[8px] font-black uppercase tracking-widest rounded-full border border-emerald-500/20">Active DOI</span>
+                               <span className="px-3 py-1 bg-white/5 text-stone-400 text-[8px] font-black uppercase tracking-widest rounded-full border border-white/10">Full Text Available</span>
+                            </div>
+                         </div>
+                      </div>
                     </div>
+                  ))}
+                </div>
+
+                {/* Conferences Section */}
+                <div className="space-y-12">
+                  <div className="flex items-center space-x-6">
+                    <h3 className="text-4xl font-black text-white uppercase tracking-tighter">Conferences</h3>
+                    <div className="flex-grow h-px bg-white/5"></div>
+                    <i className="fa-solid fa-microphone-lines text-stone-700 text-2xl"></i>
                   </div>
-                ))}
+                  
+                  <div className="grid gap-8">
+                    {CONFERENCES.map(conf => (
+                      <div key={conf.id} className="bg-stone-900/20 p-8 rounded-[2.5rem] border border-white/5 hover:border-orange-500/20 transition-all flex items-start space-x-6">
+                        <div className="w-10 h-10 bg-white/5 rounded-xl flex items-center justify-center text-stone-500 mt-1">
+                          <i className="fa-solid fa-users-rectangle text-sm"></i>
+                        </div>
+                        <div className="space-y-3">
+                          <p className="text-lg text-stone-300 leading-relaxed">
+                            <span className="font-black text-white">{conf.authors}</span> ({conf.year}). {conf.title}. {conf.event}. <span className="text-orange-500 font-bold">{conf.date}</span>, {conf.location}.
+                          </p>
+                          <div className="inline-flex items-center space-x-2 text-[9px] font-black uppercase tracking-widest text-stone-500">
+                             <span className="w-2 h-2 rounded-full bg-orange-600"></span>
+                             <span>Invited Speaker</span>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
             )}
 
