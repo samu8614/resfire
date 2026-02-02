@@ -9,8 +9,7 @@ export interface WorkPackageContent {
 
 export interface WorkPackage {
   id: string;
-  icon: string;
-  color: string;
+  image: string;
   content: Record<Language, WorkPackageContent>;
 }
 
@@ -24,6 +23,14 @@ export interface TeamMember {
   name: string;
   image: string;
   content: Record<Language, TeamMemberContent>;
+}
+
+export interface Partner {
+  id: string;
+  name: string;
+  url: string;
+  description: string;
+  logo?: string;
 }
 
 export interface ChatMessage {
