@@ -46,7 +46,21 @@ const Abstract = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap justify-center gap-6 pt-12 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
+          {/* Project Video Section */}
+          <div className="max-w-4xl mx-auto w-full pt-12 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+            <div className="relative aspect-video rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(16,185,129,0.15)] group">
+              <iframe 
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/6yTn5olrZ5o?autoplay=0&controls=1&rel=0&modestbranding=1" 
+                title="Resfire Project Presentation"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap justify-center gap-6 pt-4 animate-fade-in-up" style={{ animationDelay: '400ms' }}>
             <a href="#/work-packages" className="group relative px-12 py-5 bg-orange-600 text-white font-black rounded-full transition-all shadow-2xl shadow-orange-600/30 uppercase tracking-[0.2em] text-xs overflow-hidden">
               <span className="relative z-10">{t.home.cta_secondary}</span>
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></div>
