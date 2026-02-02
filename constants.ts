@@ -88,6 +88,16 @@ export const CONFERENCES = [
   }
 ];
 
+export const PODCASTS = [
+  {
+    id: 'podcast-1',
+    title: 'Soluciones basadas en la naturaleza para los incendios extremos',
+    platform: 'YouTube',
+    videoId: 'YJdK2HwAq9U',
+    date: '2025'
+  }
+];
+
 export const WORK_PACKAGES: any[] = [
   {
     id: 'WP1',
@@ -207,8 +217,8 @@ export const TRANSLATIONS = {
       title: 'Project Outputs',
       subtitle: 'Discover our scientific contributions, media presence, and latest news.',
       publications: 'Scientific Publications',
-      podcasts: 'Podcasts',
-      news: 'News & Media',
+      podcasts: 'Podcasts & Media',
+      news: 'News',
       view_all: 'Explore category'
     },
     contact: {
@@ -259,8 +269,8 @@ export const TRANSLATIONS = {
       title: 'Resultados',
       subtitle: 'Descubre nuestras contribuciones científicas, presencia en medios y últimas noticias.',
       publications: 'Publicaciones Científicas',
-      podcasts: 'Podcasts',
-      news: 'Noticias y Medios',
+      podcasts: 'Podcasts y Videos',
+      news: 'Noticias',
       view_all: 'Explorar categoría'
     },
     contact: {
@@ -289,7 +299,7 @@ export const TRANSLATIONS = {
       hero_title: 'O PROJETO RESFIRE',
       hero_desc_p1: 'O projeto RESFIRE visa contribuir para o desenvolvimento de estratégias de gestão de incêndios proativas e sustentáveis que não só mitiguem os riscos de incêndios florestais destrutivos.',
       hero_desc_p2: 'A ênfase é colocada no reconhecimento da importância ecológica do fogo e na integração desta compreensão em soluções baseadas na natureza.',
-      hero_desc_p3: 'Esta restauração pode ser alcançada relaxando a supressão de incêndios para que o fogo, em condições meteorológicas não adversas, recupere o seu impacto positivo.',
+      hero_desc_p3: 'Esta restauração pode ser alcançada relaxando a supressão de incêndios para que o fogo, en condições meteorológicas não adversas, recupere o seu impacto positivo.',
       cta_primary: 'Resumo Científico',
       cta_secondary: 'Plano de Ação',
     },
@@ -311,8 +321,8 @@ export const TRANSLATIONS = {
       title: 'Resultados',
       subtitle: 'Descubra nossas contribuições científicas, presença na mídia e últimas noticias.',
       publications: 'Publicações Científicas',
-      podcasts: 'Podcasts',
-      news: 'Noticias e Mídia',
+      podcasts: 'Podcasts e Vídeos',
+      news: 'Noticias',
       view_all: 'Explorar categoria'
     },
     contact: {
