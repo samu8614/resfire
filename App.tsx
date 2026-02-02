@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link, useParams } from 'react-router-dom';
 import Layout from './components/Layout';
 import Assistant from './components/Assistant';
 import { WORK_PACKAGES } from './constants';
@@ -11,7 +11,7 @@ const Abstract = () => {
   
   return (
     <div className="relative">
-      {/* Hero Section - The "Misión" content now starts the Abstract */}
+      {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center text-center px-6 py-32 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-gradient-to-b from-stone-950/80 via-stone-950/40 to-stone-950 z-10"></div>
@@ -46,7 +46,6 @@ const Abstract = () => {
             </div>
           </div>
 
-          {/* Project Video Section */}
           <div className="max-w-4xl mx-auto w-full pt-12 animate-fade-in-up" style={{ animationDelay: '300ms' }}>
             <div className="relative aspect-video rounded-[2rem] overflow-hidden border border-white/10 shadow-[0_0_50px_rgba(16,185,129,0.15)] group">
               <iframe 
@@ -73,7 +72,7 @@ const Abstract = () => {
         </div>
       </section>
 
-      {/* Monitoring Dashboard Section - Part of Abstract flow */}
+      {/* Monitoring Dashboard Section */}
       <section className="py-24 bg-stone-950 border-y border-white/5">
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
@@ -112,7 +111,7 @@ const Abstract = () => {
         </div>
       </section>
 
-      {/* Scientific Vision Section - Traditional Abstract Content */}
+      {/* Scientific Vision Section */}
       <section className="pt-32 pb-32 bg-stone-950">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto space-y-32">
@@ -153,15 +152,6 @@ const Abstract = () => {
                 <p className="text-stone-400 text-lg leading-relaxed">{t.abstract.solution_desc}</p>
               </div>
             </div>
-            
-            <div className="bg-stone-900/30 p-16 rounded-[4rem] text-center border border-white/5 relative overflow-hidden">
-               <div className="absolute top-0 right-0 p-10 opacity-5">
-                 <i className="fa-solid fa-quote-right text-9xl"></i>
-               </div>
-              <p className="text-2xl md:text-3xl text-stone-300 leading-relaxed font-serif italic max-w-4xl mx-auto relative z-10">
-                "{t.abstract.p2}"
-              </p>
-            </div>
           </div>
         </div>
       </section>
@@ -181,7 +171,7 @@ const WorksPackages = () => {
         </div>
 
         <div className="grid gap-12">
-          {WORK_PACKAGES.map((wp, idx) => {
+          {WORK_PACKAGES.map((wp) => {
             const content = wp.content[language];
             return (
               <div key={wp.id} className="group relative min-h-[400px] md:min-h-[500px] rounded-[3.5rem] overflow-hidden border border-white/5 flex flex-col justify-end p-10 md:p-16 transition-all">
@@ -189,13 +179,11 @@ const WorksPackages = () => {
                   <img src={wp.image} className="w-full h-full object-cover transition-transform duration-[2s] group-hover:scale-110" alt={content.title} />
                   <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/60 to-transparent"></div>
                 </div>
-                
                 <div className="relative z-10 max-w-4xl space-y-8 animate-fade-in-up">
                   <div className="flex items-center space-x-6">
                     <span className="text-4xl md:text-6xl font-black text-orange-600/40">{wp.id}</span>
                     <div className="w-12 h-1 bg-orange-600 rounded-full"></div>
                   </div>
-                  
                   <div className="space-y-4">
                     <h3 className="text-3xl md:text-5xl font-black text-white leading-[1.1] tracking-tight uppercase">
                       {content.title}
@@ -204,7 +192,6 @@ const WorksPackages = () => {
                       {content.description}
                     </p>
                   </div>
-
                   <div className="flex flex-wrap gap-4 pt-4">
                     {content.tasks.map((task, i) => (
                       <span key={i} className="px-5 py-2.5 bg-white/5 backdrop-blur-md border border-white/10 rounded-full text-[10px] font-black uppercase tracking-widest text-stone-200">
@@ -222,6 +209,136 @@ const WorksPackages = () => {
   );
 };
 
+const Outputs = () => {
+  const { t } = useTranslation();
+  const { category } = useParams();
+
+  const categories = [
+    { 
+      id: 'publications', 
+      title: t.outputs.publications, 
+      icon: 'fa-file-lines', 
+      img: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&q=80&w=800' 
+    },
+    { 
+      id: 'podcasts', 
+      title: t.outputs.podcasts, 
+      icon: 'fa-microphone-lines', 
+      img: 'https://images.unsplash.com/photo-1478737270239-2f02b77fc618?auto=format&fit=crop&q=80&w=800' 
+    },
+    { 
+      id: 'news', 
+      title: t.outputs.news, 
+      icon: 'fa-newspaper', 
+      img: 'https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&q=80&w=800' 
+    },
+  ];
+
+  return (
+    <div className="pt-48 pb-32 bg-stone-950 min-h-screen">
+      <div className="container mx-auto px-6">
+        <div className="max-w-4xl mb-24 space-y-6">
+          <span className="text-orange-500 font-black tracking-[0.4em] uppercase text-xs">Knowledge Hub</span>
+          <h2 className="text-6xl md:text-9xl font-black text-white tracking-tighter leading-none">{t.outputs.title}</h2>
+          <p className="text-xl text-stone-400 font-medium max-w-2xl">{t.outputs.subtitle}</p>
+        </div>
+
+        {!category ? (
+          <div className="grid md:grid-cols-3 gap-8">
+            {categories.map((cat) => (
+              <Link 
+                key={cat.id} 
+                to={`/outputs/${cat.id}`}
+                className="group relative h-[500px] rounded-[3rem] overflow-hidden border border-white/5 hover:border-orange-500/50 transition-all shadow-2xl"
+              >
+                <img src={cat.img} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-40 group-hover:opacity-60" />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-stone-950/40 to-transparent"></div>
+                <div className="absolute bottom-12 left-10 right-10 space-y-6">
+                  <div className="w-14 h-14 bg-stone-900 border border-white/10 rounded-2xl flex items-center justify-center text-orange-500 group-hover:bg-orange-600 group-hover:text-white transition-all">
+                    <i className={`fa-solid ${cat.icon} text-xl`}></i>
+                  </div>
+                  <h3 className="text-3xl font-black text-white tracking-tighter uppercase">{cat.title}</h3>
+                  <div className="text-[10px] font-black uppercase tracking-widest text-orange-500 opacity-0 group-hover:opacity-100 transition-all translate-y-4 group-hover:translate-y-0">
+                    {t.outputs.view_all} <i className="fa-solid fa-arrow-right ml-2"></i>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+        ) : (
+          <div className="animate-fade-in space-y-12">
+            <Link to="/outputs" className="inline-flex items-center space-x-2 text-stone-500 hover:text-orange-500 font-bold uppercase tracking-[0.3em] text-[10px] transition-colors">
+              <i className="fa-solid fa-arrow-left"></i>
+              <span>Back to Hub</span>
+            </Link>
+
+            {category === 'publications' && (
+              <div className="grid gap-6">
+                {[1, 2, 3].map(i => (
+                  <div key={i} className="bg-stone-900/50 p-8 md:p-12 rounded-[2.5rem] border border-white/5 hover:border-white/10 transition-all flex flex-col md:flex-row gap-10">
+                    <div className="w-full md:w-1/3 aspect-[3/4] bg-stone-800 rounded-2xl overflow-hidden relative border border-white/5">
+                      <div className="absolute inset-0 flex items-center justify-center text-stone-700">
+                        <i className="fa-solid fa-file-pdf text-6xl"></i>
+                      </div>
+                    </div>
+                    <div className="w-full md:w-2/3 space-y-6 flex flex-col justify-center">
+                      <div className="flex flex-wrap gap-2">
+                        <span className="px-3 py-1 bg-emerald-500/10 text-emerald-500 text-[8px] font-black uppercase tracking-widest rounded-full border border-emerald-500/20">Peer Reviewed</span>
+                        <span className="px-3 py-1 bg-blue-500/10 text-blue-500 text-[8px] font-black uppercase tracking-widest rounded-full border border-blue-500/20">DOI Available</span>
+                      </div>
+                      <h4 className="text-2xl md:text-3xl font-black text-white tracking-tight uppercase leading-tight">Quantifying Fire Risk in Quercus ecosystems: A meta-analysis of the Mediterranean basin</h4>
+                      <p className="text-stone-400 text-sm leading-relaxed">Journal of Fire Ecology • December 2023</p>
+                      <button className="self-start text-[10px] font-black uppercase tracking-[0.3em] text-orange-500 border-b border-orange-500/30 hover:border-orange-500 transition-all pb-1">Download Full Paper</button>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {category === 'podcasts' && (
+              <div className="grid gap-6">
+                {[1, 2].map(i => (
+                  <div key={i} className="bg-stone-900/50 p-8 rounded-[3rem] border border-white/5 hover:border-orange-500/30 transition-all flex flex-col md:flex-row items-center gap-8 group">
+                    <div className="w-24 h-24 bg-orange-600 rounded-full flex items-center justify-center text-white text-3xl shadow-xl group-hover:scale-110 transition-transform cursor-pointer">
+                      <i className="fa-solid fa-play ml-1"></i>
+                    </div>
+                    <div className="flex-grow space-y-2">
+                       <h4 className="text-xl font-black text-white uppercase tracking-tight">Episode {i}: The Future of Nature-Based Solutions</h4>
+                       <p className="text-stone-500 text-xs font-bold uppercase tracking-widest">Resfire Talks • 45 min</p>
+                       <div className="w-full h-1 bg-stone-800 rounded-full mt-4 overflow-hidden">
+                          <div className="h-full bg-orange-600 w-1/3 group-hover:w-full transition-all duration-[10s]"></div>
+                       </div>
+                    </div>
+                    <div className="flex space-x-4 opacity-50">
+                       <i className="fa-brands fa-spotify text-2xl hover:text-white cursor-pointer"></i>
+                       <i className="fa-brands fa-apple text-2xl hover:text-white cursor-pointer"></i>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {category === 'news' && (
+              <div className="grid md:grid-cols-2 gap-8">
+                {[1, 2, 3, 4].map(i => (
+                  <div key={i} className="group cursor-pointer">
+                    <div className="aspect-video bg-stone-900 rounded-[2.5rem] overflow-hidden border border-white/5 mb-6 relative">
+                       <img src={`https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80&w=800&sig=${i}`} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" />
+                       <div className="absolute top-6 left-6 px-4 py-1.5 bg-orange-600 text-white text-[9px] font-black uppercase tracking-widest rounded-full">Press Release</div>
+                    </div>
+                    <h4 className="text-2xl font-black text-white uppercase tracking-tight group-hover:text-orange-500 transition-colors">Resfire project joins UN resilience platform for 2025 summits</h4>
+                    <p className="text-stone-500 text-xs mt-3 uppercase tracking-widest font-bold">January 15, 2024 • 4 min read</p>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
 const Contact = () => {
   const { t } = useTranslation();
   return (
@@ -234,7 +351,6 @@ const Contact = () => {
               <h2 className="text-6xl md:text-9xl font-black text-white leading-[0.8] tracking-tighter">{t.contact.title}</h2>
               <p className="text-xl text-stone-400 font-medium leading-relaxed">{t.contact.subtitle}</p>
             </div>
-
             <div className="space-y-10">
               <div className="flex items-start space-x-6 group">
                 <div className="w-14 h-14 bg-stone-900 border border-white/10 rounded-2xl flex items-center justify-center text-orange-500 group-hover:bg-orange-600 group-hover:text-white transition-all">
@@ -255,13 +371,7 @@ const Contact = () => {
                 </div>
               </div>
             </div>
-
-            <div className="p-10 bg-orange-600/5 border-l-2 border-orange-600 rounded-r-3xl">
-              <p className="italic text-stone-300 text-lg leading-relaxed">"{t.contact.quote}"</p>
-              <p className="mt-6 font-black text-orange-500 text-[10px] uppercase tracking-[0.4em]">{t.contact.director}</p>
-            </div>
           </div>
-
           <div className="lg:col-span-3 bg-stone-900 border border-white/5 p-12 md:p-16 rounded-[4rem] shadow-2xl relative overflow-hidden">
              <div className="absolute top-0 right-0 p-8 opacity-10">
                 <i className="fa-solid fa-paper-plane text-8xl text-stone-500"></i>
@@ -280,10 +390,6 @@ const Contact = () => {
               <div className="space-y-3">
                 <label className="text-[10px] font-black uppercase tracking-[0.3em] text-stone-500">{t.contact.form_email}</label>
                 <input type="email" className="w-full bg-stone-950 border border-white/5 rounded-2xl px-6 py-5 text-white focus:outline-none focus:border-orange-600 transition-colors" placeholder="email@organization.org" />
-              </div>
-              <div className="space-y-3">
-                <label className="text-[10px] font-black uppercase tracking-[0.3em] text-stone-500">{t.contact.form_msg}</label>
-                <textarea rows={5} className="w-full bg-stone-950 border border-white/5 rounded-2xl px-6 py-5 text-white focus:outline-none focus:border-orange-600 transition-colors resize-none" placeholder="Your message..."></textarea>
               </div>
               <button className="w-full bg-orange-600 hover:bg-orange-500 text-white font-black py-6 rounded-2xl transition-all shadow-xl shadow-orange-600/20 uppercase tracking-[0.4em] text-xs">
                 {t.contact.form_btn}
@@ -304,6 +410,8 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Abstract />} />
             <Route path="/work-packages" element={<WorksPackages />} />
+            <Route path="/outputs" element={<Outputs />} />
+            <Route path="/outputs/:category" element={<Outputs />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
           <Assistant />
