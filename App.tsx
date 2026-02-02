@@ -421,38 +421,31 @@ const Team = () => {
           <p className="text-xl text-stone-400 font-medium max-w-2xl">{t.team.subtitle}</p>
         </div>
 
-        <div className="grid gap-16">
+        <div className="grid gap-10">
           {PARTNERS.map((partner) => (
-            <div key={partner.id} className="group relative glass-card p-10 md:p-16 rounded-[4rem] border border-white/5 hover:border-orange-500/20 transition-all flex flex-col md:flex-row items-center gap-12 md:gap-20">
-               <div className="w-full md:w-1/3 flex justify-center items-center">
-                  <div className="bg-white p-8 rounded-[3rem] shadow-2xl group-hover:scale-105 transition-transform duration-700">
-                    <img 
-                      src={partner.logo} 
-                      alt={partner.name} 
-                      className="max-h-32 md:max-h-40 w-auto object-contain"
-                    />
-                  </div>
-               </div>
-               <div className="w-full md:w-2/3 space-y-8 text-center md:text-left">
+            <div key={partner.id} className="group glass-card p-10 md:p-16 rounded-[4rem] border border-white/5 hover:border-orange-500/20 transition-all">
+               <div className="space-y-10">
                   <div className="space-y-4">
-                    <div className="inline-block px-4 py-1.5 bg-orange-600/10 border border-orange-500/20 rounded-full text-[9px] font-black uppercase tracking-[0.3em] text-orange-500">Institutional Partner</div>
-                    <h3 className="text-3xl md:text-5xl font-black text-white tracking-tighter leading-none uppercase">{partner.name}</h3>
+                    <div className="inline-block px-4 py-1.5 bg-orange-600/10 border border-orange-500/20 rounded-full text-[9px] font-black uppercase tracking-[0.3em] text-orange-500 mb-2">Institutional Partner</div>
+                    <h3 className="text-4xl md:text-6xl font-black text-white tracking-tighter leading-none uppercase group-hover:text-orange-500 transition-colors">
+                      <a href={partner.url} target="_blank" rel="noopener noreferrer" className="hover:underline decoration-orange-600 underline-offset-8">
+                        {partner.name}
+                      </a>
+                    </h3>
+                    <div className="w-24 h-1 bg-orange-600 rounded-full"></div>
                   </div>
-                  <div className="relative">
-                    <div className="absolute -left-10 top-0 hidden md:block w-1 h-full bg-orange-600/30 rounded-full"></div>
-                    <p className="text-lg md:text-xl text-stone-300 font-medium leading-relaxed opacity-90 italic md:not-italic">
+                  
+                  <div className="max-w-5xl">
+                    <p className="text-xl md:text-2xl text-stone-300 font-medium leading-relaxed opacity-90">
                       {partner.description}
                     </p>
                   </div>
-                  <div className="flex justify-center md:justify-start pt-4">
-                     <div className="flex -space-x-3">
-                        {[1, 2, 3].map(i => (
-                          <div key={i} className="w-8 h-8 rounded-full border-2 border-stone-900 bg-stone-800 overflow-hidden shadow-xl">
-                            <img src={`https://i.pravatar.cc/100?u=${partner.id}${i}`} className="w-full h-full object-cover grayscale opacity-50" />
-                          </div>
-                        ))}
-                        <div className="h-8 px-3 bg-stone-800 border-2 border-stone-900 rounded-full flex items-center justify-center text-[8px] font-black text-stone-500">Research Staff</div>
+
+                  <div className="pt-4 flex items-center space-x-4">
+                     <div className="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-stone-500">
+                        <i className="fa-solid fa-microscope text-xl"></i>
                      </div>
+                     <span className="text-[10px] font-black uppercase tracking-[0.4em] text-stone-500">Academic & Research Leadership</span>
                   </div>
                </div>
             </div>
