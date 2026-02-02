@@ -485,7 +485,7 @@ const Contact = () => {
               {/* Research Contact 1 */}
               <div className="flex items-center space-x-6 group animate-fade-in-up">
                 <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-orange-500/50 transition-all flex-shrink-0 shadow-2xl">
-                  <img src="/regos2.jpg" alt="Adrián Regos Sanz" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" />
+                  <img src="regos2.jpg" alt="Adrián Regos Sanz" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" />
                 </div>
                 <div className="space-y-1">
                   <h4 className="font-black text-white text-lg tracking-tight uppercase group-hover:text-orange-500 transition-colors">Adrián Regos Sanz</h4>
@@ -499,7 +499,7 @@ const Contact = () => {
               {/* Research Contact 2 */}
               <div className="flex items-center space-x-6 group animate-fade-in-up" style={{ animationDelay: '100ms' }}>
                 <div className="w-20 h-20 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-orange-500/50 transition-all flex-shrink-0 shadow-2xl">
-                  <img src="/Brotons.jpg" alt="Lluís Brotons Alabau" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" />
+                  <img src="Brotons.jpg" alt="Lluís Brotons Alabau" className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all" />
                 </div>
                 <div className="space-y-1">
                   <h4 className="font-black text-white text-lg tracking-tight uppercase group-hover:text-orange-500 transition-colors">Lluís Brotons Alabau</h4>
