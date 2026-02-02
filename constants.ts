@@ -92,13 +92,13 @@ export const TEAM_MEMBERS: TeamMember[] = [
 
 export const TRANSLATIONS = {
   en: {
-    nav: { abstract: 'Abstract', workPackages: 'Work Packages', contact: 'Contact', language: 'Language' },
+    nav: { abstract: 'Abstract', workPackages: 'Work Packages', outputs: 'Outputs', contact: 'Contact', language: 'Language' },
     home: {
       hero_sub: 'Proactive & Sustainable Management',
       hero_title: 'THE RESFIRE PROJECT',
       hero_desc_p1: 'The RESFIRE project aims to contribute to the development of proactive and sustainable fire management strategies that not only mitigate the risks of destructive wildfires but also foster the health and resilience of Mediterranean ecosystems and their biodiversity.',
-      hero_desc_p2: 'The emphasis is on recognizing the ecological importance of fire and integrating this understanding into effective nature-based solutions for fire-prone ecosystems. Thus, the overarching goal of the project is to advance the understanding, management, and restoration of fire regimes in humanized Mediterranean landscapes.',
-      hero_desc_p3: 'This restoration of fire regimes can be achieved by relaxing fire suppression in these systems so that fire in non-adverse meteorological conditions can recover its positive impact. The project seeks to develop a nuanced perspective that acknowledges the ecological role of fire as a natural disturbance.',
+      hero_desc_p2: 'The emphasis is on recognizing the ecological importance of fire and integrating this understanding into effective nature-based solutions for fire-prone ecosystems.',
+      hero_desc_p3: 'This restoration of fire regimes can be achieved by relaxing fire suppression in these systems so that fire in non-adverse meteorological conditions can recover its positive impact.',
       cta_primary: 'Scientific Abstract',
       cta_secondary: 'View Roadmap',
     },
@@ -115,6 +115,14 @@ export const TRANSLATIONS = {
       title: 'Strategy',
       subtitle: 'The project is organized into three strategic work packages designed to restore resilient fire regimes.',
       milestones: 'Focus Areas'
+    },
+    outputs: {
+      title: 'Project Outputs',
+      subtitle: 'Discover our scientific contributions, media presence, and latest news.',
+      publications: 'Scientific Publications',
+      podcasts: 'Podcasts',
+      news: 'News & Media',
+      view_all: 'Explore category'
     },
     contact: {
       title: 'Contact',
@@ -136,13 +144,13 @@ export const TRANSLATIONS = {
     }
   },
   es: {
-    nav: { abstract: 'Abstract', workPackages: 'Work Packages', contact: 'Contacto', language: 'Idioma' },
+    nav: { abstract: 'Abstract', workPackages: 'Work Packages', outputs: 'Outputs', contact: 'Contacto', language: 'Idioma' },
     home: {
       hero_sub: 'Gestión Proactiva y Sostenible',
       hero_title: 'EL PROYECTO RESFIRE',
       hero_desc_p1: 'El proyecto RESFIRE tiene como objetivo contribuir al desarrollo de estrategias de gestión del fuego proactivas y sostenibles que no solo mitiguen los riesgos de incendios forestales destructivos, sino que también fomenten la salud y la resiliencia de los ecosistemas mediterráneos y su biodiversidad.',
-      hero_desc_p2: 'El énfasis se pone en reconocer la importancia ecológica del fuego e integrar esta comprensión en soluciones efectivas basadas en la naturaleza para ecosistemas propensos al fuego. El objetivo es avanzar en la gestión y restauración de los regímenes de fuego en paisajes humanizados.',
-      hero_desc_p3: 'Esta restauración se logra relajando la supresión de incendios para que el fuego, en condiciones meteorológicas no adversas, recupere su impacto positivo. Buscamos una perspectiva matizada que reconozca el papel ecológico del fuego como una perturbación natural.',
+      hero_desc_p2: 'El énfasis se pone en reconocer la importancia ecológica del fuego e integrar esta comprensión en soluciones efectivas basadas en la naturaleza.',
+      hero_desc_p3: 'Esta restauración se logra relajando la supresión de incendios para que el fuego, en condiciones meteorológicas no adversas, recupere su impacto positivo.',
       cta_primary: 'Resumen Científico',
       cta_secondary: 'Hoja de Ruta',
     },
@@ -159,6 +167,14 @@ export const TRANSLATIONS = {
       title: 'Estrategia',
       subtitle: 'El proyecto se organiza en tres paquetes de trabajo estratégicos diseñados para restaurar regímenes de fuego resilientes.',
       milestones: 'Áreas de Enfoque'
+    },
+    outputs: {
+      title: 'Resultados',
+      subtitle: 'Descubre nuestras contribuciones científicas, presencia en medios y últimas noticias.',
+      publications: 'Publicaciones Científicas',
+      podcasts: 'Podcasts',
+      news: 'Noticias y Medios',
+      view_all: 'Explorar categoría'
     },
     contact: {
       title: 'Contacto',
@@ -180,13 +196,13 @@ export const TRANSLATIONS = {
     }
   },
   pt: {
-    nav: { abstract: 'Abstract', workPackages: 'Pacotes', contact: 'Contacto', language: 'Idioma' },
+    nav: { abstract: 'Abstract', workPackages: 'Pacotes', outputs: 'Outputs', contact: 'Contacto', language: 'Idioma' },
     home: {
       hero_sub: 'Gestão Proativa e Sustentável',
       hero_title: 'O PROJETO RESFIRE',
-      hero_desc_p1: 'O projeto RESFIRE visa contribuir para o desenvolvimento de estratégias de gestão de incêndios proativas e sustentáveis que não só mitiguem os riscos de incêndios florestais destrutivos, mas também promovam a saúde e a resiliência dos ecossistemas mediterrânicos.',
-      hero_desc_p2: 'A ênfase é colocada no reconhecimento da importância ecológica do fogo e na integração desta compreensão em soluções baseadas na natureza. O objetivo global é avançar na restauração dos regimes de fogo em paisagens humanizadas.',
-      hero_desc_p3: 'Esta restauração pode ser alcançada relaxando a supressão de incêndios para que o fogo, em condições meteorológicas não adversas, recupere o seu impacto positivo. O projeto procura reconhecer o papel ecológico do fogo como uma perturbação natural.',
+      hero_desc_p1: 'O projeto RESFIRE visa contribuir para o desenvolvimento de estratégias de gestão de incêndios proativas e sustentáveis que não só mitiguem os riscos de incêndios florestais destrutivos.',
+      hero_desc_p2: 'A ênfase é colocada no reconhecimento da importância ecológica do fogo e na integração desta compreensão em soluções baseadas na natureza.',
+      hero_desc_p3: 'Esta restauração pode ser alcançada relaxando a supressão de incêndios para que o fogo, em condições meteorológicas não adversas, recupere o seu impacto positivo.',
       cta_primary: 'Resumo Científico',
       cta_secondary: 'Plano de Ação',
     },
@@ -203,6 +219,14 @@ export const TRANSLATIONS = {
       title: 'Estratégia',
       subtitle: 'O projeto está organizado em três pacotes de trabalho estratégicos concebidos para restaurar regimes de fogo resilientes.',
       milestones: 'Áreas de Foco'
+    },
+    outputs: {
+      title: 'Resultados',
+      subtitle: 'Descubra nossas contribuições científicas, presença na mídia e últimas notícias.',
+      publications: 'Publicações Científicas',
+      podcasts: 'Podcasts',
+      news: 'Notícias e Mídia',
+      view_all: 'Explorar categoria'
     },
     contact: {
       title: 'Contacto',
