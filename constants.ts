@@ -1,5 +1,5 @@
 
-import { WorkPackage, TeamMember } from './types';
+import { WorkPackage, TeamMember, Partner } from './types';
 
 export const PUBLICATIONS = [
   {
@@ -83,7 +83,7 @@ export const CONFERENCES = [
     year: '2025',
     title: 'Paisaxe, fogo e biodiversidade na reserva da biosfera Gerês-Xurés: pasado, presente e futuro',
     event: 'Ponencia invitada nas Xornadas “Expansión e homoxeneización do espazo forestal: receita para un desastre?” Consello da Cultura Galega',
-    date: '20 de outubro de 2025',
+    date: '20 de octubre de 2025',
     location: 'Santiago de Compostela'
   }
 ];
@@ -109,22 +109,24 @@ export const NEWS = [
   }
 ];
 
-export const PARTNERS = [
+export const PARTNERS: Partner[] = [
   {
     id: 'mbg',
     name: 'Misión Biológica de Galicia',
     url: 'https://mbg.csic.es/es/',
-    description: 'The Misión Biológica de Galicia has an excellent research record in the study of the responses of landscapes and the key ecosystem services provided such as carbon or water provisioning to main drivers such as wildfires, accounting for much of the information needed in the development of landscape dynamic models in complex socio-ecological contexts.'
+    description: 'The Misión Biológica de Galicia has an excellent research record in the study of the responses of landscapes and the key ecosystem services provided such as carbon or water provisioning to main drivers such as wildfires, accounting for much of the information needed in the development of landscape dynamic models in complex socio-ecological contexts.',
+    logo: 'logo-mbg.jpg'
   },
   {
     id: 'creaf',
     name: 'CREAF',
     url: 'https://www.creaf.cat/es',
-    description: 'The Centre for Ecological Research and Forestry Applications as gained experience in establishing links between landscape dynamics, in terms of composition and configuration of major landscape components and their derived biodiversity responses. This has been possible thanks to developing a spatially explicit landscape model (SELM), aimed at simulating forest dynamics under different fire regimes.'
+    description: 'The Centre for Ecological Research and Forestry Applications as gained experience in establishing links between landscape dynamics, in terms of composition and configuration of major landscape components and their derived biodiversity responses. This has been possible thanks to developing a spatially explicit landscape model (SELM), aimed at simulating forest dynamics under different fire regimes.',
+    logo: 'CREAF-SO-logo.webp'
   }
 ];
 
-export const WORK_PACKAGES: any[] = [
+export const WORK_PACKAGES: WorkPackage[] = [
   {
     id: 'WP1',
     image: 'https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&q=80&w=1600',
@@ -142,7 +144,7 @@ export const WORK_PACKAGES: any[] = [
       pt: {
         title: 'WP1. Compreender e quantificar o controlo humano sobre os regimes de fogo em paisagens mediterrânicas',
         description: 'Analisar a influência histórica e atual das actividades humanas nos padrões de fogo para prever melhor os riscos futuros.',
-        tasks: ['Quantificação de Dados', 'Análise de Impacto Humano', 'Mapeamento de Regimes']
+        tasks: ['Quantificação de Datos', 'Análise de Impacto Humano', 'Mapeamento de Regimes']
       }
     }
   },
@@ -183,7 +185,7 @@ export const WORK_PACKAGES: any[] = [
       },
       pt: {
         title: 'WP3. Utilização do Nature Futures Framework (NFF) para guiar o potencial futuro dos regimes de fogo ecológicos como NbS perante incêndios extremos',
-        description: 'Aplicar estruturas globais para desenvolver soluções baseadas na natureza que transformem o fogo numa ferramenta de gestão.',
+        description: 'Aplicar estruturas globais para desenvolver soluções baseadas na naturaleza que transformem o fogo numa ferramenta de gestão.',
         tasks: ['Estrutura NFF', 'Soluções Baseadas na Natureza', 'Planeamento Estratégico']
       }
     }
@@ -198,7 +200,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     content: {
       en: { role: 'Project Director', description: 'Expert in forest ecology with 20 years of experience in fire behavior modeling.' },
       es: { role: 'Directora del Proyecto', description: 'Experta en ecología forestal con 20 años de experiencia en modelado del comportamiento del fuego.' },
-      pt: { role: 'Diretora do Projeto', description: 'Especialista em ecologia florestal com 20 anos de experiência em modelagem do comportamento do fogo.' }
+      pt: { role: 'Directora do Projeto', description: 'Especialista em ecologia florestal com 20 anos de experiência em modelagem do comportamento do fogo.' }
     }
   },
   {
@@ -333,8 +335,8 @@ export const TRANSLATIONS = {
     home: {
       hero_sub: 'Gestão Proativa e Sustentável',
       hero_title: 'O PROJETO RESFIRE',
-      hero_desc_p1: 'O projeto RESFIRE visa contribuir para o desenvolvimento de estratégias de gestão de incêndios proativas e sustentáveis que não só mitiguem os riscos de incêndios florestais destrutivos.',
-      hero_desc_p2: 'A ênfase é colocada no reconhecimento da importância ecológica do fogo e na integração desta compreensão em soluções baseadas na natureza.',
+      hero_desc_p1: 'O proyecto RESFIRE visa contribuir para o desenvolvimento de estratégias de gestão de incêndios proativas e sustentáveis que não só mitiguem os riscos de incêndios florestais destrutivos.',
+      hero_desc_p2: 'A ênfase é colocada no reconhecimento da importância ecológica do fogo e na integração desta compreensão em soluções baseadas na naturaleza.',
       hero_desc_p3: 'Esta restauração pode ser alcançada relaxando a supressão de incêndios para que o fogo, en condições meteorológicas não adversas, recupere o seu impacto positivo.',
       cta_primary: 'Resumo Científico',
       cta_secondary: 'Plano de Ação',
