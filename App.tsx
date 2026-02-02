@@ -436,10 +436,23 @@ const Team = () => {
                     <div className="w-24 h-1 bg-orange-600 rounded-full"></div>
                   </div>
                   
-                  <div className="max-w-5xl">
-                    <p className="text-xl md:text-2xl text-stone-300 font-medium leading-relaxed opacity-90">
-                      {partner.description}
-                    </p>
+                  <div className="flex flex-col lg:flex-row gap-12 items-center">
+                    <div className="flex-grow max-w-5xl">
+                      <p className="text-xl md:text-2xl text-stone-300 font-medium leading-relaxed opacity-90">
+                        {partner.description}
+                      </p>
+                    </div>
+                    {partner.logo && (
+                      <div className="w-full lg:w-64 flex-shrink-0">
+                        <div className="bg-white/5 backdrop-blur-sm p-8 rounded-[3rem] border border-white/10 flex items-center justify-center group-hover:border-orange-500/30 transition-all overflow-hidden group/logo">
+                          <img 
+                            src={partner.logo} 
+                            alt={`${partner.name} logo`} 
+                            className="w-full h-auto object-contain max-h-24 grayscale brightness-125 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700 transform group-hover/logo:scale-105" 
+                          />
+                        </div>
+                      </div>
+                    )}
                   </div>
 
                   <div className="pt-4 flex items-center space-x-4">
