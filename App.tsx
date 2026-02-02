@@ -521,18 +521,6 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-
-              <div className="pt-12 border-t border-white/5">
-                <div className="flex items-start space-x-6 group">
-                  <div className="w-12 h-12 bg-stone-900 border border-white/10 rounded-2xl flex items-center justify-center text-orange-500 group-hover:bg-orange-600 group-hover:text-white transition-all">
-                    <i className="fa-solid fa-location-dot text-lg"></i>
-                  </div>
-                  <div>
-                    <h4 className="font-black text-white uppercase tracking-widest text-[10px] mb-1">{t.contact.hub}</h4>
-                    <p className="text-stone-400 text-sm leading-relaxed max-w-[200px]">{t.contact.address}</p>
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Visual Column (Right) */}
