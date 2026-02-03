@@ -3,15 +3,6 @@ import { WorkPackage, TeamMember, Partner, Language } from './types';
 
 export const PUBLICATIONS = [
   {
-    id: 'special-issue-link',
-    authors: 'Regos A (Ed.)',
-    year: '2026',
-    title: 'Special Issue: Nature-Based Solutions to Extreme Wildfire',
-    journal: 'Fire (MDPI) Collection',
-    doi: 'Collection Link',
-    url: 'https://www.mdpi.com/journal/fire/special_issues/Nature_Based_Solutions_Extreme_Wildfire'
-  },
-  {
     id: 'regos-2026-editorial',
     authors: 'Regos A',
     year: '2026',
@@ -130,7 +121,7 @@ export const PARTNERS: Partner[] = [
     description: {
       en: 'The Centre for Ecological Research and Forestry Applications as gained experience in establishing links between landscape dynamics, in terms of composition and configuration of major landscape components and their derived biodiversity responses. This has been possible thanks to developing a spatially explicit landscape model (SELM), aimed at simulating forest dynamics under different fire regimes.',
       es: 'El Centro de Investigación Ecológica y Aplicaciones Forestales ha adquirido experiencia en el establecimiento de vínculos entre la dinámica del paisaje, en términos de composición y configuración de sus componentes principales, y las respuestas de la biodiversidad derivadas. Esto ha sido posible gracias al desarrollo de un modelo de paisaje espacialmente explícito (SELM), destinado a simular la dinámica forestal bajo diferentes regímenes de fuego.',
-      pt: 'O Centro de Investigação Ecológica e Aplicações Florestais adquiriu experiência no estabelecimento de ligações entre a dinâmica da paisagem, em termos de composição e configuração dos principais componentes da paisagem e as suas respostas de biodiversidade derivadas. Isto foi possível graças ao desenvolvimento de um modelo de paisagem espacialmente explícito (SELM), destinado a simular a dinâmica florestal sob diferentes regimes de fogo.',
+      pt: 'O Centro de Investigação Ecológica e Aplicações Forestais adquiriu experiência no estabelecimento de ligações entre a dinâmica da paisagem, em termos de composição e configuração dos principais componentes da paisagem e as suas respostas de biodiversidade derivadas. Isto foi possível graças ao desenvolvimento de um modelo de paisagem espacialmente explícito (SELM), destinado a simular a dinâmica forestal sob diferentes regimes de fogo.',
       gl: 'O Centro de Investigación Ecolóxica e Aplicacións Forestais adquiriu experiencia no establecemento de vínculos entre a dinámica da paisaxe, en termos de composición e configuración dos seus compoñentes principais, e as respostas da biodiversidade derivadas. Isto foi posible grazas ao desenvolvemento dun modelo de paisaxe espacialmente explícito (SELM), destinado a simular a dinámica forestal baixo diferentes réximes de lume.',
       ca: 'El Centre de Recerca Ecològica i Aplicacions Forestals ha adquirit experiència en l\'establiment d\'enllaços entre la dinàmica del paisatge, en termes de composició i configuració dels seus components principals, i les respostes de la biodiversitat derivades. Això ha estat possible gràcies al desenvolupament d\'un model de paisatge espacialment explícit (SELM), destinat a simular la dinàmica forestal sota diferents règims de foc.'
     },
@@ -435,7 +426,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     },
     team: {
       title: 'O Equipo',
-      subtitle: 'Resfire é un efrozo colaborativo entre institucións de investigación líderes en Galicia e Cataluña.',
+      subtitle: 'Resfire é un efrozo colaborativo entre institutiones de investigación líderes en Galicia e Cataluña.',
       partners: 'Socios do Consorcio'
     },
     contact: {
@@ -465,7 +456,7 @@ export const TRANSLATIONS: Record<Language, any> = {
       title: 'Resum del Projecte',
       p1: 'El canvi climàtic ha alterat fonamentalment el règim d\'incendis forestals a nivell mundial. El Projecte Resfire representa un canvi de paradigma des de la supressió reactiva cap a paisatges proactius i resilients utilitzant intel·ligència basada en dades.',
       challenge_title: 'El Desafiament',
-      challenge_desc: 'L\'augment de les temperatures ha creat "mega-incendis" que superen la capacitat humana de supressió. L\'acumulació de combustible degut a l\'abandonament rural ha fet que els boscos siguin altament volàtils.',
+      challenge_desc: 'L\'augment de les temperatures ha creat "mega-incendis" que superan la capacitat humana de supressió. L\'acumulació de combustible degut a l\'abandonament rural ha fet que els boscos siguin altament volàtils.',
       solution_title: 'La Nostra Solució',
       solution_desc: 'Integració d\'aprenentatge profund per a models predictivos, nodes de sensors IoT per al seguiment i gestió forestal adaptativa per restaurar paisatges en mosaic.',
       p2: 'La nostra missió és tractar el bosc com un sistema viu i dinàmic que pot ser gestionat per a la resiliència a llarg termini a través de la ciència.',
