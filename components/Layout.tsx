@@ -73,7 +73,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                 <span className="text-4xl md:text-5xl font-black tracking-tighter text-white leading-none">RESFIRE</span>
                 <span className="flex h-3 w-3 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_12px_rgba(16,185,129,0.8)]"></span>
               </div>
-              <span className="text-[9px] uppercase tracking-[0.25em] text-orange-500 font-black mt-1">PID2023-152690OB-C21</span>
+              <span className="text-[9px] uppercase tracking-[0.25em] text-orange-500 font-black mt-1">PID2023-152690OA-C21/C22</span>
             </div>
           </Link>
           
@@ -190,7 +190,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             <div className="col-span-2 space-y-8">
               <div className="flex flex-col">
                 <span className="font-black text-4xl tracking-tighter text-white leading-none">RESFIRE</span>
-                <span className="text-[10px] uppercase tracking-[0.25em] text-orange-500 font-black mt-1">PID2023-152690OB-C21</span>
+                <span className="text-[10px] uppercase tracking-[0.25em] text-orange-500 font-black mt-1">PID2023-152690OA-C21/C22</span>
               </div>
               
               {/* Institutional Logos relocated and in original colors */}
