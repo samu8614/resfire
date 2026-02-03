@@ -36,7 +36,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const handleMouseLeave = () => {
     timeoutRef.current = window.setTimeout(() => {
       setIsOutputsOpen(false);
-    }, 150); // Pequeño delay para que no se cierre si el usuario es rápido
+    }, 150);
   };
 
   const navLinks = [
@@ -59,6 +59,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     { code: 'en', label: 'EN', flag: '🇺🇸' },
     { code: 'es', label: 'ES', flag: '🇪🇸' },
     { code: 'pt', label: 'PT', flag: '🇵🇹' },
+    { code: 'gl', label: 'GL', flag: 'GAL' },
+    { code: 'ca', label: 'CA', flag: 'CAT' },
   ];
 
   return (
@@ -97,7 +99,6 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                   <span className={`absolute -bottom-1 left-0 h-0.5 bg-orange-500 transition-all duration-300 ${location.pathname.startsWith(link.path) && (link.path !== '/' || location.pathname === '/') ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
                 </Link>
 
-                {/* Submenú Desplegable con "puente" invisible para estabilidad */}
                 {link.subMenu && isOutputsOpen && (
                   <div className="absolute left-0 top-full w-64 pt-4 z-[100] animate-fade-in">
                     <div className="bg-stone-900/95 backdrop-blur-2xl border border-white/10 rounded-2xl p-2 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8)] overflow-hidden">
@@ -131,7 +132,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                 onClick={() => setIsLangOpen(!isLangOpen)}
                 className="flex items-center space-x-2 bg-white/5 px-3 py-1.5 rounded-full border border-white/10 text-[9px] font-black hover:bg-white/10 transition-colors uppercase tracking-widest"
               >
-                <span>{languages.find(l => l.code === language)?.flag} {language}</span>
+                <span>{languages.find(l => l.code === language)?.label}</span>
                 <i className={`fa-solid fa-chevron-down text-[8px] transition-transform ${isLangOpen ? 'rotate-180' : ''}`}></i>
               </button>
               
@@ -143,7 +144,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                       onClick={() => { setLanguage(lang.code); setIsLangOpen(false); }}
                       className={`w-full text-left px-4 py-2 text-[10px] font-bold uppercase tracking-widest hover:bg-orange-600 hover:text-white transition-colors ${language === lang.code ? 'text-orange-500' : 'text-stone-400'}`}
                     >
-                      {lang.label} {lang.flag}
+                      {lang.label} <span className="text-[8px] opacity-50 ml-1">{lang.flag}</span>
                     </button>
                   ))}
                 </div>
@@ -156,7 +157,6 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           </button>
         </div>
 
-        {/* Menú Móvil */}
         <div className={`md:hidden transition-all duration-500 ease-in-out bg-stone-950 fixed inset-0 z-40 ${isMobileMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0'}`}>
           <div className="flex flex-col p-10 h-full justify-center items-center text-center overflow-y-auto pt-24 space-y-10">
             {navLinks.map((link) => (
@@ -171,9 +171,11 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                 )}
               </div>
             ))}
-            <div className="flex space-x-6 pt-10 border-t border-white/10 w-full justify-center">
+            <div className="flex flex-wrap gap-4 pt-10 border-t border-white/10 w-full justify-center">
                {languages.map(lang => (
-                 <button key={lang.code} onClick={() => { setLanguage(lang.code); setIsMobileMenuOpen(false); }} className={`text-2xl transition-transform hover:scale-125 ${language === lang.code ? 'opacity-100 grayscale-0' : 'opacity-30 grayscale'}`}>{lang.flag}</button>
+                 <button key={lang.code} onClick={() => { setLanguage(lang.code); setIsMobileMenuOpen(false); }} className={`px-4 py-2 bg-white/5 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all ${language === lang.code ? 'text-orange-500 border-orange-500/50' : 'text-stone-500 border-transparent'}`}>
+                   {lang.label}
+                 </button>
                ))}
             </div>
           </div>
@@ -212,8 +214,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-10 border-t border-white/5">
             <div className="flex flex-col">
-              <p className="text-stone-600 text-[10px] uppercase tracking-[0.2em] font-bold">Scientific Prevention &bull; 2024</p>
-              <p className="text-orange-500/50 text-[8px] uppercase tracking-[0.4em] font-black mt-1">v1.2.0 - Deployment Active</p>
+              <p className="text-stone-600 text-[10px] uppercase tracking-[0.2em] font-bold">Scientific Prevention &bull; {new Date().getFullYear()}</p>
+              <p className="text-orange-500/50 text-[8px] uppercase tracking-[0.4em] font-black mt-1">v1.3.0 - Multi-Language Active</p>
             </div>
             <div className="flex space-x-6">
               {['linkedin', 'x-twitter', 'github', 'instagram'].map(social => (
