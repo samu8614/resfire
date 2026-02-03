@@ -70,10 +70,10 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           <Link to="/" className="flex items-center space-x-3 group relative">
             <div className="flex flex-col">
               <div className="flex items-center space-x-2">
-                <span className="text-2xl font-black tracking-tighter text-white leading-none">RESFIRE</span>
-                <span className="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_8px_rgba(16,185,129,0.8)]"></span>
+                <span className="text-4xl md:text-5xl font-black tracking-tighter text-white leading-none">RESFIRE</span>
+                <span className="flex h-3 w-3 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_12px_rgba(16,185,129,0.8)]"></span>
               </div>
-              <span className="text-[8px] uppercase tracking-[0.3em] text-orange-500 font-bold">Scientific Prevention</span>
+              <span className="text-[9px] uppercase tracking-[0.25em] text-orange-500 font-black mt-1">PID2023-152690OB-C21</span>
             </div>
           </Link>
           
@@ -188,8 +188,9 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-4 gap-12 mb-16">
             <div className="col-span-2 space-y-6">
-              <div className="flex items-center space-x-3">
-                <span className="font-black text-2xl tracking-tighter text-white">RESFIRE</span>
+              <div className="flex flex-col">
+                <span className="font-black text-3xl tracking-tighter text-white">RESFIRE</span>
+                <span className="text-[8px] uppercase tracking-[0.2em] text-orange-500 font-black">PID2023-152690OB-C21</span>
               </div>
               <p className="text-stone-400 max-w-sm text-sm leading-relaxed font-medium">
                 Global initiative for forest preservation through advanced data science and ecological engineering.
@@ -214,8 +215,8 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-10 border-t border-white/5">
             <div className="flex flex-col">
-              <p className="text-stone-600 text-[10px] uppercase tracking-[0.2em] font-bold">Scientific Prevention &bull; {new Date().getFullYear()}</p>
-              <p className="text-orange-500/50 text-[8px] uppercase tracking-[0.4em] font-black mt-1">v1.3.0 - Multi-Language Active</p>
+              <p className="text-stone-600 text-[10px] uppercase tracking-[0.2em] font-bold">PID2023-152690OB-C21 &bull; {new Date().getFullYear()}</p>
+              <p className="text-orange-500/50 text-[8px] uppercase tracking-[0.4em] font-black mt-1">v1.3.1 - Enhanced Branding Active</p>
             </div>
             <div className="flex space-x-6">
               {['linkedin', 'x-twitter', 'github', 'instagram'].map(social => (
