@@ -1,5 +1,5 @@
 
-import { WorkPackage, TeamMember, Partner } from './types';
+import { WorkPackage, TeamMember, Partner, Language } from './types';
 
 export const PUBLICATIONS = [
   {
@@ -145,6 +145,16 @@ export const WORK_PACKAGES: WorkPackage[] = [
         title: 'WP1. Compreender e quantificar o controlo humano sobre os regimes de fogo em paisagens mediterrânicas',
         description: 'Analisar a influência histórica e atual das actividades humanas nos padrões de fogo para prever melhor os riscos futuros.',
         tasks: ['Quantificação de Datos', 'Análise de Impacto Humano', 'Mapeamento de Regimes']
+      },
+      gl: {
+        title: 'WP1. Comprender e cuantificar o control humano sobre os réximes de incendios en paisaxes mediterráneas',
+        description: 'Analizar a influencia histórica e actual das actividades humanas nos patróns de lume para predicir mellor os riscos futuros.',
+        tasks: ['Cuantificación de Datos', 'Análise de Impacto Humano', 'Mapeo de Réximes']
+      },
+      ca: {
+        title: 'WP1. Comprendre i quantificar el control humà sobre els règimes d\'incendis en paisatges mediterranis',
+        description: 'Analitzar la influència històrica i actual de les activitats humanes en els patrons de foc per predir millor els riscos futurs.',
+        tasks: ['Quantificació de Dades', 'Anàlisi d\'Impacte Humà', 'Mapatge de Règims']
       }
     }
   },
@@ -166,6 +176,16 @@ export const WORK_PACKAGES: WorkPackage[] = [
         title: 'WP2. Identificar o papel dos procesos ecológicos por trás das respostas da biodiversidade ao fogo na restauração de regimes de fogo ecológicos',
         description: 'Estudar como diferentes espécies e ecossistemas reagem ao fogo para restaurar el equilibrio natural.',
         tasks: ['Processos Ecológicos', 'Monitorização da Biodiversidade', 'Ciência da Restauração']
+      },
+      gl: {
+        title: 'WP2. Identificar o papel dos procesos ecolóxicos detrás das respostas da biodiversidade ao lume na restauración de réximes de lume ecolóxicos',
+        description: 'Estudar como reaccionan as diferentes especies e ecosistemas ao lume para restaurar o equilibrio natural e a resiliencia.',
+        tasks: ['Procesos Ecolóxicos', 'Monitoreo de Biodiversidade', 'Ciencia de Restauración']
+      },
+      ca: {
+        title: 'WP2. Identificar el paper dels processos ecològics darrere de les respostes de la biodiversitat al foc en la restauració de règims de foc ecològics',
+        description: 'Estudiar com reaccionen les diferents espècies i ecosistemes al foc per restaurar l\'equilibri natural i la resiliència.',
+        tasks: ['Processos Ecològics', 'Monitoratge de Biodiversitat', 'Ciència de Restauració']
       }
     }
   },
@@ -187,6 +207,16 @@ export const WORK_PACKAGES: WorkPackage[] = [
         title: 'WP3. Utilização do Nature Futures Framework (NFF) para guiar o potencial futuro dos regimes de fogo ecológicos como NbS perante incêndios extremos',
         description: 'Aplicar estruturas globais para desenvolver soluções baseadas na naturaleza que transformem o fogo numa ferramenta de gestão.',
         tasks: ['Estrutura NFF', 'Soluções Baseadas na Natureza', 'Planeamento Estratégico']
+      },
+      gl: {
+        title: 'WP3. Uso do Nature Futures Framework (NFF) para guiar o potencial futuro dos réximes de lume ecolóxicos como NbS ante incendios extremos',
+        description: 'Aplicar marcos globais para desenvolver solucións baseadas na natureza que transformen o lume dunha ameaza nunha ferramenta de xestión.',
+        tasks: ['Marco NFF', 'Solucións Baseadas na Natureza', 'Planificación Estratéxica']
+      },
+      ca: {
+        title: 'WP3. Ús del Nature Futures Framework (NFF) per guiar el potencial futur dels règims de foc ecològics com a NbS davant d\'incendis extrems',
+        description: 'Aplicar marcs globals per desenvolupar solucions basades en la natura que transformin el foc d\'una amenaça en una eina de gestió.',
+        tasks: ['Marc NFF', 'Solucions Basades en la Natura', 'Planificació Estratègica']
       }
     }
   }
@@ -200,22 +230,14 @@ export const TEAM_MEMBERS: TeamMember[] = [
     content: {
       en: { role: 'Project Director', description: 'Expert in forest ecology with 20 years of experience in fire behavior modeling.' },
       es: { role: 'Directora del Proyecto', description: 'Experta en ecología forestal con 20 años de experiencia en modelado del comportamiento del fuego.' },
-      pt: { role: 'Directora do Projeto', description: 'Especialista em ecologia florestal com 20 anos de experiência em modelagem do comportamento do fogo.' }
-    }
-  },
-  {
-    id: 'm2',
-    name: 'Dr. Marcus Thorne',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=800',
-    content: {
-      en: { role: 'AI Lead Researcher', description: 'Specialized in deep learning and satellite computer vision for environmental protection.' },
-      es: { role: 'Investigador Principal de IA', description: 'Especializado en aprendizaje profundo y visión artificial satelital para la protección ambiental.' },
-      pt: { role: 'Investigador Principal de IA', description: 'Especializado em deep learning e visão computacional por satélite para proteção ambiental.' }
+      pt: { role: 'Directora do Projeto', description: 'Especialista em ecologia florestal com 20 anos de experiência em modelagem do comportamento do fogo.' },
+      gl: { role: 'Directora do Proxecto', description: 'Experta en ecoloxía forestal con 20 anos de experiencia en modelado do comportamento do lume.' },
+      ca: { role: 'Directora del Projecte', description: 'Experta en ecologia forestal amb 20 anys d\'experiència en modelatge del comportament del foc.' }
     }
   }
 ];
 
-export const TRANSLATIONS = {
+export const TRANSLATIONS: Record<Language, any> = {
   en: {
     nav: { abstract: 'Abstract', workPackages: 'Work Packages', outputs: 'Outputs', team: 'Team', contact: 'Contact', language: 'Language' },
     home: {
@@ -259,13 +281,6 @@ export const TRANSLATIONS = {
       subtitle: 'Have questions about our research or want to collaborate? Our team is ready to connect.',
       hub: 'Innovation Hub',
       address: 'Forestry Science Dept, Building A, University of Resilience, EU',
-      quote: '"Science and technology are our greatest shields against the changing climate."',
-      director: '— Dr. Elena Vance, Project Director',
-      form_first: 'First Name',
-      form_last: 'Last Name',
-      form_email: 'Email',
-      form_msg: 'Message',
-      form_btn: 'Submit Inquiry',
     },
     assistant: {
       welcome: 'Hello! I am the Resfire Assistant. How can I help you today with wildfire prevention or project information?',
@@ -316,13 +331,6 @@ export const TRANSLATIONS = {
       subtitle: '¿Tienes preguntas sobre nuestra investigación? Nuestro equipo está listo para colaborar.',
       hub: 'Sede de Innovación',
       address: 'Depto. de Ciencias Forestales, Edificio A, Universidad de la Resiliencia, UE',
-      quote: '"La ciencia y la tecnología son nuestros mayores escudos frente al cambio climático."',
-      director: '— Dra. Elena Vance, Directora del Proyecto',
-      form_first: 'Nombre',
-      form_last: 'Apellidos',
-      form_email: 'Email',
-      form_msg: 'Mensaje',
-      form_btn: 'Enviar Consulta',
     },
     assistant: {
       welcome: '¡Hola! Soy el asistente de Resfire. ¿Cómo puedo ayudarte hoy con la prevención de incendios o información del proyecto?',
@@ -335,9 +343,9 @@ export const TRANSLATIONS = {
     home: {
       hero_sub: 'Gestão Proativa e Sustentável',
       hero_title: 'O PROJETO RESFIRE',
-      hero_desc_p1: 'O proyecto RESFIRE visa contribuir para o desenvolvimento de estratégias de gestão de incêndios proativas e sustentáveis que não só mitiguem os riscos de incêndios florestais destrutivos.',
+      hero_desc_p1: 'O proyecto RESFIRE visa contribuir para o desenvolvimento de estratégias de gestão de incêndios proativas e sustentáveis.',
       hero_desc_p2: 'A ênfase é colocada no reconhecimento da importância ecológica do fogo e na integração desta compreensão em soluções baseadas na naturaleza.',
-      hero_desc_p3: 'Esta restauração pode ser alcançada relaxando a supressão de incêndios para que o fogo, en condições meteorológicas não adversas, recupere o seu impacto positivo.',
+      hero_desc_p3: 'Esta restauração pode ser alcançada relaxando a supressão de incêndios para que o fogo recupere o seu impacto positivo.',
       cta_primary: 'Resumo Científico',
       cta_secondary: 'Plano de Ação',
     },
@@ -346,7 +354,7 @@ export const TRANSLATIONS = {
       p1: 'As alterações climáticas alteraram o regime de incêndios. O Resfire representa uma mudança para paisagens proativas e resilientes.',
       challenge_title: 'O Desafio',
       challenge_desc: 'O aumento das temperaturas criou "mega-incêndios" que excedem a capacidade humana de supressão.',
-      solution_title: 'La Solución',
+      solution_title: 'A Solução',
       solution_desc: 'Integração de aprendizagem profunda, sensores IoT e gestão florestal adaptativa.',
       p2: 'Nossa missão é tratar a floresta como um sistema dinâmico gerido pela ciência.',
     },
@@ -373,18 +381,111 @@ export const TRANSLATIONS = {
       subtitle: 'Tem dúvidas sobre a nossa investigação? A nossa equipa está pronta para colaborar.',
       hub: 'Centro de Inovação',
       address: 'Depto. de Ciencias Forestales, Edifício A, Universidade da Resiliência, UE',
-      quote: '"A ciência e a tecnologia são os nossos maiores escudos."',
-      director: '— Dra. Elena Vance, Diretora do Projeto',
-      form_first: 'Nome',
-      form_last: 'Apelido',
-      form_email: 'E-mail',
-      form_msg: 'Mensagem',
-      form_btn: 'Enviar',
     },
     assistant: {
       welcome: 'Olá! Sou o assistente da Resfire. Como posso ajudá-lo hoje?',
       placeholder: 'Pergunte sobre segurança...',
       loading: 'Analisando...',
+    }
+  },
+  gl: {
+    nav: { abstract: 'Abstract', workPackages: 'Work Packages', outputs: 'Outputs', team: 'Equipo', contact: 'Contacto', language: 'Idioma' },
+    home: {
+      hero_sub: 'Xestión Proactiva e Sostible',
+      hero_title: 'O PROXECTO RESFIRE',
+      hero_desc_p1: 'O proxecto RESFIRE ten como obxectivo contribuír ao desenvolvemento de estratexias de xestión do lume proactivas e sostibles que non só mitiguen os riscos de incendios forestais destrutivos, senón que tamén fomenten a saúde e a resiliencia dos ecosistemas mediterráneos e a súa biodiversidade.',
+      hero_desc_p2: 'Ponse a énfase en recoñecer a importancia ecolóxica do lume e integrar este coñecemento en solucións efectivas baseadas na natureza para ecosistemas propensos ao lume.',
+      hero_desc_p3: 'Esta restauración dos réximes de lume pode acadarse relaxando a supresión de incendios nestes sistemas para que o lume, en condicións meteorolóxicas non adversas, recupere o seu impacto positivo.',
+      cta_primary: 'Resumo Científico',
+      cta_secondary: 'Folla de Ruta',
+    },
+    abstract: {
+      title: 'Resumo do Proxecto',
+      p1: 'O cambio climático alterou fundamentalmente o réxime de incendios forestais a nivel mundial. O Proxecto Resfire representa un cambio de paradigma dende a supresión reactiva cara a paisaxes proactivas e resilientes usando intelixencia baseada en datos.',
+      challenge_title: 'O Desafío',
+      challenge_desc: 'O aumento das temperaturas creou "mega-incendios" que superan a capacidade humana de supresión. A acumulación de combustible polo abandono rural fixo que os bosques sexan altamente volátiles.',
+      solution_title: 'A Nosa Solución',
+      solution_desc: 'Integración de aprendizaxe profundo para modelos preditivos, nodos de sensores IoT para o seguimento e xestión forestal adaptativa para restaurar paisaxes en mosaico.',
+      p2: 'A nosa misión é tratar o bosque como un sistema vivo e dinámico que pode ser xestionado para acadar resiliencia a longo prazo a través da ciencia.',
+    },
+    work_packages: {
+      title: 'Estratexia',
+      subtitle: 'O proxecto organízase en tres paquetes de traballo estratéxicos deseñados para restaurar réximes de lume resilientes.',
+      milestones: 'Áreas de Enfoque'
+    },
+    outputs: {
+      title: 'Resultados',
+      subtitle: 'Descubre as nosas contribucións científicas, presenza en medios e últimas noticias.',
+      publications: 'Publicacións Científicas',
+      podcasts: 'Podcasts e Medios',
+      news: 'Noticias',
+      view_all: 'Explorar categoría'
+    },
+    team: {
+      title: 'O Equipo',
+      subtitle: 'Resfire é un esforzo colaborativo entre institucións de investigación líderes en Galicia e Cataluña.',
+      partners: 'Socios do Consorcio'
+    },
+    contact: {
+      title: 'Contacto',
+      subtitle: 'Tes preguntas sobre a nosa investigación ou queres colaborar? O noso equipo está listo para conectar.',
+      hub: 'Hub de Innovación',
+      address: 'Depto. de Ciencias Forestais, Edificio A, Universidade da Resiliencia, UE',
+    },
+    assistant: {
+      welcome: 'Ola! Son o asistente de Resfire. En que podo axudarche hoxe coa prevención de incendios ou información do proxecto?',
+      placeholder: 'Pregunta sobre seguridade...',
+      loading: 'Analizando base de coñecemento...',
+    }
+  },
+  ca: {
+    nav: { abstract: 'Abstract', workPackages: 'Work Packages', outputs: 'Outputs', team: 'Equip', contact: 'Contacte', language: 'Idioma' },
+    home: {
+      hero_sub: 'Gestió Proactiva i Sostenible',
+      hero_title: 'EL PROJECTE RESFIRE',
+      hero_desc_p1: 'El projecte RESFIRE té com a objectiu contribuir al desenvolupament d\'estratègies de gestió del foc proactives i sostenibles que no només mitiguin els riscos d\'incendis forestals destructius, sinó que també fomentin la salut i la resiliència dels ecosistemes mediterranis i la seva biodiversitat.',
+      hero_desc_p2: 'L\'èmfasi es posa en reconèixer l\'importància ecològica del foc i integrar aquesta comprensió en solucions efectives basades en la natura per a ecosistemes propensos al foc.',
+      hero_desc_p3: 'Aquesta restauració dels règims de foc es pot aconseguir relaxant la supressió d\'incendis en aquests sistemes perquè el foc, en condicions meteorològiques no adverses, recuperi el seu impacte positiu.',
+      cta_primary: 'Resum Científic',
+      cta_secondary: 'Full de Ruta',
+    },
+    abstract: {
+      title: 'Resum del Projecte',
+      p1: 'El canvi climàtic ha alterat fonamentalment el règim d\'incendis forestals a nivell mundial. El Projecte Resfire representa un canvi de paradigma des de la supressió reactiva cap a paisatges proactius i resilients utilitzant intel·ligència basada en dades.',
+      challenge_title: 'El Desafiament',
+      challenge_desc: 'L\'augment de les temperatures ha creat "mega-incendis" que superen la capacitat humana de supressió. L\'acumulació de combustible degut a l\'abandonament rural ha fet que els boscos siguin altament volàtils.',
+      solution_title: 'La Nostra Solució',
+      solution_desc: 'Integració d\'aprenentatge profund per a models predictius, nodes de sensors IoT per al seguiment i gestió forestal adaptativa per restaurar paisatges en mosaic.',
+      p2: 'La nostra missió és tractar el bosc com un sistema viu i dinàmic que pot ser gestionat per a la resiliència a llarg termini a través de la ciència.',
+    },
+    work_packages: {
+      title: 'Estratègia',
+      subtitle: 'El projecte s\'organitza en tres paquets de treball estratègics dissenyats per restaurar règims de foc resilients.',
+      milestones: 'Àrees d\'Enfoque'
+    },
+    outputs: {
+      title: 'Resultats del Projecte',
+      subtitle: 'Descobreix les nostres contribucions científiques, presència en mitjans i darreres notícies.',
+      publications: 'Publicacions Científiques',
+      podcasts: 'Podcasts i Mitjans',
+      news: 'Notícies',
+      view_all: 'Explorar categoria'
+    },
+    team: {
+      title: 'L\'Equip',
+      subtitle: 'Resfire és un esforç col·laboratiu entre institucions de recerca líders a Galícia i Catalunya.',
+      partners: 'Socis del Consorci'
+    },
+    contact: {
+      title: 'Contacte',
+      subtitle: 'Tens preguntes sobre la nostra recerca o vols col·laborar? El nostre equip està a punt per connectar.',
+      hub: 'Hub d\'Innovació',
+      address: 'Depto. de Ciències Forestals, Edifici A, Universitat de la Resiliència, UE',
+    },
+    assistant: {
+      welcome: 'Hola! Soc l\'assistent de Resfire. En què et puc ajudar avui amb la prevenció d\'incendis o informació del projecte?',
+      placeholder: 'Pregunta sobre seguretat...',
+      loading: 'Analitzant base de coneixement...',
     }
   }
 };
