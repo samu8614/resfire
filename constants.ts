@@ -305,7 +305,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     abstract: {
       title: 'Resumen del Proyecto',
       p1: 'El cambio climático ha alterado radicalmente el régimen de incendios. Resfire representa un cambio de paradigma: de la supresión reactiva a la creación de paisajes proactivos y resilientes.',
-      challenge_title: 'El Desafío',
+      challenge_title: 'El Reto',
       challenge_desc: 'El aumento de temperaturas ha creado "mega-incendios" que superan la capacidad humana de extinción. La acumulación de biomasa es una bomba de relojería.',
       solution_title: 'La Solución',
       solution_desc: 'Integración de aprendizaje profundo para modelos predictivos, sensores IoT para monitoreo y gestión forestal adaptativa.',
@@ -405,7 +405,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     abstract: {
       title: 'Resumo do Proxecto',
       p1: 'O cambio climático alterou fundamentalmente o réxime de incendios forestais a nivel mundial. O Proxecto Resfire representa un cambio de paradigma dende a supresión reactiva cara a paisaxes proactivas e resilientes usando intelixencia baseada en datos.',
-      challenge_title: 'O Desafío',
+      challenge_title: 'O Reto',
       challenge_desc: 'O aumento das temperaturas creou "mega-incendios" que superan a capacidade humana de supresión. A acumulación de combustible polo abandono rural fixo que os bosques sexan altamente volátiles.',
       solution_title: 'A Nosa Solució',
       solution_desc: 'Integración de aprendizaxe profundo para modelos predictivos, nodos de sensores IoT para o seguimento e xestión forestal adaptativa para restaurar paisaxes en mosaico.',
@@ -455,7 +455,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     abstract: {
       title: 'Resum del Projecte',
       p1: 'El canvi climàtic ha alterat fonamentalment el règim d\'incendis forestals a nivell mundial. El Projecte Resfire representa un canvi de paradigma des de la supressió reactiva cap a paisatges proactius i resilients utilitzant intel·ligència basada en dades.',
-      challenge_title: 'El Desafiament',
+      challenge_title: 'El Repte',
       challenge_desc: 'L\'augment de les temperatures ha creat "mega-incendis" que superan la capacitat humana de supressió. L\'acumulació de combustible degut a l\'abandonament rural ha fet que els boscos siguin altament volàtils.',
       solution_title: 'La Nostra Solució',
       solution_desc: 'Integració d\'aprenentatge profund per a models predictivos, nodes de sensors IoT per al seguimento i gestió forestal adaptativa per restaurar paisatges en mosaic.',
