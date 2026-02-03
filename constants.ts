@@ -109,7 +109,7 @@ export const PARTNERS: Partner[] = [
       en: 'The Misión Biológica de Galicia has an excellent research record in the study of the responses of landscapes and the key ecosystem services provided such as carbon or water provisioning to main drivers such as wildfires, accounting for much of the information needed in the development of landscape dynamic models in complex socio-ecological contexts.',
       es: 'La Misión Biológica de Galicia cuenta con una excelente trayectoria investigadora en el estudio de las respuestas de los paisajes y los servicios ecosistémicos clave, como la provisión de carbono o agua, frente a factores como los incendios forestales, aportando gran parte de la información necesaria para el desarrollo de modelos dinámicos del paisaje en contextos socioecológicos complejos.',
       pt: 'A Missão Biológica da Galiza tem um excelente historial de investigação no estudo das respostas das paisagens e dos principais serviços ecossistémicos prestados, como o aprovisionamento de carbono ou de água, aos principais factores como os incêndios florestais, fornecendo grande parte da informação necesaria para o desenvolvimento de modelos de dinâmica da paisagem em contextos socioecológicos complexos.',
-      gl: 'A Misión Biolóxica de Galicia conta cunha excelente traxectoria investigadora no estudo das respostas das paisaxes e dos servizos ecosistémicos clave, como a provisión de carbono ou auga, fronte a factores como os incendios forestais, achegando gran parte da información necesaria para o desenvolvemento de modelos dinámicos da paisaxe en contextos socioecolóxicos complexos.',
+      gl: 'A Misión Biolóxica de Galicia conta cunha excelente traxectoria investigadora en o estudo das respostas das paisaxes e dos servizos ecosistémicos clave, como a provisión de carbono ou auga, fronte a factores como os incendios forestais, achegando gran parte da información necesaria para o desenvolvemento de modelos dinámicos da paisaxe en contextos socioecolóxicos complexos.',
       ca: 'La Missió Biològica de Galícia compta amb una excel·lent trajectòria investigadora en l\'estudi de les respostes dels paisatges i els serveis ecosistèmics clau, com la provisió de carboni o aigua, davant de factors com els incendis forestals, aportant gran part de la informació necessària per al desenvolupament de models dinàmics del paisatge en contextos socioecològics complexos.'
     },
     logo: 'logo-mbg.jpg'
@@ -123,7 +123,7 @@ export const PARTNERS: Partner[] = [
       es: 'El Centro de Investigación Ecológica y Aplicaciones Forestales ha adquirido experiencia en el establecimiento de vínculos entre la dinámica del paisaje, en términos de composición y configuración de sus componentes principales, y las respuestas de la biodiversidad derivadas. Esto ha sido posible gracias al desarrollo de un modelo de paisaje espacialmente explícito (SELM), destinado a simular la dinámica forestal bajo diferentes regímenes de fuego.',
       pt: 'O Centro de Investigação Ecológica e Aplicações Forestais adquiriu experiência no estabelecimento de ligações entre a dinâmica da paisagem, em termos de composição e configuração dos principais componentes da paisagem e as suas respostas de biodiversidade derivadas. Isto foi possível graças ao desenvolvimento de um modelo de paisagem espacialmente explícito (SELM), destinado a simular a dinâmica forestal sob diferentes regimes de fogo.',
       gl: 'O Centro de Investigación Ecolóxica e Aplicacións Forestais adquiriu experiencia no establecemento de vínculos entre la dinámica da paisaxe, en termos de composición e configuración dos seus compoñentes principais, e as respostas da biodiversidade derivadas. Isto foi posible grazas ao desenvolvemento dun modelo de paisaxe espacialmente explícito (SELM), destinado a simular a dinámica forestal baixo diferentes réximes de lume.',
-      ca: 'El Centre de Recerca Ecològica i Aplicacions Forestals ha adquirit experiència en l\'establiment d\'enllaços entre la dinàmica del paisatge, en termes de composició i configuració dels seus components principals, i les respostes de la biodiversitat derivades. Això ha estat possible gràcies al desenvolupament d\'un model de paisatge espacialmente explícit (SELM), destinat a simular la dinàmica forestal sota diferents règims de foc.'
+      ca: 'El Centre de Recerca Ecològica i Aplicacions Forestals ha adquirit experiència en l\'establiment d\'enllaços entre la dinàmica del paisatge, en termes de composició i configuració dels seus components principals, i les respostes de la biodiversitat derivades. Això ha estat possible gràcies al desenvolvemento d\'un model de paisatge espacialmente explícit (SELM), destinat a simular la dinàmica forestal sota de diferents règims de foc.'
     },
     logo: 'CREAF-SO-logo.webp'
   }
@@ -145,7 +145,7 @@ export const WORK_PACKAGES: WorkPackage[] = [
         tasks: ['Cuantificación de Datos', 'Análisis de Impacto Humano', 'Mapeo de Regímenes']
       },
       pt: {
-        title: 'WP1. Compreender e quantificar o controlo humano sobre os regimes de fogo em paisagens mediterrânicas',
+        title: 'WP1. Comprender e quantificar o controlo humano sobre os regimes de fogo em paisagens mediterrânicas',
         description: 'Analisar a influência histórica e atual das actividades humanas nos padrões de fogo para prever melhor os riscos futuros.',
         tasks: ['Quantificação de Datos', 'Análise de Impacto Humano', 'Mapeamento de Regimes']
       },
@@ -155,7 +155,7 @@ export const WORK_PACKAGES: WorkPackage[] = [
         tasks: ['Cuantificación de Datos', 'Análise de Impacto Humano', 'Mapeo de Réximes']
       },
       ca: {
-        title: 'WP1. Comprendre i quantificar el control humà sobre els règimes d\'incendis en paisatges mediterranis',
+        title: 'WP1. Comprendre i quantificar el control humà sobre els règims d\'incendis en paisatges mediterranis',
         description: 'Analitzar la influència històrica i actual de les activitats humanes en els patrons de foc per predir millor els riscos futurs.',
         tasks: ['Quantificació de Dades', 'Anàlisi d\'Impacte Humà', 'Mapatge de Règims']
       }
@@ -233,7 +233,7 @@ export const TEAM_MEMBERS: TeamMember[] = [
     content: {
       en: { role: 'Project Director', description: 'Expert in forest ecology with 20 years of experience in fire behavior modeling.' },
       es: { role: 'Directora del Proyecto', description: 'Experta en ecología forestal con 20 años de experiencia en modelado del comportamiento del fuego.' },
-      pt: { role: 'Directora do Projeto', description: 'Especialista em ecologia florestal com 20 anos de experiência em modelagem do comportamento do fogo.' },
+      pt: { role: 'Directora do Projeto', description: 'Especialista em em ecologia florestal com 20 anos de experiência em modelagem do comportamento do fogo.' },
       gl: { role: 'Directora do Proxecto', description: 'Experta en ecoloxía forestal con 20 anos de experiencia en modelado do comportamento do lume.' },
       ca: { role: 'Directora del Projecte', description: 'Experta en ecologia forestal amb 20 anys d\'experiència en modelatge del comportament del foc.' }
     }
@@ -247,8 +247,8 @@ export const TRANSLATIONS: Record<Language, any> = {
       hero_sub: 'Proactive & Sustainable Management',
       hero_title: 'RESFIRE PROJECT',
       hero_desc_p1: 'The RESFIRE project aims to contribute to the development of proactive and sustainable fire management strategies that not only mitigate the risks of destructive wildfires but also foster the health and resilience of Mediterranean ecosystems and their biodiversity.',
-      hero_desc_p2: 'The emphasis is on recognizing the ecological importance of fire and integrating this understanding into effective nature-based solutions for fire-prone ecosystems.',
-      hero_desc_p3: 'This restoration of fire regimes can be achieved by relaxing fire suppression in these systems so that fire in non-adverse meteorological conditions can recover its positive impact.',
+      hero_desc_p2: 'The emphasis is on recognizing the ecological importance of fire and integrating this understanding into effective nature-based solutions for fire-prone ecosystems. This restoration of fire regimes can be achieved by relaxing fire suppression in these systems so that fire in non-adverse meteorological conditions can recover its positive impact on these systems.',
+      hero_desc_p3: 'The project aims to unravel the complex interplay of factors, such as land abandonment, vegetation recovery, and fire suppression, in shaping fire regimes. By doing so, it seeks to develop a nuanced perspective that acknowledges the ecological role of fire as a natural disturbance.',
       cta_primary: 'Scientific Abstract',
       cta_secondary: 'View Roadmap',
     },
@@ -297,8 +297,8 @@ export const TRANSLATIONS: Record<Language, any> = {
       hero_sub: 'Gestión Proactiva y Sostenible',
       hero_title: 'PROYECTO RESFIRE',
       hero_desc_p1: 'El proyecto RESFIRE tiene como objetivo contribuir al desarrollo de estrategias de gestión del fuego proactivas y sostenibles que no solo mitiguen los riesgos de incendios forestales destructivos, sino que también fomenten la salud y la resiliencia de los ecosistemas mediterráneos y su biodiversidad.',
-      hero_desc_p2: 'El énfasis se pone en reconocer la importancia ecológica del fuego e integrar esta comprensión en soluciones efectivas basadas en la naturaleza.',
-      hero_desc_p3: 'Esta restauración se logra relajando la supresión de incendios para que el fuego, en condiciones meteorológicas no adversas, recupere su impacto positivo.',
+      hero_desc_p2: 'El énfasis se pone en reconocer la importancia ecológica del fuego e integrar esta comprensión en soluciones efectivas basadas en la naturaleza para ecosistemas propensos al fuego. Esta restauración se logra relajando la supresión de incendios en estos sistemas para que el fuego recupere su impacto positivo.',
+      hero_desc_p3: 'El proyecto tiene como objetivo desentrañar la compleja interacción de factores, como el abandono de la tierra, la recuperación de la vegetación y la supresión de incendios, en la configuración de los regímenes de fuego. Al hacerlo, busca desarrollar una perspectiva matizada que reconozca el papel ecológico del fuego como una perturbación natural.',
       cta_primary: 'Resumen Científico',
       cta_secondary: 'Hoja de Ruta',
     },
@@ -347,8 +347,8 @@ export const TRANSLATIONS: Record<Language, any> = {
       hero_sub: 'Gestão Proativa e Sustentável',
       hero_title: 'PROJETO RESFIRE',
       hero_desc_p1: 'O proyecto RESFIRE visa contribuir para o desenvolvimento de estratégias de gestão de incêndios proativas e sustentáveis.',
-      hero_desc_p2: 'A ênfase é colocada no reconhecimento da importância ecológica do fogo e na integração desta compreensão em soluções baseadas na naturaleza.',
-      hero_desc_p3: 'Esta restauração pode ser alcançada relaxando a supressão de incêndios para que o fogo recupere o seu impacto positivo.',
+      hero_desc_p2: 'A ênfase é colocada no reconhecimento da importância ecológica do fogo e na integração desta compreensão em soluções baseadas na natureza para ecossistemas propensos ao fogo. Esta restauração pode ser alcançada relaxando a supressão de incêndios nestes sistemas para que o fogo recupere o seu impacto positivo.',
+      hero_desc_p3: 'O projeto visa desvendar a complexa interação de fatores, como o abandono da terra, a recuperação da vegetação e a supressão de incêndios, na formação dos regimes de fogo. Ao fazê-lo, procura desenvolver uma perspectiva diferenciada que reconheça o papel ecológico do fogo como um distúrbio natural.',
       cta_primary: 'Resumo Científico',
       cta_secondary: 'Plano de Ação',
     },
@@ -396,9 +396,9 @@ export const TRANSLATIONS: Record<Language, any> = {
     home: {
       hero_sub: 'Xestión Proactiva e Sostible',
       hero_title: 'PROXECTO RESFIRE',
-      hero_desc_p1: 'O proxecto RESFIRE ten como obxectivo contribuír ao desenvolvemento de estratexias de xestión do lume proactivas e sostibles que non só mitiguen os riscos de incendios forestais destrutivos, senón que tamén fomenten a saúde e a resiliencia dos ecosistemas mediterráneos e a súa biodiversidade.',
-      hero_desc_p2: 'Ponse a énfase en recoñecer a importancia ecolóxica do lume e integrar este coñecemento en solucións efectivas baseadas na natureza para ecosistemas propensos ao lume.',
-      hero_desc_p3: 'Esta restauración dos réximes de lume pode acadarse relaxando a supresión de incendios nestes sistemas para que o lume, en condicións meteorolóxicas non adversas, recupere o seu impacto positivo.',
+      hero_desc_p1: 'O proxecto RESFIRE ten como obxectivo contribuír ao desenvolvemento de estratexias de xestión do lume proactivas e sostibles que no só mitiguen os riscos de incendios forestais destrutivos, senón que tamén fomenten a saúde e a resiliencia dos ecosistemas mediterráneos e a súa biodiversidade.',
+      hero_desc_p2: 'Ponse a énfase en recoñecer a importancia ecolóxica do lume e integrar este coñecemento en solucións baseadas na natureza para ecosistemas propensos ao lume. Esta restauración pode acadarse relaxando a supresión de incendios nestes sistemas para que o lume recupere o seu impacto positivo.',
+      hero_desc_p3: 'O proxecto ten como obxectivo descifrar a complexa interacción de factores, como o abandono da terra, a recuperación da vexetación e a supresión de incendios, na configuración dos réximes de lume. Ao facelo, busca desenvolver unha perspectiva matizada que recoñeza o papel ecolóxico do lume como unha perturbación natural.',
       cta_primary: 'Resumo Científico',
       cta_secondary: 'Folla de Ruta',
     },
@@ -407,8 +407,8 @@ export const TRANSLATIONS: Record<Language, any> = {
       p1: 'O cambio climático alterou fundamentalmente o réxime de incendios forestais a nivel mundial. O Proxecto Resfire representa un cambio de paradigma dende a supresión reactiva cara a paisaxes proactivas e resilientes usando intelixencia baseada en datos.',
       challenge_title: 'O Desafío',
       challenge_desc: 'O aumento das temperaturas creou "mega-incendios" que superan a capacidade humana de supresión. A acumulación de combustible polo abandono rural fixo que os bosques sexan altamente volátiles.',
-      solution_title: 'A Nosa Solución',
-      solution_desc: 'Integración de aprendizaxe profundo para modelos preditivos, nodos de sensores IoT para o seguimento e xestión forestal adaptativa para restaurar paisaxes en mosaico.',
+      solution_title: 'A Nosa Solució',
+      solution_desc: 'Integración de aprendizaxe profundo para modelos predictivos, nodos de sensores IoT para o seguimento e xestión forestal adaptativa para restaurar paisaxes en mosaico.',
       p2: 'A nosa misión é tratar o bosque como un sistema vivo e dinámico que pode ser xestionado para acadar resiliencia a longo prazo a través da ciencia.',
     },
     work_packages: {
@@ -446,9 +446,9 @@ export const TRANSLATIONS: Record<Language, any> = {
     home: {
       hero_sub: 'Gestió Proactiva i Sostenible',
       hero_title: 'PROJECTE RESFIRE',
-      hero_desc_p1: 'El projecte RESFIRE té com a objectiu contribuir al desenvolupament d\'estratègies de gestió del foc proactives i sostenibles que no només mitiguen els riscos d\'incendis forestals destructius, sinó que també fomenten a salut i la resiliència dels ecosistemes mediterranis i la seva biodiversitat.',
-      hero_desc_p2: 'L\'èmfasi es posa en reconèixer l\'importància ecològica del foc i integrar aquesta comprensió en solucions efectives basades en la natura per a ecosistemes propensos al foc.',
-      hero_desc_p3: 'Aquesta restauració dels règims de foc es pot aconseguir relaxant la supressió d\'incendis en aquests sistemas perquè el foc, en condicions meteorològiques no adversas, recuperi el seu impacte positiu.',
+      hero_desc_p1: 'El projecte RESFIRE té com a objectiu contribuir al desenvolvement d\'estratègies de gestió del foc proactives i sostenibles que no només mitiguen els riscos d\'incendis forestals destructius, sinó que també fomenten a salut i la resiliència dels ecosistemes mediterranis i la seva biodiversitat.',
+      hero_desc_p2: 'Es posa l’èmfasi en el reconeixement de la funció ecològica del foc i en la seva integració en solucions basades en la natura. La restauració dels règims de foc pot assolir-se mitjançant l’alleugeriment de les polítiques de supressió d’incendis en aquests sistemes, permetent que el foc recuperi els seus efectes beneficiosos.',
+      hero_desc_p3: 'El projecte té com a objectiu desvelar la complexa interacció de factors, com l\'abandonament de la terra, la recuperació de la vexetació i la supressió d\'incendis, en la configuració dels règims de foc. En fer-ho, busca desenvolupar una perspectiva matisada que reconegui el paper ecològic del foc com a pertorbació natural.',
       cta_primary: 'Resum Científic',
       cta_secondary: 'Full de Ruta',
     },
@@ -458,7 +458,7 @@ export const TRANSLATIONS: Record<Language, any> = {
       challenge_title: 'El Desafiament',
       challenge_desc: 'L\'augment de les temperatures ha creat "mega-incendis" que superan la capacitat humana de supressió. L\'acumulació de combustible degut a l\'abandonament rural ha fet que els boscos siguin altament volàtils.',
       solution_title: 'La Nostra Solució',
-      solution_desc: 'Integració d\'aprenentatge profund per a models predictivos, nodes de sensors IoT per al seguiment i gestió forestal adaptativa per restaurar paisatges en mosaic.',
+      solution_desc: 'Integració d\'aprenentatge profund per a models predictivos, nodes de sensors IoT per al seguimento i gestió forestal adaptativa per restaurar paisatges en mosaic.',
       p2: 'La nostra missió és tractar el bosc com un sistema viu i dinàmic que pot ser gestionat per a la resiliència a llarg termini a través de la ciència.',
     },
     work_packages: {
@@ -477,7 +477,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     team: {
       title: 'L\'Equip',
       subtitle: 'Resfire és un esforç col·laboratiu entre institucions de recerca líders a Galícia i Catalunya.',
-      partners: 'Socis del Consorci'
+      partners: 'Socis del Consorcio'
     },
     contact: {
       title: 'Contacte',
