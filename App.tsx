@@ -1,5 +1,4 @@
 
-import React from 'react';
 import { HashRouter as Router, Routes, Route, Link, useParams } from 'react-router-dom';
 import Layout from './components/Layout';
 import Assistant from './components/Assistant';
@@ -147,7 +146,7 @@ const Outputs = () => {
   ];
 
   return (
-    <div className="pt-48 pb-32 bg-stone-950 min-h-screen">
+    <div className="pt-48 pb-32 bg- stone-950 min-h-screen">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mb-24 space-y-6">
           <span className="text-orange-500 font-black tracking-[0.4em] uppercase text-xs">Knowledge Hub</span>
@@ -414,7 +413,7 @@ const Contact = () => {
                   </div>
                   <div className="space-y-2">
                     <h4 className="font-black text-white text-2xl tracking-tight uppercase group-hover:text-orange-500 transition-colors">Adrián Regos Sanz</h4>
-                    <p className="text-stone-500 text-[9px] font-bold uppercase tracking-[0.3em]">Researcher & Project Coordinator</p>
+                    <p className="text-stone-500 text-[9px] font-bold uppercase tracking-[0.3em]">Project Coordinator</p>
                     <a href="mailto:aregos@mbg.csic.es" className="text-stone-400 font-bold tracking-widest uppercase text-[11px] hover:text-white transition-colors flex items-center space-x-2 pt-1">
                       <i className="fa-solid fa-envelope text-[10px] text-orange-500"></i>
                       <span>aregos@mbg.csic.es</span>
@@ -429,7 +428,7 @@ const Contact = () => {
                   </div>
                   <div className="space-y-2">
                     <h4 className="font-black text-white text-2xl tracking-tight uppercase group-hover:text-orange-500 transition-colors">Lluís Brotons Alabau</h4>
-                    <p className="text-stone-500 text-[9px] font-bold uppercase tracking-[0.3em]">Scientific Advisor & Partner Lead</p>
+                    <p className="text-stone-500 text-[9px] font-bold uppercase tracking-[0.3em]">Project Coordinator</p>
                     <a href="mailto:l.brotons@creaf.uab.cat" className="text-stone-400 font-bold tracking-widest uppercase text-[11px] hover:text-white transition-colors flex items-center space-x-2 pt-1">
                       <i className="fa-solid fa-envelope text-[10px] text-orange-500"></i>
                       <span>l.brotons@creaf.uab.cat</span>
