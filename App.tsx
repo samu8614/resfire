@@ -407,7 +407,7 @@ const Outputs = () => {
 };
 
 const Team = () => {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
   return (
     <div className="pt-48 pb-32 bg-stone-950 min-h-screen">
       <div className="container mx-auto px-6">
@@ -439,7 +439,7 @@ const Team = () => {
                   <div className="flex flex-col lg:flex-row gap-12 items-center">
                     <div className="flex-grow max-w-5xl">
                       <p className="text-xl md:text-2xl text-stone-300 font-medium leading-relaxed opacity-90">
-                        {partner.description}
+                        {partner.description[language]}
                       </p>
                     </div>
                     {partner.logo && (
