@@ -186,16 +186,25 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
       <footer className="bg-stone-950 pt-24 pb-12 border-t border-white/5">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-12 mb-16">
-            <div className="col-span-2 space-y-6">
+          <div className="grid md:grid-cols-4 gap-12">
+            <div className="col-span-2 space-y-8">
               <div className="flex flex-col">
-                <span className="font-black text-3xl tracking-tighter text-white">RESFIRE</span>
-                <span className="text-[8px] uppercase tracking-[0.2em] text-orange-500 font-black">PID2023-152690OB-C21</span>
+                <span className="font-black text-4xl tracking-tighter text-white leading-none">RESFIRE</span>
+                <span className="text-[10px] uppercase tracking-[0.25em] text-orange-500 font-black mt-1">PID2023-152690OB-C21</span>
               </div>
-              <p className="text-stone-400 max-w-sm text-sm leading-relaxed font-medium">
-                Global initiative for forest preservation through advanced data science and ecological engineering.
-              </p>
+              
+              {/* Institutional Logos relocated and in original colors */}
+              <div className="flex flex-wrap items-center gap-8 md:gap-12">
+                <img src="AEI-logo.png" alt="AEI Logo" className="h-10 md:h-12 w-auto object-contain" />
+                <img src="logo-mbg.jpg" alt="MBG Logo" className="h-10 md:h-12 w-auto object-contain" />
+                <img src="CREAF-SO-logo.webp" alt="CREAF Logo" className="h-10 md:h-12 w-auto object-contain" />
+              </div>
+              
+              <div className="text-[10px] font-bold uppercase tracking-widest text-stone-600">
+                &copy; {new Date().getFullYear()} Resfire Project.
+              </div>
             </div>
+            
             <div className="space-y-6">
               <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-orange-500">Navigation</h4>
               <ul className="space-y-4">
@@ -204,42 +213,13 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
                 ))}
               </ul>
             </div>
+            
             <div className="space-y-6 text-right md:text-left">
               <h4 className="text-[10px] font-black uppercase tracking-[0.3em] text-orange-500">Legal</h4>
               <ul className="space-y-4">
                 <li><a href="#" className="text-stone-500 hover:text-white transition-colors text-sm font-medium">Privacy Policy</a></li>
                 <li><a href="#" className="text-stone-500 hover:text-white transition-colors text-sm font-medium">Terms of Service</a></li>
               </ul>
-            </div>
-          </div>
-
-          {/* Institutional Logos Row */}
-          <div className="flex flex-wrap items-center justify-center md:justify-start gap-10 md:gap-16 py-10 border-t border-white/5 mb-10">
-            <div className="group relative">
-              <img src="AEI-logo.png" alt="AEI Logo" className="h-10 md:h-12 w-auto object-contain grayscale brightness-200 opacity-60 group-hover:grayscale-0 group-hover:brightness-100 group-hover:opacity-100 transition-all duration-500" />
-            </div>
-            <div className="group relative">
-              <img src="logo-mbg.jpg" alt="MBG Logo" className="h-10 md:h-12 w-auto object-contain grayscale brightness-125 opacity-60 group-hover:grayscale-0 group-hover:brightness-100 group-hover:opacity-100 transition-all duration-500" />
-            </div>
-            <div className="group relative">
-              <img src="CREAF-SO-logo.webp" alt="CREAF Logo" className="h-10 md:h-12 w-auto object-contain grayscale brightness-125 opacity-60 group-hover:grayscale-0 group-hover:brightness-100 group-hover:opacity-100 transition-all duration-500" />
-            </div>
-          </div>
-          
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-10 border-t border-white/5">
-            <div className="flex flex-col">
-              <p className="text-stone-600 text-[10px] uppercase tracking-[0.2em] font-bold">PID2023-152690OB-C21 &bull; {new Date().getFullYear()}</p>
-              <p className="text-orange-500/50 text-[8px] uppercase tracking-[0.4em] font-black mt-1">v1.3.2 - Institutional Partners Active</p>
-            </div>
-            <div className="flex space-x-6">
-              {['linkedin', 'x-twitter', 'github', 'instagram'].map(social => (
-                <a key={social} href="#" className="text-stone-600 hover:text-orange-500 transition-all hover:-translate-y-1 text-lg">
-                  <i className={`fa-brands fa-${social}`}></i>
-                </a>
-              ))}
-            </div>
-            <div className="text-[10px] font-bold uppercase tracking-widest text-stone-600">
-              &copy; {new Date().getFullYear()} Resfire Project.
             </div>
           </div>
         </div>
