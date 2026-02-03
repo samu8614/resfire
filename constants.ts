@@ -63,7 +63,7 @@ export const CONFERENCES = [
     id: 'conf-regos-2025-pt',
     authors: 'Regos A*',
     year: '2025',
-    title: 'O uso do fogo como solução baseada na naturaleza: os grandes incêndios florestais em paisagens rurais abandonadas',
+    title: 'O uso do fogo como solución baseada na naturaleza: os grandes incêndios florestais em paisagens rurais abandonadas',
     event: 'Ponencia invitada na Conferência “Floresta e Fogos: que futuro?',
     date: '3 de outubro de 2025',
     location: 'Ponte de Lima (Portugal)'
@@ -108,7 +108,7 @@ export const PARTNERS: Partner[] = [
     description: {
       en: 'The Misión Biológica de Galicia has an excellent research record in the study of the responses of landscapes and the key ecosystem services provided such as carbon or water provisioning to main drivers such as wildfires, accounting for much of the information needed in the development of landscape dynamic models in complex socio-ecological contexts.',
       es: 'La Misión Biológica de Galicia cuenta con una excelente trayectoria investigadora en el estudio de las respuestas de los paisajes y los servicios ecosistémicos clave, como la provisión de carbono o agua, frente a factores como los incendios forestales, aportando gran parte de la información necesaria para el desarrollo de modelos dinámicos del paisaje en contextos socioecológicos complejos.',
-      pt: 'A Missão Biológica da Galiza tem um excelente historial de investigação no estudo das respostas das paisagens e dos principais serviços ecossistémicos prestados, como o aprovisionamento de carbono ou de água, aos principais factores como os incêndios florestais, fornecendo grande parte da informação necessária para o desenvolvimento de modelos de dinâmica da paisagem em contextos socioecológicos complexos.',
+      pt: 'A Missão Biológica da Galiza tem um excelente historial de investigação no estudo das respostas das paisagens e dos principais serviços ecossistémicos prestados, como o aprovisionamento de carbono ou de água, aos principais factores como os incêndios florestais, fornecendo grande parte da informação necesaria para o desenvolvimento de modelos de dinâmica da paisagem em contextos socioecológicos complexos.',
       gl: 'A Misión Biolóxica de Galicia conta cunha excelente traxectoria investigadora no estudo das respostas das paisaxes e dos servizos ecosistémicos clave, como a provisión de carbono ou auga, fronte a factores como os incendios forestais, achegando gran parte da información necesaria para o desenvolvemento de modelos dinámicos da paisaxe en contextos socioecolóxicos complexos.',
       ca: 'La Missió Biològica de Galícia compta amb una excel·lent trajectòria investigadora en l\'estudi de les respostes dels paisatges i els serveis ecosistèmics clau, com la provisió de carboni o aigua, davant de factors com els incendis forestals, aportant gran part de la informació necessària per al desenvolupament de models dinàmics del paisatge en contextos socioecològics complexos.'
     },
@@ -122,8 +122,8 @@ export const PARTNERS: Partner[] = [
       en: 'The Centre for Ecological Research and Forestry Applications as gained experience in establishing links between landscape dynamics, in terms of composition and configuration of major landscape components and their derived biodiversity responses. This has been possible thanks to developing a spatially explicit landscape model (SELM), aimed at simulating forest dynamics under different fire regimes.',
       es: 'El Centro de Investigación Ecológica y Aplicaciones Forestales ha adquirido experiencia en el establecimiento de vínculos entre la dinámica del paisaje, en términos de composición y configuración de sus componentes principales, y las respuestas de la biodiversidad derivadas. Esto ha sido posible gracias al desarrollo de un modelo de paisaje espacialmente explícito (SELM), destinado a simular la dinámica forestal bajo diferentes regímenes de fuego.',
       pt: 'O Centro de Investigação Ecológica e Aplicações Forestais adquiriu experiência no estabelecimento de ligações entre a dinâmica da paisagem, em termos de composição e configuração dos principais componentes da paisagem e as suas respostas de biodiversidade derivadas. Isto foi possível graças ao desenvolvimento de um modelo de paisagem espacialmente explícito (SELM), destinado a simular a dinâmica forestal sob diferentes regimes de fogo.',
-      gl: 'O Centro de Investigación Ecolóxica e Aplicacións Forestais adquiriu experiencia no establecemento de vínculos entre a dinámica da paisaxe, en termos de composición e configuración dos seus compoñentes principais, e as respostas da biodiversidade derivadas. Isto foi posible grazas ao desenvolvemento dun modelo de paisaxe espacialmente explícito (SELM), destinado a simular a dinámica forestal baixo diferentes réximes de lume.',
-      ca: 'El Centre de Recerca Ecològica i Aplicacions Forestals ha adquirit experiència en l\'establiment d\'enllaços entre la dinàmica del paisatge, en termes de composició i configuració dels seus components principals, i les respostes de la biodiversitat derivades. Això ha estat possible gràcies al desenvolupament d\'un model de paisatge espacialment explícit (SELM), destinat a simular la dinàmica forestal sota diferents règims de foc.'
+      gl: 'O Centro de Investigación Ecolóxica e Aplicacións Forestais adquiriu experiencia no establecemento de vínculos entre la dinámica da paisaxe, en termos de composición e configuración dos seus compoñentes principais, e as respostas da biodiversidade derivadas. Isto foi posible grazas ao desenvolvemento dun modelo de paisaxe espacialmente explícito (SELM), destinado a simular a dinámica forestal baixo diferentes réximes de lume.',
+      ca: 'El Centre de Recerca Ecològica i Aplicacions Forestals ha adquirit experiència en l\'establiment d\'enllaços entre la dinàmica del paisatge, en termes de composició i configuració dels seus components principals, i les respostes de la biodiversitat derivades. Això ha estat possible gràcies al desenvolupament d\'un model de paisatge espacialmente explícit (SELM), destinat a simular la dinàmica forestal sota diferents règims de foc.'
     },
     logo: 'CREAF-SO-logo.webp'
   }
@@ -245,7 +245,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     nav: { abstract: 'Abstract', workPackages: 'Work Packages', outputs: 'Outputs', team: 'Team', contact: 'Contact', language: 'Language' },
     home: {
       hero_sub: 'Proactive & Sustainable Management',
-      hero_title: 'THE RESFIRE PROJECT',
+      hero_title: 'RESFIRE PROJECT',
       hero_desc_p1: 'The RESFIRE project aims to contribute to the development of proactive and sustainable fire management strategies that not only mitigate the risks of destructive wildfires but also foster the health and resilience of Mediterranean ecosystems and their biodiversity.',
       hero_desc_p2: 'The emphasis is on recognizing the ecological importance of fire and integrating this understanding into effective nature-based solutions for fire-prone ecosystems.',
       hero_desc_p3: 'This restoration of fire regimes can be achieved by relaxing fire suppression in these systems so that fire in non-adverse meteorological conditions can recover its positive impact.',
@@ -295,7 +295,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     nav: { abstract: 'Abstract', workPackages: 'Work Packages', outputs: 'Outputs', team: 'Equipo', contact: 'Contacto', language: 'Idioma' },
     home: {
       hero_sub: 'Gestión Proactiva y Sostenible',
-      hero_title: 'EL PROYECTO RESFIRE',
+      hero_title: 'PROYECTO RESFIRE',
       hero_desc_p1: 'El proyecto RESFIRE tiene como objetivo contribuir al desarrollo de estrategias de gestión del fuego proactivas y sostenibles que no solo mitiguen los riesgos de incendios forestales destructivos, sino que también fomenten la salud y la resiliencia de los ecosistemas mediterráneos y su biodiversidad.',
       hero_desc_p2: 'El énfasis se pone en reconocer la importancia ecológica del fuego e integrar esta comprensión en soluciones efectivas basadas en la naturaleza.',
       hero_desc_p3: 'Esta restauración se logra relajando la supresión de incendios para que el fuego, en condiciones meteorológicas no adversas, recupere su impacto positivo.',
@@ -345,7 +345,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     nav: { abstract: 'Abstract', workPackages: 'Pacotes', outputs: 'Outputs', team: 'Equipa', contact: 'Contacto', language: 'Idioma' },
     home: {
       hero_sub: 'Gestão Proativa e Sustentável',
-      hero_title: 'O PROJETO RESFIRE',
+      hero_title: 'PROJETO RESFIRE',
       hero_desc_p1: 'O proyecto RESFIRE visa contribuir para o desenvolvimento de estratégias de gestão de incêndios proativas e sustentáveis.',
       hero_desc_p2: 'A ênfase é colocada no reconhecimento da importância ecológica do fogo e na integração desta compreensão em soluções baseadas na naturaleza.',
       hero_desc_p3: 'Esta restauração pode ser alcançada relaxando a supressão de incêndios para que o fogo recupere o seu impacto positivo.',
@@ -395,7 +395,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     nav: { abstract: 'Abstract', workPackages: 'Work Packages', outputs: 'Outputs', team: 'Equipo', contact: 'Contacto', language: 'Idioma' },
     home: {
       hero_sub: 'Xestión Proactiva e Sostible',
-      hero_title: 'O PROXECTO RESFIRE',
+      hero_title: 'PROXECTO RESFIRE',
       hero_desc_p1: 'O proxecto RESFIRE ten como obxectivo contribuír ao desenvolvemento de estratexias de xestión do lume proactivas e sostibles que non só mitiguen os riscos de incendios forestais destrutivos, senón que tamén fomenten a saúde e a resiliencia dos ecosistemas mediterráneos e a súa biodiversidade.',
       hero_desc_p2: 'Ponse a énfase en recoñecer a importancia ecolóxica do lume e integrar este coñecemento en solucións efectivas baseadas na natureza para ecosistemas propensos ao lume.',
       hero_desc_p3: 'Esta restauración dos réximes de lume pode acadarse relaxando a supresión de incendios nestes sistemas para que o lume, en condicións meteorolóxicas non adversas, recupere o seu impacto positivo.',
@@ -445,10 +445,10 @@ export const TRANSLATIONS: Record<Language, any> = {
     nav: { abstract: 'Abstract', workPackages: 'Work Packages', outputs: 'Outputs', team: 'Equip', contact: 'Contacte', language: 'Idioma' },
     home: {
       hero_sub: 'Gestió Proactiva i Sostenible',
-      hero_title: 'EL PROJECTE RESFIRE',
-      hero_desc_p1: 'El projecte RESFIRE té com a objectiu contribuir al desenvolupament d\'estratègies de gestió del foc proactives i sostenibles que no només mitiguin els riscos d\'incendis forestals destructius, sinó que també fomentin la salut i la resiliència dels ecosistemes mediterranis i la seva biodiversitat.',
+      hero_title: 'PROJECTE RESFIRE',
+      hero_desc_p1: 'El projecte RESFIRE té com a objectiu contribuir al desenvolupament d\'estratègies de gestió del foc proactives i sostenibles que no només mitiguen els riscos d\'incendis forestals destructius, sinó que també fomenten a salut i la resiliència dels ecosistemes mediterranis i la seva biodiversitat.',
       hero_desc_p2: 'L\'èmfasi es posa en reconèixer l\'importància ecològica del foc i integrar aquesta comprensió en solucions efectives basades en la natura per a ecosistemes propensos al foc.',
-      hero_desc_p3: 'Aquesta restauració dels règims de foc es pot aconseguir relaxant la supressió d\'incendis en aquests sistemes perquè el foc, en condicions meteorològiques no adversas, recuperi el seu impacte positiu.',
+      hero_desc_p3: 'Aquesta restauració dels règims de foc es pot aconseguir relaxant la supressió d\'incendis en aquests sistemas perquè el foc, en condicions meteorològiques no adversas, recuperi el seu impacte positiu.',
       cta_primary: 'Resum Científic',
       cta_secondary: 'Full de Ruta',
     },
