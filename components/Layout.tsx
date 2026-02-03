@@ -212,11 +212,24 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
               </ul>
             </div>
           </div>
+
+          {/* Institutional Logos Row */}
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-10 md:gap-16 py-10 border-t border-white/5 mb-10">
+            <div className="group relative">
+              <img src="AEI-logo.png" alt="AEI Logo" className="h-10 md:h-12 w-auto object-contain grayscale brightness-200 opacity-60 group-hover:grayscale-0 group-hover:brightness-100 group-hover:opacity-100 transition-all duration-500" />
+            </div>
+            <div className="group relative">
+              <img src="logo-mbg.jpg" alt="MBG Logo" className="h-10 md:h-12 w-auto object-contain grayscale brightness-125 opacity-60 group-hover:grayscale-0 group-hover:brightness-100 group-hover:opacity-100 transition-all duration-500" />
+            </div>
+            <div className="group relative">
+              <img src="CREAF-SO-logo.webp" alt="CREAF Logo" className="h-10 md:h-12 w-auto object-contain grayscale brightness-125 opacity-60 group-hover:grayscale-0 group-hover:brightness-100 group-hover:opacity-100 transition-all duration-500" />
+            </div>
+          </div>
           
           <div className="flex flex-col md:flex-row justify-between items-center gap-8 pt-10 border-t border-white/5">
             <div className="flex flex-col">
               <p className="text-stone-600 text-[10px] uppercase tracking-[0.2em] font-bold">PID2023-152690OB-C21 &bull; {new Date().getFullYear()}</p>
-              <p className="text-orange-500/50 text-[8px] uppercase tracking-[0.4em] font-black mt-1">v1.3.1 - Enhanced Branding Active</p>
+              <p className="text-orange-500/50 text-[8px] uppercase tracking-[0.4em] font-black mt-1">v1.3.2 - Institutional Partners Active</p>
             </div>
             <div className="flex space-x-6">
               {['linkedin', 'x-twitter', 'github', 'instagram'].map(social => (
